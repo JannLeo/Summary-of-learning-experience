@@ -27,26 +27,86 @@ int find_kthnum(vector<int>nums1,int offset1,vector<int>nums2,int offset2,int k)
 }
 int main() {
 	vector<int> nums1, nums2;
+	nums1.push_back(0);
+	nums1.push_back(1);
 	nums1.push_back(2);
-	/*nums1.push_back(0);
-	nums2.push_back(0);
-	nums2.push_back(0);*/
+	nums1.push_back(3);
+	nums1.push_back(4);
+	/*nums2.push_back(1);
+	nums2.push_back(3);*/
 
-	//二分查找
-	int n = (nums1.size()+nums2.size());
-	int offset1 = 0;
-	int offset2 = 0;
-	if (n % 2 == 0){
-		double left = find_kthnum(nums1, offset1, nums2, offset2, n / 2);
-		double right = find_kthnum(nums1, offset1, nums2, offset2, n / 2 + 1);
-		cout << (left + right) / 2.0;
-		return (double)(left + right) / 2.0;
-	}
-	else {
-		cout << find_kthnum(nums1, offset1, nums2, offset2, n / 2);
-		return (double)find_kthnum(nums1, offset1, nums2, offset2, n / 2);
-	}
+	//划分数组
 	
+	vector<int> nums3;
+	if (m > n) {
+		nums3 = nums1;
+		nums1 = nums2;
+		nums2 = nums3;
+	}
+	int m = nums1.size();
+	int n = nums2.size();
+	int leftMax = 0, rightMin = 0;
+	int iMin = 0, iMax = m;
+	while (iMin <= iMax) {
+		//i+j=(m+n+1)/2
+		int i = (iMin + iMax) / 2;//主动取中间值
+		int j = (m + n + 1) / 2 - i;
+		//普通异常情况 不满足A[i-1]<B[j+1]条件 此时i大了 调整iMax
+		if (i != 0 && j != n && nums1[i - 1] > nums2[j]) {
+			iMax = i - 1;
+		}
+		// 不满足 A[i+1]>B[j-1] 此时需要增加A[i+1]的值 所以iMin改变
+		else if (i != m && j != 0 && nums1[i] < nums2[j - 1]) {
+			iMin = i + 1;
+		}
+		else {
+			//此时要么为边界情况要么满足条件
+			//i=0时 B[j-1]为左边最大
+			if (i == 0) {
+				leftMax = nums2[j - 1];
+			}
+			//j=0时 A[i-1]为左边最大
+			else if (j == 0) {
+				leftMax = nums1[i - 1];
+			}
+			else {
+				leftMax = max(nums1[i - 1], nums2[j - 1]);
+			}
+			if ((m + n) % 2 == 1) {
+				cout << leftMax << endl;
+				return leftMax;
+			}
+			//i=m时 B[j+1]为右边最小
+			if (i == m) {
+				rightMin = nums2[j];
+			}
+			//j=n时 A[i+1]为右边最小
+			else if (j == n) {
+				rightMin = nums1[i];
+			}
+			else {
+				rightMin = min(nums2[j], nums1[i]);
+			}
+			cout << (leftMax + rightMin) / 2.0 << endl;
+			return (leftMax + rightMin) / 2.0;
+		}
+	}
+
+	////二分查找
+	//int n = (nums1.size()+nums2.size());
+	//int offset1 = 0;
+	//int offset2 = 0;
+	//if (n % 2 == 0){
+	//	double left = find_kthnum(nums1, offset1, nums2, offset2, n / 2);
+	//	double right = find_kthnum(nums1, offset1, nums2, offset2, n / 2 + 1);
+	//	cout << (left + right) / 2.0;
+	//	return (double)(left + right) / 2.0;
+	//}
+	//else {
+	//	cout << find_kthnum(nums1, offset1, nums2, offset2, n / 2);
+	//	return (double)find_kthnum(nums1, offset1, nums2, offset2, n / 2);
+	//}
+	//
 	
 
 	//暴力法

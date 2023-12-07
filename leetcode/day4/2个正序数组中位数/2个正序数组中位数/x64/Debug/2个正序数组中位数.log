@@ -1,6 +1,6 @@
 ﻿  源.cpp
-D:\作业与课件\leetcode\day4\2个正序数组中位数\2个正序数组中位数\源.cpp(36,8): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-D:\作业与课件\leetcode\day4\2个正序数组中位数\2个正序数组中位数\源.cpp(43,33): warning C4244: “return”: 从“double”转换到“int”，可能丢失数据
-D:\作业与课件\leetcode\day4\2个正序数组中位数\2个正序数组中位数\源.cpp(47,29): warning C4244: “return”: 从“double”转换到“int”，可能丢失数据
+D:\作业与课件\leetcode\day4\2个正序数组中位数\2个正序数组中位数\源.cpp(39,8): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\作业与课件\leetcode\day4\2个正序数组中位数\2个正序数组中位数\源.cpp(40,8): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\作业与课件\leetcode\day4\2个正序数组中位数\2个正序数组中位数\源.cpp(90,32): warning C4244: “return”: 从“double”转换到“int”，可能丢失数据
 D:\作业与课件\leetcode\day4\2个正序数组中位数\2个正序数组中位数\源.cpp(27): warning C4715: “find_kthnum”: 不是所有的控件路径都返回值
   2个正序数组中位数.vcxproj -> D:\作业与课件\leetcode\day4\2个正序数组中位数\x64\Debug\2个正序数组中位数.exe

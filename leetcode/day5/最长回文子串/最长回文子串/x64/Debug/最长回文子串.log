@@ -1,0 +1,4 @@
+﻿  源.cpp
+D:\作业与课件\leetcode\day5\最长回文子串\最长回文子串\源.cpp(37,13): warning C4326: “main”的返回类型应为“int”而非“void”
+D:\作业与课件\leetcode\day5\最长回文子串\最长回文子串\源.cpp(38,10): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  最长回文子串.vcxproj -> D:\作业与课件\leetcode\day5\最长回文子串\x64\Debug\最长回文子串.exe
