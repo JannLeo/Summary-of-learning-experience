@@ -1,0 +1,116 @@
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                    11/06/2023  01:08:47  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0, INVOKED BY:
+D:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\main.obj TO .\Objects\2-3 LED流水灯 PRINT (.\Listings\2-3 LED流水灯.m51) RAMSIZE (
+>> 256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\main.obj (MAIN)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (?C?SIDIV)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (?C?UIDIV)
+
+
+LINK MAP OF MODULE:  .\Objects\2-3 LED流水灯 (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0004H     UNIT         _DATA_GROUP_
+            IDATA   000CH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     008BH     UNIT         ?C?LIB_CODE
+            CODE    008EH     004BH     UNIT         ?PR?MAIN?MAIN
+            CODE    00D9H     000DH     UNIT         ?PR?DELAY500MS?MAIN
+            CODE    00E6H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\2-3 LED流水灯 (MAIN)
+
+
+SEGMENT                          DATA_GROUP 
+  +--> CALLED SEGMENT          START    LENGTH
+----------------------------------------------
+?C_C51STARTUP                  -----    -----
+  +--> ?PR?MAIN?MAIN
+
+?PR?MAIN?MAIN                  0008H    0004H
+  +--> ?PR?DELAY500MS?MAIN
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\2-3 LED流水灯 (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:00A0H         PUBLIC        P2
+  C:008EH         PUBLIC        main
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  11/06/2023  01:08:47  PAGE 2
+
+
+  C:00D9H         PUBLIC        Delay500ms
+  -------         PROC          DELAY500MS
+  -------         DO            
+  D:0007H         SYMBOL        i
+  D:0006H         SYMBOL        j
+  D:0005H         SYMBOL        k
+  -------         ENDDO         
+  C:00D9H         LINE#         3
+  C:00D9H         LINE#         4
+  C:00D9H         LINE#         7
+  C:00DBH         LINE#         8
+  C:00DDH         LINE#         9
+  C:00DFH         LINE#         11
+  C:00DFH         LINE#         13
+  C:00DFH         LINE#         14
+  C:00E1H         LINE#         15
+  C:00E3H         LINE#         16
+  C:00E5H         LINE#         17
+  -------         ENDPROC       DELAY500MS
+  -------         PROC          MAIN
+  -------         DO            
+  D:0008H         SYMBOL        A1
+  D:0002H         SYMBOL        A2
+  D:000AH         SYMBOL        A3
+  D:0082H         SYMBOL        i
+  -------         ENDDO         
+  C:008EH         LINE#         19
+  C:008EH         LINE#         20
+  C:0093H         LINE#         21
+  C:0093H         LINE#         22
+  C:0096H         LINE#         23
+  C:009EH         LINE#         24
+  C:00A4H         LINE#         25
+  C:00A8H         LINE#         26
+  C:00C5H         LINE#         27
+  C:00CCH         LINE#         28
+  C:00CFH         LINE#         29
+  C:00D4H         LINE#         30
+  C:00D7H         LINE#         31
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+
+  -------         MODULE        ?C?SIDIV
+  C:0003H         PUBLIC        ?C?SIDIV
+  -------         ENDMOD        ?C?SIDIV
+
+  -------         MODULE        ?C?UIDIV
+  C:0039H         PUBLIC        ?C?UIDIV
+  -------         ENDMOD        ?C?UIDIV
+
+Program Size: data=13.0 xdata=0 code=242
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
