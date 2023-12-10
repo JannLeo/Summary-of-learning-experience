@@ -1,0 +1,23 @@
+//Symbol Name		Page Address
+//----------------	------------
+//	DDR                     2099
+//	DSR                     209A
+//	HUICHE                  2048
+//	KBDR                    209B
+//	KBSR                    209C
+//	LENGTH                  20A3
+//	LOOP0                   2008
+//	LOOP1                   2028
+//	LOOP2                   202A
+//	LOOP3                   201D
+//	NEXT                    2020
+//	NKBSR                   2047
+//	OVER                    2044
+//	SAVER0                  209D
+//	SAVER1                  209E
+//	SAVER2                  209F
+//	SAVER3                  20A0
+//	SAVER4                  20A1
+//	SAVER5                  20A2
+//	SHUZU                   2049
+//	SPACE                   2046

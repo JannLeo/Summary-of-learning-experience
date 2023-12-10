@@ -1,0 +1,19 @@
+//Symbol Name		Page Address
+//----------------	------------
+//	A                       303B
+//	COUNT                   3027
+//	DELAY                   301F
+//	HC                      3025
+//	ICS                     3029
+//	ICS1                    3031
+//	KBDR                    3039
+//	KBSR                    303A
+//	KWORD                   303E
+//	LOOP                    300E
+//	LOOP1                   3016
+//	LOP                     300C
+//	REP                     3021
+//	RR6                     303F
+//	SIX                     303C
+//	SaveR1                  3028
+//	ZDD                     303D
