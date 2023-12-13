@@ -1,0 +1,66 @@
+#include <iostream>
+using namespace std;
+
+class Member {
+protected:
+        int no;
+        string name;
+        int jifen;
+public:
+    Member(int no,string name,int jifen):no(no),name(name),jifen(jifen){};
+    virtual void Print()
+    { cout<<"普通会员"<<no<<"--"<<name<<"--"<<jifen<<endl; }
+    virtual void Add(int pay)
+    { jifen+=pay; }
+    virtual int Exchange(int jcount)
+    { if(jcount>jifen)
+         return -1;
+      int change=jcount/100;
+      jifen = jifen - change*100;
+      return change;
+    }
+};
+
+class VIP:public Member {
+    int add;
+    int exchange;
+public:
+    VIP(int no,string name,int jifen,int a,int e):Member(no,name,jifen),add(a),exchange(e) { }
+    void Print()
+    { cout<<"贵宾会员"<<no<<"--"<<name<<"--"<<jifen<<endl; }
+    void Add(int pay)
+    { jifen+=add*pay; }
+    int Exchange(int jcount) {
+        if(jcount>jifen)
+            return -1;
+        int change=jcount/exchange;
+        jifen = jifen - change*exchange;
+        return change;
+     }
+};
+
+int main() {
+    Member *pm; //创建一个基类对象指针 //....其他变量自行编写
+    int no, jifen, add, exchange,jcount;
+    string name;
+
+    cin>>no>>name>>jifen;
+    pm=new Member(no, name, jifen); //参数对应三个属性：编号、姓名、积分 //使用指针pm执行以下操作：
+    cin>>jcount;
+    pm->Add(jcount);
+    cin>>jcount;
+    pm->Exchange(jcount);
+    pm->Print();
+    delete pm;
+
+    cin>>no>>name>>jifen>>add>>exchange;
+    pm=new VIP(no, name, jifen, add, exchange); //参数对应五个属性：编号、姓名、积分、累加比例、兑换比例
+    cin>>jcount;
+    pm->Add(jcount);
+    cin>>jcount;
+    pm->Exchange(jcount);
+    pm->Print();
+    delete pm;
+
+    return 0;
+}

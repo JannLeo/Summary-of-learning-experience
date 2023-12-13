@@ -1,0 +1,87 @@
+#include <iostream>
+using namespace std;
+
+class HomeElec {
+protected:
+    int no,power;
+public:
+    HomeElec(int n,int p):no(n),power(p) { }
+    void print()
+    { cout<<no<<" "<<power<<endl; }
+};
+
+class ElecFan:virtual public HomeElec {
+protected:
+    int direction,force;
+public:
+    ElecFan(int n,int p,int d,int f):HomeElec(n,p),direction(d),force(f) { }
+    void setd(int d)
+    { direction = d; }
+    void setf(int f)
+    { force = f; }
+};
+
+class Humidifier:virtual public HomeElec {
+protected:
+    float water,maxw;
+public:
+    Humidifier(int n,int p,float w,float m):HomeElec(n,p),water(w),maxw(m) { }
+    int warning() {
+        if(water>=maxw*0.5)
+            return 1;
+        else if(water>=maxw*0.1)
+            return 2;
+        else
+            return 3;
+    }
+};
+
+class Humi_Fan:public ElecFan,public Humidifier {
+    int gear;
+public:
+    Humi_Fan(int n,int p,int d,int f,float w,float m,int g):HomeElec(n,p),ElecFan(n,p,d,f),Humidifier(n,p,w,m),gear(g) { }
+    void setgear(int n) {
+        gear = n;
+        if(gear==1)
+            { setd(0); setf(1); }
+        else if(gear==2)
+            { setd(1); setf(2); }
+        else if(gear==3)
+            { setd(1); setf(3); }
+    }
+    void print() {
+        cout<<"加湿风扇--档位"<<gear<<endl;
+        cout<<"编号"<<no<<"--功率"<<power<<"W"<<endl;
+        if(direction==0)
+            cout<<"定向吹风";
+        else
+            cout<<"旋转吹风";
+        cout<<"--风力"<<force<<"级"<<endl;
+        cout<<"实际水容量"<<water<<"升--";
+        if( warning()==1)
+            cout<<"水量正常"<<endl;
+        else if(warning()==3)
+            cout<<"水量不足"<<endl;
+        else
+            cout<<"水量偏低"<<endl;
+    }
+};
+
+int main() {
+    int t;
+    cin>>t;
+
+    while(t--) {
+      int n,p,d,f,g;
+      float w,m;
+
+      cin>>n>>p>>d>>f>>w>>m>>g;
+      Humi_Fan F(n,p,d,f,w,m,g);
+
+      cin>>g;
+      F.setgear(g);
+      F.print();
+    }
+
+   return 0;
+}

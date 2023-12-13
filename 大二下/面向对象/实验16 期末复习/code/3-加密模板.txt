@@ -1,0 +1,63 @@
+#include <iostream>
+using namespace std;
+
+template <class T>
+T max(T *a, int n) {
+    T cmax = a[0];
+    int i;
+    for(i=1; i<n; i++){
+        if(a[i]>cmax)
+           cmax=a[i];
+    }
+    return cmax;
+}
+
+template <class T>
+class Cryption {
+    T ptxt[100]; //明文
+    T ctxt[100]; //密文
+    T key; //密钥
+    int len; //长度
+public:
+    Cryption(T tk, int tl):key(tk),len(tl) //参数依次对应密钥、明文、长度
+    {
+        for(int i=0; i<len; i++)
+           cin>>ptxt[i];
+    }
+    void Encrypt() //加密
+    {
+       T cmax = max(ptxt,len);
+       for(int i=0; i<len; i++)
+            ctxt[i] = cmax-ptxt[i]+key;
+    }
+    void Print() //打印，无需改造
+    { int i;
+      for (i=0; i<len-1; i++)
+           cout<<ctxt[i]<<" ";
+      cout<<ctxt[i]<<endl;
+     }
+};
+
+int main() {
+    int length; //明文长度
+
+    int ik;
+    cin>>ik>>length;
+    Cryption<int> ic(ik, length);
+    ic.Encrypt();
+    ic.Print(); //浮点数加密
+
+    double dk;
+    cin>>dk>>length;
+    Cryption<double> dc(dk, length);
+    dc.Encrypt();
+    dc.Print(); //字符加密
+
+    char ck;
+    cin>>ck>>length;
+    Cryption<char> cc(ck, length);
+    cc.Encrypt();
+    cc.Print();
+
+    return 0;
+}

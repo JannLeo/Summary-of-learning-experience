@@ -1,0 +1,61 @@
+#include <iostream>
+using namespace std;
+
+class metal {
+private:
+    int hardness,weight,volume;
+public:
+    metal(int h,int w,int v):hardness(h),weight(w),volume(v){ }
+
+    friend metal operator+(const metal &m1,const metal &m2){
+      int h,w,v;
+      h = m1.hardness+m2.hardness ;
+      w = m1.weight+m2.weight;
+      v = m1.volume + m2.volume;
+      return metal(h,w,v);
+    }
+
+    friend metal operator*(const metal &m,const int n){
+      int v;
+      v = m.volume *n;
+      return metal(m.hardness,m.weight,v);
+    }
+
+    metal& operator++(){
+      hardness++;
+      weight = int(weight*1.1);
+      volume = int(volume*1.1);
+      return *this;
+    }
+
+    metal operator--(int){
+      metal temp = *this;
+      hardness--;
+      weight = int(weight*0.9);
+      volume = int(volume*0.9);
+      return temp;
+    }
+
+    void print(){
+      cout<<"硬度"<<hardness<<"--重量"<<weight<<"--体积"<<volume<<endl;
+    }
+};
+
+int main() {
+    int h,w,v,n;
+
+    cin>>h>>w>>v;
+    metal m1(h,w,v);
+    cin>>h>>w>>v;
+    metal m2(h,w,v);
+    cin>>n;
+
+    (m1+m2).print();
+    (m1*n).print();
+    ++m1;
+    m1.print();
+    m2--;
+    m2.print();
+
+    return 0;
+}

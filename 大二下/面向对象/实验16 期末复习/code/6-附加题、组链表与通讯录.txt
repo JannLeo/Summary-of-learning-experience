@@ -1,0 +1,131 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+const int hmax=26;
+
+class Info {
+    string name;//姓名
+    int phoneNo; //电话
+public:
+    Info* next; //指向下一个结点
+    Info():next(NULL){}
+    Info(string name, int phoneNo):name(name),phoneNo(phoneNo),next(NULL){ }
+    void Print(){ cout<<name<<"--"<<phoneNo<<endl; }
+    string getName() { return name; }
+    int getPNo() { return phoneNo; }
+    void setPNo(int tno) { phoneNo = tno; }
+};
+
+class PhoneBook {//组链表方式实现通讯录
+    Info Table[hmax]; //链表头结点数组，对应26个大写字母
+public:
+    Info* operator()(string); //查找某个联系人是否存在，查找成功返回结点，失败返回NULL
+    PhoneBook& operator+=(Info &); //插入新联系人
+    void Input(); //接收外来数据创建通讯录
+    void Print();
+    PhoneBook& operator+(PhoneBook&); //两个通讯录合并到第一个通讯录中
+};
+//初始化时无需考虑数据重复的情况
+void PhoneBook::Input()
+{ int t, i, pno;
+  string tn;
+  cin>>t;
+  while (t--){
+    cin>>tn>>pno;
+    Info * hp = new Info(tn, pno);
+    i = tn[0] - 'A';
+    hp->next = Table[i].next;
+    Table[i].next = hp; //表头插入
+  }
+}
+//输出整个通讯录
+void PhoneBook::Print()
+{ int i;
+  Info *p;
+  for(i=0; i<hmax; i++){
+     if(Table[i].next) //链表非空
+     { cout<<char('A'+i)<<"--";
+       p = Table[i].next;
+       while (p){
+          cout<<p->getName()<<"."<<p->getPNo()<<"--";
+          p = p->next;
+        }
+        cout<<endl;
+      }
+   }
+}
+//----查找功能----
+Info* PhoneBook::operator()(string tn)//姓名查找 //查找成功返回结点，失败返回NULL
+{
+  Info *p;
+  int i = tn[0] - 'A';
+  if (Table[i].next) //链表非空
+    {  p = Table[i].next;
+       while (p){
+          if (p->getName()==tn)
+            return p;
+          p = p->next;
+        }
+      }
+  return NULL;
+}
+//插入新联系人信息，链表头元素不存电话
+PhoneBook& PhoneBook::operator+=(Info &np)
+{ int i, tno;
+  Info *p;
+  string tn = np.getName();
+  p=(*this)(tn); //判断联系人是否已经存在
+  if (p){
+     tno = np.getPNo();
+     if (p->getPNo()!=tno) //新工作电话和原工作电话不相同，覆盖
+        p->setPNo(tno); //新工作电话覆盖
+  }
+  else //新的联系人
+  {  p = new Info(np);
+     i = tn[0] - 'A';
+     p->next = Table[i].next;
+     Table[i].next = p; //表头插入
+   }
+   return *this;
+}
+//两个通讯录合并到第一个通讯录中
+PhoneBook& PhoneBook::operator+(PhoneBook& ob)
+{ int i;
+  Info *p;
+  for (i=0; i<hmax; i++) //把第二个通讯录的每个联系人信息都插入到第一个通讯录中
+  {   p = ob.Table[i].next; //获取第二个通讯录的一个联系人
+      while(p){
+        *this+=*p; //把联系人插入到第一个通讯录
+        p=p->next;
+       }
+   }
+   return *this;
+}
+//----主函数----
+int main() {
+   string tname;
+   int i, tno;
+   Info *p;
+   PhoneBook pb;
+   pb.Input();
+   //两次姓名查找
+   for (i=0; i<2; i++){
+      cin>>tname;
+      p = pb(tname);
+      if (p)
+        p->Print();
+      else
+        cout<<"查找失败"<<endl;
+    }
+    //一次插入
+    cin>>tname>>tno;
+    Info temp(tname, tno);
+    pb+=temp;
+    //通讯录合并
+    PhoneBook pc;
+    pc.Input();
+    pb=pb+pc;
+    pb.Print();
+    return 0;
+}

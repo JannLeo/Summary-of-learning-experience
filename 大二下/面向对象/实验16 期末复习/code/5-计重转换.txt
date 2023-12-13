@@ -1,0 +1,167 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+class CN; //提前声明
+class EN; //提前声明
+
+class Weight { //抽象类
+protected:
+    char kind[20]; //计重类型
+    int gram; //克
+public:
+    Weight (char tk[]="no name"){
+        strcpy(kind, tk);
+    }
+    virtual void Print(ostream& out) = 0; //输出不同类型的计重信息
+    friend ostream& operator<<(ostream &out, Weight &w) {
+       w.Print(out);
+       return out;
+    }
+};
+
+class CN: public Weight { //中国计重
+    int j,l,q;
+public:
+    CN(char* kind):Weight(kind){}
+
+    void Convert(int n){
+      j = n/500;
+      l = (n%500)/50;
+      q = (n%500)%50/5;
+      gram = (n%500)%50%5;
+    }
+
+    void Print(ostream &out){
+      out<<"中国计重:"<<j<<"斤"<<l<<"两"<<q<<"钱"<<gram<<"克"<<endl;
+    }
+};
+
+class EN: public Weight { //英国计重
+    int b,r,d;
+public:
+    EN(char *kind):Weight(kind){ }
+
+    void Convert(int n){
+      b = n/512;
+      r = (n%512)/32;
+      d = (n%512)%32/2;
+      gram = (n%512)%32%2;
+    }
+
+    operator CN(){
+      int temp = b*512+r*32+d*2+gram;
+      CN T("中国计重");
+      T.Convert(temp);
+      return T;
+    }
+
+    void Print(ostream &out) {
+      out<<"英国计重:"<<b<<"磅"<<r<<"盎司"<<d<<"打兰"<<gram<<"克"<<endl;
+    }
+};
+
+
+int main()//主函数
+{ int tw;
+
+  CN cn("中国计重");
+  cin>>tw;
+  cn.Convert(tw); //把输入的克数转成中国计重
+  cout<<cn;
+
+  EN en("英国计重");
+  cin>>tw;
+  en.Convert(tw); //把输入的克数转成英国计重
+  cout<<en;
+
+  cn=en; //把英国计重转成中国计重
+  cout<<cn;
+
+  return 0;
+}
+
+///////////////////////////////
+或者将重载<<写成一个全局函数
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+class CN; //提前声明
+class EN; //提前声明
+
+class Weight { //抽象类
+protected:
+    char kind[20]; //计重类型
+    int gram; //克
+public:
+    Weight (char tk[]="no name"){
+        strcpy(kind, tk);
+    }
+    virtual void Print(ostream& out) = 0; //输出不同类型的计重信息
+};
+
+class CN: public Weight { //中国计重
+    int j,l,q;
+public:
+    CN(char* kind):Weight(kind){}
+
+    void Convert(int n){
+      j = n/500;
+      l = (n%500)/50;
+      q = (n%500)%50/5;
+      gram = (n%500)%50%5;
+    }
+
+    void Print(ostream &out){
+      out<<"中国计重:"<<j<<"斤"<<l<<"两"<<q<<"钱"<<gram<<"克"<<endl;
+    }
+};
+
+class EN: public Weight { //英国计重
+    int b,r,d;
+public:
+    EN(char *kind):Weight(kind){ }
+
+    void Convert(int n){
+      b = n/512;
+      r = (n%512)/32;
+      d = (n%512)%32/2;
+      gram = (n%512)%32%2;
+    }
+
+    operator CN(){
+      int temp = b*512+r*32+d*2+gram;
+      CN T("中国计重");
+      T.Convert(temp);
+      return T;
+    }
+
+    void Print(ostream &out) {
+      out<<"英国计重:"<<b<<"磅"<<r<<"盎司"<<d<<"打兰"<<gram<<"克"<<endl;
+    }
+};
+
+ostream& operator<<(ostream &out, Weight &w) {
+    w.Print(out);
+    return out;
+}
+
+int main()//主函数
+{ int tw;
+
+  CN cn("中国计重");
+  cin>>tw;
+  cn.Convert(tw); //把输入的克数转成中国计重
+  cout<<cn;
+
+  EN en("英国计重");
+  cin>>tw;
+  en.Convert(tw); //把输入的克数转成英国计重
+  cout<<en;
+
+  cn=en; //把英国计重转成中国计重
+  cout<<cn;
+
+  return 0;
+}
