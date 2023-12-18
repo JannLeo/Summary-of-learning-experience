@@ -1,0 +1,4 @@
+﻿  源.cpp
+C:\Users\11440\Desktop\作业与课件\大二下\算法导论\实验五\实验5\基准算法+并查集\基准算法+并查集\源.cpp(6,1): warning C4005: “_CRT_SECURE_NO_WARNINGS”: 宏重定义
+C:\Users\11440\Desktop\作业与课件\大二下\算法导论\实验五\实验5\基准算法+并查集\基准算法+并查集\源.cpp : message : 参见“_CRT_SECURE_NO_WARNINGS”的前一个定义
+  基准算法+并查集.vcxproj -> C:\Users\11440\Desktop\作业与课件\大二下\算法导论\实验五\实验5\基准算法+并查集\Debug\基准算法+并查集.exe

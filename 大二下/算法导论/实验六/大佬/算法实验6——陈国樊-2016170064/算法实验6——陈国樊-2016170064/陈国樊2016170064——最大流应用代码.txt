@@ -1,0 +1,285 @@
+//2021年6月10日，陈国樊，2016170064
+
+#include <iostream>
+#include<windows.h>
+#include<vector>
+#include <queue>
+#include <time.h>
+using namespace std;
+LARGE_INTEGER freq;
+LARGE_INTEGER begintime;
+LARGE_INTEGER endtime;
+LARGE_INTEGER freq1;
+LARGE_INTEGER begintime1;
+LARGE_INTEGER endtime1;
+
+#define max_INF 9999
+struct edge
+{
+    int st, ed, val, reves_num;
+    edge(){}
+    edge(int a1, int b1, int c1, int d1)
+    {   st=a1;
+        ed=b1;
+        val=c1;
+        reves_num=d1;
+    }
+};
+
+int n,e,src,dst,ans_flow_max,day_nums,hol_nums;	
+int EK_max_flow;
+vector<vector<int>> adj;
+int *father = new int[100];
+int *min_flow = new int[100];
+int *level= new int[100];
+int *visit = new int[100];
+int *flow_findpath = new int[100];
+vector<edge> edges;			
+vector<edge> edges_init;		
+
+void set_father() {
+    for (int i = 0; i < n; i++) {
+        father[i] = 0;
+    }
+}
+void set_visit() {
+    for (int i = 0; i < n; i++) {
+        visit[i] = 0;
+    }
+}
+void set_findpath() {
+    for (int i = 0; i < n; i++) {
+        flow_findpath[i] = -1;
+    }
+}
+void set_level() {
+    for (int i = 0; i < n; i++) {
+        level[i]=-1
+    }
+}
+
+bool BFS_EK()
+{
+    set_father();
+    set_visit();
+    set_findpath();
+    queue<int> q;
+    q.push(0);
+    visit[0]=1;
+    while(!q.empty())
+    {
+        int temp=q.front();
+        q.pop();
+        for(int i=0; i<adj[temp].size(); i++)
+        {
+            if (visit[edges[adj[temp][i]].ed]==0&&edges[adj[temp][i]].val>0)
+            {
+                q.push(edges[adj[temp][i]].ed);
+                father[edges[adj[temp][i]].ed]=temp;
+                flow_findpath[edges[adj[temp][i]].ed]=i;
+                visit[edges[adj[temp][i]].ed]=1;
+                if (visit[n-1]==1)
+                {
+                    return 1;
+                }
+            }
+        }
+    }
+    return false;
+}
+void EK() {
+    EK_max_flow = 0;									
+    while (1) {
+        int temp_flow = max_INF;
+        bool flag = BFS_EK();
+        if (flag == 0) {
+            break;
+        }
+        for (int i = n-1; i != 0; i = father[i])
+        {
+                temp_flow = min(temp_flow, edges[adj[father[i]][flow_findpath[i]]].val);
+        }
+        for (int i = n-1; i != 0; i = father[i])
+        {
+            edges[edges[adj[father[i]][flow_findpath[i]]].reves_num].val += temp_flow;		
+            edges[adj[father[i]][flow_findpath[i]]].val -= temp_flow;		
+        }
+        EK_max_flow += temp_flow;
+    }
+    if (EK_max_flow>=(hol_nums*day_nums))
+    cout<<"有解，EK查找最大流:"<<EK_max_flow<<endl;
+    else
+    cout<<"EK查找无解"<<endl;
+}
+
+void graph_update()
+{
+    int x, y=dst, flow=min_flow[dst], i;
+    ans_flow_max += flow;
+    vector<int> path;
+    while(y!=src)
+    {
+        path.push_back(y);
+        x = father[y];
+        for(i=0; i<adj[x].size(); i++) if(edges[adj[x][i]].ed==y) break;
+        edges[adj[x][i]].val -= flow;
+        edges[edges[adj[x][i]].reves_num].val += flow;	// 更新另一半的边
+        y = x;
+    }
+}
+
+bool BFS_level()
+{
+    set_level();
+    level[src] = 0;	
+    queue<int> q; q.push(src);
+    int lv = 0;		
+    while(!q.empty())
+    {
+        lv++;
+        int qs = q.size();
+        for(int sq=0; sq<qs; sq++)
+        {
+            int x=q.front(),y; q.pop();
+            if(x==dst) return true;
+            for(int i=0; i<adj[x].size(); i++)
+            {
+                edge e = edges[adj[x][i]];
+                y = e.ed;
+                if(level[y]!=-1 || e.val==0) continue;
+                level[y] = lv;
+                q.push(y);
+            }
+        }
+    }
+    return false;
+}
+
+int DFS_Dinic(int x, int flow)
+{
+    father[x] = 1;
+    if(x==dst) return flow;
+    for(int i=0; i<adj[x].size(); i++)
+    {
+        edge e = edges[adj[x][i]];
+        int y = e.ed;
+        if(e.val==0 || level[y]!=level[x]+1 || father[y]==1) continue;
+        int res = DFS_Dinic(y, min(flow, e.val));
+        edges[adj[x][i]].val-=res, edges[edges[adj[x][i]].reves_num].val+=res;
+        if(res!=0) return res;	
+    }
+    return 0;	
+}
+
+void Dinic()
+{
+    ans_flow_max = 0;
+    while(BFS_level())
+    {
+        while(1)
+        {
+            for(int i=0; i<n; i++) father[i]=0;
+            int res = DFS_Dinic(src, max_INF);
+            if(res==0) break;	
+            ans_flow_max += res;
+        }
+    }
+    if (ans_flow_max>=(day_nums*hol_nums))
+    cout<<"有解，Dinic查找最大流:"<<ans_flow_max<<endl;
+    else
+        cout<<"Dinic查找无解"<<endl;
+}
+
+void Add_edges(int st, int ed, int val)
+{
+    int ii=edges_init.size();
+    edges_init.push_back(edge(st, ed, val, ii+1));
+    edges_init.push_back(edge(ed, st, 0, ii));
+    adj[st].push_back(ii);
+    adj[ed].push_back(ii+1);
+}
+
+void Init_Graph(int doc_num, int hol_num, int day_num, int c)
+{
+    int st, ed;
+    int times=-1;
+    n = 1 + doc_num + doc_num*hol_num + hol_num*day_num + 1; //1+30+30*30+30*30+1=1832个节点数
+    cout<<"流网络图存在节点总个数："<<n<<endl;
+    adj.resize(n);
+    father = new int[n];
+    min_flow = new int[n];
+    level = new int[n];
+    edges_init.clear(); 
+    edges.clear();
+    src=0, dst=n-1;
+    for(int i=1; i<doc_num+1; i++) 
+    {
+        st=src;
+        ed=i;
+        Add_edges(st, ed, c);
+    }
+    for(int i=0; i<doc_num; i++)
+    {
+        for(int j=0; j<hol_num; j++)
+        {
+            st=i+1;   //st=1
+            ed=1+doc_num +doc_num*j+i;
+            Add_edges(st, ed, 1);
+        }
+    }
+    for(int i=0; i<hol_num*doc_num; i++)
+    {
+        if(i%doc_num==0)
+            times++;
+        for(int j=0; j<day_num; j++)
+        {
+            st=i+1+doc_num;  //st=3
+            ed=1+doc_num +doc_num*hol_num+j+day_num*times;
+            Add_edges(st, ed, 1);
+        }
+    }
+    for(int i=0; i<hol_num*day_num; i++)
+    {
+        st=1+doc_num+doc_num*hol_num+i;
+        ed=dst;
+        Add_edges(st, ed, 1);
+    }
+    e = edges_init.size();  
+    edges.resize(e);       
+}
+void recover_graph()
+{
+    for(int i=0; i<e; i++) 
+        edges[i]=edges_init[i];
+}
+int main()
+{
+
+        int doc_count,hol_count,day_count,doc_maxday;
+        cout<<"请输出流网络图规模：-- "<<"医生数量"<<"-- "<<"假期数量"<<"-- "<<"单个假期的假日数量"<<"-- "<<"单个医生最大值班天数"<<endl;
+        cin>>doc_count>>hol_count>>day_count>>doc_maxday;
+        day_nums=day_count;
+        hol_nums=hol_count;
+        Init_Graph(doc_count,hol_count,day_count,doc_maxday);
+        recover_graph();
+
+        for(int i=0; i<edges.size(); i++)
+        cout<<edges[i].st<<" -> "<<edges[i].ed<<" val="<<edges[i].val<<endl;
+        cout<<endl;
+
+        QueryPerformanceFrequency(&freq);
+        QueryPerformanceCounter(&begintime);
+        EK();
+        QueryPerformanceCounter(&endtime);
+        cout << "EK运行时间为： " <<  (double)(endtime.QuadPart - begintime.QuadPart) * 1000 / freq.QuadPart << "  ms " << endl << endl;
+
+        recover_graph();
+        QueryPerformanceFrequency(&freq1);
+        QueryPerformanceCounter(&begintime1);
+        Dinic();//
+        QueryPerformanceCounter(&endtime1);
+        cout << "Dinic运行时间为： " <<  (double)(endtime1.QuadPart - begintime1.QuadPart) * 1000 / freq1.QuadPart << "  ms " << endl << endl;
+
+    return 0;
+}
+

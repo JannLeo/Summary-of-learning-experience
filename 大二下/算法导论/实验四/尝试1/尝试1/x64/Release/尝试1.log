@@ -1,0 +1,7 @@
+﻿  源.cpp
+C:\Users\11440\Desktop\作业与课件\大二下\算法导论\实验四\尝试1\尝试1\源.cpp(95,32): warning C4244: “初始化”: 从“double”转换到“size_t”，可能丢失数据
+  正在生成代码
+  Previous IPDB not found, fall back to full compilation.
+  已完成代码的生成
+  All 25 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  尝试1.vcxproj -> C:\Users\11440\Desktop\作业与课件\大二下\算法导论\实验四\尝试1\x64\Release\尝试1.exe
