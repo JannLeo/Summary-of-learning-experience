@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b076822d-e9e7-4fb3-bbf7-d63969a9fb13" name="默认变更列表" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../c++/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/.idea/c++.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/arithmetic/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/arithmetic/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/arithmetic/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/arithmetic/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/arithmetic/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/arithmetic/.idea/算法.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/first class/.idea/first class.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/first class/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/first class/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/first class/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/test1/.idea/test1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/testyouyuan/.idea/testyouyuan.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/testyouyuan/test2.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/testyouyuan/test2.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/untitled/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/untitled/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/untitled/.idea/untitled.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/untitled/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/untitled1/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/untitled1/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/untitled1/.idea/untitled1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/untitled1/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/untitled1/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/untitled1/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/untitled1/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/untitled1/cmake-build-debug/CMakeFiles/3.19.2/CMakeCCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/untitled1/cmake-build-debug/CMakeFiles/3.19.2/CMakeCXXCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/untitled1/cmake-build-debug/CMakeFiles/3.19.2/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/untitled1/cmake-build-debug/CMakeFiles/3.19.2/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/untitled1/cmake-build-debug/CMakeFiles/3.19.2/CMakeRCCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/untitled1/cmake-build-debug/CMakeFiles/3.19.2/CMakeSystem.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/untitled1/cmake-build-debug/CMakeFiles/3.19.2/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/untitled1/cmake-build-debug/CMakeFiles/3.19.2/CompilerIdC/a.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/untitled1/cmake-build-debug/CMakeFiles/3.19.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/untitled1/cmake-build-debug/CMakeFiles/3.19.2/CompilerIdCXX/a.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/untitled1/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/untitled1/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/untitled1/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/untitled1/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/untitled1/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/untitled1/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/untitled1/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/untitled1/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/untitled1/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/DependInfo.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/build.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/cmake_clean.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/depend.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/flags.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/link.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/linklibs.rsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/objects1.rsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/progress.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/untitled1/cmake-build-debug/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/untitled1/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/untitled1/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/untitled1/cmake-build-debug/untitled1.cbp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/untitled1/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/代码/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/代码/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/代码/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/代码/.idea/代码.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/代码/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/代码/课堂.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/代码/课堂.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/第一课/.idea/第一课.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/第一课/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/第一课/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../HW6/src/test1/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson-2.3.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/DefaultDateTypeAdapter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/ExclusionStrategy.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/FieldAttributes.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/FieldNamingPolicy.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/FieldNamingStrategy.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/Gson.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/GsonBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/InstanceCreator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/JsonArray.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/JsonDeserializationContext.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/JsonDeserializer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/JsonElement.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/JsonIOException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/JsonNull.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/JsonObject.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/JsonParseException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/JsonParser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/JsonPrimitive.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/JsonSerializationContext.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/JsonSerializer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/JsonStreamParser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/JsonSyntaxException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/LongSerializationPolicy.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/TreeTypeAdapter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/TypeAdapter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/TypeAdapterFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/annotations/Expose.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/annotations/JsonAdapter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/annotations/SerializedName.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/annotations/Since.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/annotations/Until.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/internal/$Gson$Preconditions.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/internal/$Gson$Types.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/internal/ConstructorConstructor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/internal/Excluder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/internal/JsonReaderInternalAccess.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/internal/LazilyParsedNumber.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/internal/LinkedHashTreeMap.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/internal/LinkedTreeMap.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/internal/ObjectConstructor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/internal/Primitives.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/internal/Streams.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/internal/UnsafeAllocator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/internal/bind/ArrayTypeAdapter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/internal/bind/CollectionTypeAdapterFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/internal/bind/DateTypeAdapter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/internal/bind/JsonTreeReader.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/internal/bind/JsonTreeWriter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/internal/bind/MapTypeAdapterFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/internal/bind/ObjectTypeAdapter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/internal/bind/ReflectiveTypeAdapterFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/internal/bind/SqlDateTypeAdapter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/internal/bind/TimeTypeAdapter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/internal/bind/TypeAdapterRuntimeTypeWrapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/internal/bind/TypeAdapters.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/reflect/TypeToken.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/stream/JsonReader.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/stream/JsonScope.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/stream/JsonToken.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/stream/JsonWriter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/lib/gson/stream/MalformedJsonException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/src/util/FileUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../UrlDown105" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../UrlDown194" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../UrlDown291" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../UrlDown387" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../UrlDown391" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../UrlDown736" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../UrlDown980" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../csdnip/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../csdnip/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../csdnip/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../csdnip/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../csdnip/src/csdnip/csdntemp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../csdnip/src/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../myProject/myProject.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/com/company/csdn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/com/company/szuurl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/test3_3_1/tcpclient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/test3_3_1/tcpserver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/test3_3_2/Tcpclient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/test3_3_2/Tcpserver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/test3_3_3/Tcpclient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/test3_3_3/Tcpserver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../szuurl/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../szuurl/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../szuurl/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../szuurl/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../szuurl/UrlDown158" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../szuurl/UrlDown582" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../szuurl/UrlDown622" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../szuurl/src/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../szuurl/src/szuurl/szuurll.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../test/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../test/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../test/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../test/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../test/src/drqew.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../test/src/test111/testt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../test/test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../实验五/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../实验五/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../实验五/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../实验五/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../实验五/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../实验五/experienment5.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../实验五/src/packege2/demo2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../实验四/src/test4/demo1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../实验四/src/test4/demo2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../实验四/src/test4/demo3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../实验四/src/test4/demo4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../实验四/src/test4/demo5.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../实验四/实验四.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../水电/水电.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../第三次作业/第三次作业.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../第二次作业/第二次作业.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../untitled/src/test/demo1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../计算机安全导论/RSA加密解密/src/test/RSA.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="21o90c4pveqeSaVTfU2uSUax58x" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../java" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="应用程序.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="b076822d-e9e7-4fb3-bbf7-d63969a9fb13" name="默认变更列表" comment="" />
+      <created>1638596352620</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1638596352620</updated>
+      <workItem from="1638596358815" duration="12453000" />
+      <workItem from="1638845386743" duration="932000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>

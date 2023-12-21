@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component jdk="1.8" jdk_type="JavaSDK">
+	<contentEntry url="file://$MODULE_DIR$"/>
+	<lib name="gson-2.3.1.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/its_java_demo/webapi_its_demo/lib/gson-2.3.1.jar!/"/>
+	</lib>
+</component>
