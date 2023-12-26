@@ -1,0 +1,4 @@
+进入文件
+source venv/bin/activate
+导入csv
+copy pg_table(表字段1,表字段2,表字段3,...,表字段n) from '/home/*/needtoinputfile.csv' delimiter ',' csv header;

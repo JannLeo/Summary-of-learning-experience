@@ -1,0 +1,553 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>深圳大学数据库实验一Database Command and SQL</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-require-zoom-fix foreignobject { font-size: var(--mermaid-font-zoom); }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+ :root {--mermaid-font-zoom:1.5em ;} 
+</style>
+</head>
+<body class='typora-export os-windows'>
+<div id='write'  class=''><p>&nbsp;</p><p><strong><span>一、实验目的：</span></strong></p><ol start='' ><li><p><span>了解DBMS系统的功能、软件组成；</span></p><p><span>2、掌握利用SQL语句定义、操纵数据库的方法。</span></p></li></ol><p><strong><span>二、实验要求：</span></strong></p><p><span>1、在课外安装相关软件并浏览软件自带的帮助文件和功能菜单，了解DBMS的功能、结构；</span><br/><span> 2、创建一个有两个关系表的数据库；</span></p><p><span>3、数据库、关系表定义；</span></p><p><span>4、学习定义关系表的约束(主键、外键、自定义)；</span></p><p><span>5、了解SQL的数据定义功能；</span></p><p><span>6、了解SQL的操纵功能；</span></p><p><span>7、 掌握典型的SQL语句的功能；</span></p><p><span>8、 了解视图的概念；</span></p><p><strong><span>三、实验设备：</span></strong></p><p><span>计算机、数据库管理系统如SQL SERVER, DB2，Oracle 等软件。</span></p><p><strong><span>四、实验内容</span></strong></p><p><strong><span>EMP:</span></strong></p><figure><table><thead><tr><th><strong><span>EMPNO</span></strong></th><th><strong><span>ENAME</span></strong></th><th><strong><span>JOB</span></strong></th><th><strong><span>MGR（经理）</span></strong></th><th><strong><span>HIREDATE</span></strong></th><th><strong><span>SAL</span></strong></th><th><strong><span>COMM</span></strong></th><th><strong><span>DEPTNO</span></strong></th></tr></thead><tbody><tr><td><strong><span>7369</span></strong></td><td><strong><span>SMITH</span></strong></td><td><strong><span>CLERK</span></strong></td><td><strong><span>7902</span></strong></td><td><strong><span>17-Dec-90</span></strong></td><td><strong><span>13750</span></strong></td><td>&nbsp;</td><td><strong><span>20</span></strong></td></tr><tr><td><strong><span>7499</span></strong></td><td><strong><span>ALLEN</span></strong></td><td><strong><span>SALESMAN</span></strong></td><td><strong><span>7698</span></strong></td><td><strong><span>20-FEB-89</span></strong></td><td><strong><span>19000</span></strong></td><td><strong><span>6400</span></strong></td><td><strong><span>30</span></strong></td></tr><tr><td><strong><span>7521</span></strong></td><td><strong><span>WARD</span></strong></td><td><strong><span>SALESMAN</span></strong></td><td><strong><span>7698</span></strong></td><td><strong><span>22-FEB-93</span></strong></td><td><strong><span>18500</span></strong></td><td><strong><span>4250</span></strong></td><td><strong><span>30</span></strong></td></tr><tr><td><strong><span>7566</span></strong></td><td><strong><span>JONES</span></strong></td><td><strong><span>MANAGER</span></strong></td><td><strong><span>7839</span></strong></td><td><strong><span>02-APR-89</span></strong></td><td><strong><span>26850</span></strong></td><td>&nbsp;</td><td><strong><span>20</span></strong></td></tr><tr><td><strong><span>7654</span></strong></td><td><strong><span>MARTIN</span></strong></td><td><strong><span>SALESMAN</span></strong></td><td><strong><span>7698</span></strong></td><td><strong><span>28-SEP-97</span></strong></td><td><strong><span>15675</span></strong></td><td><strong><span>3500</span></strong></td><td><strong><span>30</span></strong></td></tr><tr><td><strong><span>7698</span></strong></td><td><strong><span>BLAKE</span></strong></td><td><strong><span>MANAGER</span></strong></td><td><strong><span>7839</span></strong></td><td><strong><span>01-MAY-90</span></strong></td><td><strong><span>24000</span></strong></td><td>&nbsp;</td><td><strong><span>30</span></strong></td></tr><tr><td><strong><span>7782</span></strong></td><td><strong><span>CLARK</span></strong></td><td><strong><span>MANAGER</span></strong></td><td><strong><span>7839</span></strong></td><td><strong><span>09-JUN-88</span></strong></td><td><strong><span>27500</span></strong></td><td>&nbsp;</td><td><strong><span>10</span></strong></td></tr><tr><td><strong><span>7788</span></strong></td><td><strong><span>SCOTT</span></strong></td><td><strong><span>ANALYST</span></strong></td><td><strong><span>7566</span></strong></td><td><strong><span>19-APR-87</span></strong></td><td><strong><span>19500</span></strong></td><td>&nbsp;</td><td><strong><span>20</span></strong></td></tr><tr><td><strong><span>7839</span></strong></td><td><strong><span>KING</span></strong></td><td><strong><span>PRESIDENT</span></strong></td><td>&nbsp;</td><td><strong><span>17-NOV-83</span></strong></td><td><strong><span>82500</span></strong></td><td>&nbsp;</td><td><strong><span>10</span></strong></td></tr><tr><td><strong><span>7844</span></strong></td><td><strong><span>TURNER</span></strong></td><td><strong><span>SALESMAN</span></strong></td><td><strong><span>7698</span></strong></td><td><strong><span>08-SEP-92</span></strong></td><td><strong><span>18500</span></strong></td><td><strong><span>6250</span></strong></td><td><strong><span>30</span></strong></td></tr><tr><td><strong><span>7876</span></strong></td><td><strong><span>ADAMS</span></strong></td><td><strong><span>CLERK</span></strong></td><td><strong><span>7788</span></strong></td><td><strong><span>23-MAY-96</span></strong></td><td><strong><span>11900</span></strong></td><td>&nbsp;</td><td><strong><span>20</span></strong></td></tr><tr><td><strong><span>7900</span></strong></td><td><strong><span>JAMES</span></strong></td><td><strong><span>CLERK</span></strong></td><td><strong><span>7698</span></strong></td><td><strong><span>03-DEC-95</span></strong></td><td><strong><span>12500</span></strong></td><td>&nbsp;</td><td><strong><span>30</span></strong></td></tr><tr><td><strong><span>7902</span></strong></td><td><strong><span>FORD</span></strong></td><td><strong><span>ANALYST</span></strong></td><td><strong><span>7566</span></strong></td><td><strong><span>03-DEC-91</span></strong></td><td><strong><span>21500</span></strong></td><td>&nbsp;</td><td><strong><span>20</span></strong></td></tr><tr><td><strong><span>7934</span></strong></td><td><strong><span>MILLER</span></strong></td><td><strong><span>CLERK</span></strong></td><td><strong><span>7782</span></strong></td><td><strong><span>23-JAN-95</span></strong></td><td><strong><span>13250</span></strong></td><td>&nbsp;</td><td><strong><span>10</span></strong></td></tr><tr><td><strong><span>3258</span></strong></td><td><strong><span>GREEN</span></strong></td><td><strong><span>SALESMAN</span></strong></td><td><strong><span>4422</span></strong></td><td><strong><span>24-Jul-95</span></strong></td><td><strong><span>18500</span></strong></td><td><strong><span>2750</span></strong></td><td><strong><span>50</span></strong></td></tr><tr><td><strong><span>4422</span></strong></td><td><strong><span>STEVENS</span></strong></td><td><strong><span>MANAGER</span></strong></td><td><strong><span>7839</span></strong></td><td><strong><span>14-Jan-94</span></strong></td><td><strong><span>24750</span></strong></td><td>&nbsp;</td><td><strong><span>50</span></strong></td></tr><tr><td><strong><span>6548</span></strong></td><td><strong><span>BARNES</span></strong></td><td><strong><span>CLERK</span></strong></td><td><strong><span>4422</span></strong></td><td><strong><span>16-Jan-95</span></strong></td><td><strong><span>11950</span></strong></td><td>&nbsp;</td><td><strong><span>50</span></strong></td></tr></tbody></table></figure><p><strong><span>DEPT:</span></strong></p><figure><table><thead><tr><th><strong><span>DEPTNO</span></strong></th><th><strong><span>DNAME</span></strong></th><th><strong><span>LOC</span></strong></th></tr></thead><tbody><tr><td><strong><span>10</span></strong></td><td><strong><span>ACCOUNTING</span></strong></td><td><strong><span>LONDON</span></strong></td></tr><tr><td><strong><span>20</span></strong></td><td><strong><span>RESEARCH</span></strong></td><td><strong><span>PRESTON</span></strong></td></tr><tr><td><strong><span>30</span></strong></td><td><strong><span>SALES</span></strong></td><td><strong><span>LIVERPOOL</span></strong></td></tr><tr><td><strong><span>40</span></strong></td><td><strong><span>OPERATIONS</span></strong></td><td><strong><span>STAFFORD</span></strong></td></tr><tr><td><strong><span>50</span></strong></td><td><strong><span>MARKETING</span></strong></td><td><strong><span>LUTON</span></strong></td></tr></tbody></table></figure><p><span>按照实验指导讲义完成老师要求的练习题目，必须写出sql语句以及运行结果。（示例如Exercise2 q4,后面按照这个格式完成练习。）</span></p><p><strong><span>一、CentOS7安装</span></strong></p><p><span>1、下载好centos7的iso文件后，在vmware点击新建虚拟机（图1-1），点击自定义配置，点击下一步。</span></p><p><img src="media/88b08401e54b9ba55f9dde999c8d49c1.png" referrerpolicy="no-referrer"></p><p><span>图1-1</span></p><ol start='' ><li><span>继续点击下一步（图1-2），然后选择安装程序光盘镜像文件（图1-3），点击下一步。</span></li></ol><p><img src="media/7ff8f4d49da5315601fae705dfaab715.png" referrerpolicy="no-referrer"></p><p><span>图1-2</span></p><p><img src="media/fef008468ef6d29edcf51baecd9eb1b2.png" referrerpolicy="no-referrer"></p><p><span>图1-3</span></p><p><span>3、定义好虚拟机名称与路径后（图1-4），点击下一步。</span></p><p><img src="media/477a1fbd2ddf40a2f559195ab639714e.png" referrerpolicy="no-referrer"></p><p><span>图1-4</span></p><p><span>4、定义处理器数量与内核数量，尽量往内核总数8设置（图1-5）。</span></p><p><img src="media/22ff9499fac580892da9f9cd0e407151.png" referrerpolicy="no-referrer"></p><p><span>图1-5</span></p><p><span>5、定义虚拟机内存，选择最大内存（图1-6）。</span></p><p><img src="media/bdca9012fe632be14ce335e989cfaa51.png" referrerpolicy="no-referrer"></p><p><span>图1-6</span></p><p><span>6、选择虚拟机网络类型为桥接网络（图1-7），点击下一步。</span></p><p><img src="media/5513bd9c1ae7d3dd448cdb7c73b46863.png" referrerpolicy="no-referrer"></p><p><span>图1-7</span></p><p><span>7、接下来三个选择默认，下一步（图1-8、图1-9、图1-10）。</span></p><p><img src="media/d06136bfc51a348e7c71e23655a3352d.png" referrerpolicy="no-referrer"></p><p><span>图1-8</span></p><p><img src="media/3aca00ba84c41820a29aa6dc19284208.png" referrerpolicy="no-referrer"></p><p><span>图1-9</span></p><p><img src="media/a71e62a9ccc6eb37d8fd5f558bf5a56a.png" referrerpolicy="no-referrer"></p><p><span>图1-10</span></p><p><span>8、设置磁盘容量为80G，点击下一步（图1-11），默认再点击下一步（图1-12），点击完成即可（图1-13）。</span></p><p><img src="media/77f7613d287b55008581f1023304dbba.png" referrerpolicy="no-referrer"></p><p><span>图1-11</span></p><p><img src="media/ad7481789c030234b7befa6cb2200c5d.png" referrerpolicy="no-referrer"></p><p><span>图1-12</span></p><p><img src="media/b9c92ed162aa9385f1a3f4b68d582ee2.png" referrerpolicy="no-referrer"></p><p><span>图1-13</span></p><p><span>9、为了让虚拟机启动更快，删除掉原本不需要使用的硬件，编辑虚拟机设置--删-USB控制器、声卡、打印机（图1-14）。</span></p><p><img src="media/baec143dcf8bd3296c806ab92afb9eea.png" referrerpolicy="no-referrer"></p><p><span>图1-14</span></p><p><span>10、点击开启虚拟机后，按两次回车，开始安装（图1-15），等待即可。</span></p><p><img src="media/31cbf81df1caadbe1ada13199eac5e76.png" referrerpolicy="no-referrer"></p><p><span>图1-15</span></p><p><span>11、选择中文-</span><span>&gt;</span><span>简体中文，点击continue（图1-16）（这里是后来改的，因为中文更方便点，下面步骤都是英文的，本人已经重装好几回了QAQ）。</span></p><p><img src="media/ef0056b83fdf634513d5d983b93a2b41.png" referrerpolicy="no-referrer"></p><p><span>图1-16</span></p><p><span>12、选择installation destination，因为不选就不能进行下一步（图1-17），而且我们直接采用默认安装方式，即没有图形化界面的centos7。</span></p><p><img src="media/cbf6d7df86536b9d351ea1e1bfc7f447.png" referrerpolicy="no-referrer"></p><p><span>图1-17</span></p><p><span>13、选择自己创建的磁盘，然后选择I will configure partitioning，最后点击Done（图1-18）。</span></p><p><img src="media/7d9e698f2554b3ce7fb86dd8285c10ef.png" referrerpolicy="no-referrer"></p><p><span>图1-18</span></p><p><span>14、点击左下角的＋号，在mount point中分别选择/boot、/、swap，拟按一下配置配置虚拟机（图1-19、图1-20）：</span></p><p><span>/boot：1024M，标准分区格式创建。</span></p><p><span>swap：4096M，标准分区格式创建。</span></p><p><span>/：剩余所有空间，采用lvm卷组格式创建。</span></p><p><img src="media/a2d0ae79f6bf21a92b9d3c395d75eeea.png" referrerpolicy="no-referrer"></p><p><span>图1-19</span></p><p><img src="media/94aa2a57d6a9e4db152d45747eb71f73.png" referrerpolicy="no-referrer"></p><p><span>图1-20</span></p><p><span>15、点击accept changes（图1-21）。</span></p><p><img src="media/69e157592c0b44ba11a0ced15185f0e7.png" referrerpolicy="no-referrer"></p><p><span>图1-21</span></p><p><span>16、点击host name选项，设置主机名（图1-22、图1-23）。</span></p><p><img src="media/56d25e89d780171aba982a7a1c4146af.png" referrerpolicy="no-referrer"></p><p><span>图1-22</span></p><p><img src="media/050694709e50831e02ecee289ba21cd7.png" referrerpolicy="no-referrer"></p><p><span>图1-23</span></p><p><span>17、最后点击begin installation即可开始安装（图1-24），在安装时可以设置root密码（图1-25）。</span></p><p><img src="media/40764fda983bbf29b27e40e8aeabbf6d.png" referrerpolicy="no-referrer"></p><p><span>图1-24</span></p><p><img src="media/b974d9693469e1dfd310f6601a4402da.png" referrerpolicy="no-referrer"></p><p><span>图1-25</span></p><p><span>18、完成后，重启虚拟机，输入账号root 与密码，最后成功安装centos7（图1-26）！</span></p><p><img src="media/c87dfe133940e94ab5424950e4ef4df7.png" referrerpolicy="no-referrer"></p><p><span>图1-26</span></p><p><strong><span>二、CentOS7内PostgreSQL安装</span></strong></p><p><span>1、在安装完本地npm后，在postgre官网运行脚本即可安装postgresql（图2-1、图2-2）。</span></p><p><img src="media/f10360ff7e6c9a3ce4977a56d2762379.png" referrerpolicy="no-referrer"></p><p><span>图2-1</span></p><p><img src="media/16a4107f4a85f7eaf50181de0788b5c9.png" referrerpolicy="no-referrer"></p><p><span>图2-2</span></p><p><span>2、安装完成后，输入su – postgres即可进入bash界面，然后通过使用psql语句登录postgres的用户，即可进入数据库（图2-3）。</span></p><p><img src="media/3fc8a98ed0729312a4e4edcfa312cb78.png" referrerpolicy="no-referrer"></p><p><span>图2-3</span></p><p><span>3、vi /var/lib/pgsql/13/data/postgresql.conf ,然后修改如下（图2-4），并在/var/lib/pgsql/13/data/pg_hba.conf 下修改添加信任，后重启服务并关闭防火墙（图2-5）。设置环境变量（图2-6）。</span></p><p><img src="media/2ad563a572a9190a9fe9bf7be2158339.png" referrerpolicy="no-referrer"></p><p><span>图2-4</span></p><p><img src="media/8e9e5753714f22adc8595c2804711c8a.png" referrerpolicy="no-referrer"></p><p><span>图2-5</span></p><p><img src="media/7dccfeec82424302016b93d0429bae6e.png" referrerpolicy="no-referrer"></p><p><span>图2-6</span></p><p><span>4、利用netstat –tunlp发现5432端口已启用，且为postmaster（图2-7）。</span></p><p><img src="media/963ccda1c0d6dc9ae25cd2cdd891b791.png" referrerpolicy="no-referrer"></p><p><span>图2-7</span></p><p><span>5、进入postgres，创建用户jannleo，并创建数据库，设置密码（图2-8）。</span></p><p><img src="media/89c6116b5b73df36f3618658be70da4a.png" referrerpolicy="no-referrer"></p><p><span>图2-8</span></p><p><span>6、通过bash输入psql –U jannleo –d myfirstdb –h 127.0.0.1 –p 5432 即可进入数据库（图2-9）。</span></p><p><img src="media/f5746d12d2d59a815d9aa360389e31d4.png" referrerpolicy="no-referrer"></p><p><span>图2-9</span></p><p><strong><span>三、数据导入</span></strong></p><p><span>1、建立表Department，以此来存放部门（图3-1）。</span></p><p><img src="media/6aed7346ae31f132575e9999e0c5f1f6.png" referrerpolicy="no-referrer"></p><p><span>图3-1</span></p><p><span>2、插入数据如下（图3-2），依次插入即可，但是略显麻烦，如图3-3，显示插入成功！图3-4为插入完成后Department表的表项。</span></p><p><img src="media/fb9b58e38c36c745037944872e8e52fa.png" referrerpolicy="no-referrer"></p><p><span>图3-2</span></p><p><img src="media/4dd46ac06591d7916b1e6925a42eac7e.png" referrerpolicy="no-referrer"></p><p><span>图3-3</span></p><p><img src="media/f8c7b747cf4a39dc78ce73609a0c07d8.png" referrerpolicy="no-referrer"></p><p><span>图3-4</span></p><p><span>3、创建Employment表（图3-5），并导入数据（图3-6）。</span></p><p><img src="media/70cc627812960926eeeb68716a74d8d3.png" referrerpolicy="no-referrer"></p><p><span>图3-5</span></p><p><img src="media/dc8a15a28656a6985e0483659cb60e07.png" referrerpolicy="no-referrer"></p><p><span>图3-6</span></p><p><span>4、修改表名Employment为Employment2017303010（图3-7），修改表名Department为Department2017303010（图3-8）。</span></p><p><img src="media/250998b7449ee55df217e436f2aa7d92.png" referrerpolicy="no-referrer"></p><p><span>图3-7</span></p><p><img src="media/fec568d2a1ed2eeb06f03f59b6fbd2cc.png" referrerpolicy="no-referrer"></p><p><span>图3-8</span></p><p><span>5、确认Department2017303010表主键为DEPTNO，确认Employment2017303010表主键为EMPNO，外键为DEPTNO与Department2017303010(DEPTNO)链接，由于我在建表的时候就已经设置了主键，故在此只用设置外键。</span></p><ul><li><span>外键：如果公共关键字在一个关系中是主关键字，那么这个公共关键字被称为另一个关系的外键。由此可见，外键表示了两个关系之间的相关联系。以另一个关系的外键作主关键字的表被称为主表，具有此外键的表被称为主表的从表。外键又称作外关键字。</span></li><li><span>主键：是被挑选出来，作表的行的惟一标识的候选关键字。一个表只有一个主关键字。主关键字又可以称为主键。 主键可以由一个字段，也可以由多个字段组成，分别成为单字段主键或多字段主键。</span></li></ul><p><img src="media/c727798043eddec3e8373456e6b26562.png" referrerpolicy="no-referrer"></p><p><span>图3-9</span></p><p><span>6、为表添加约束（图3-10），经过分析得知，EMP表中的EMPNO为主键，不用约束，ENAME为唯一约束，JOB、HIREDATE、SAL、DEPTNO为非空约束。</span></p><p><img src="media/cf43a470d68143c9e6dddd4063005839.png" referrerpolicy="no-referrer"></p><p><img src="media/c9849fe6691c7541a3c7f7c137d3d235.png" referrerpolicy="no-referrer"></p><p><span>图3-10</span></p><p><strong><span>四、做题</span></strong></p><p><span>1、List all information about the employees.</span></p><p><span>语句：</span></p><p><span>Select </span><span>*</span><span> from Employment2017303010;</span></p><p><span>返回：（图4-1）</span></p><p><img src="media/31b1d2ac671a5de75816635ef1d76c47.png" referrerpolicy="no-referrer"></p><p><span>图4-1</span></p><p><span>2、List only the following information from the EMP table ( Employee name, employee number, salary, department number)</span></p><p><span>语句：</span></p><p><span>Select ENAME,EMPNO,SAL,DEPTNO from Employment2017303010;</span></p><p><span>结果：（图4-2）</span></p><p><img src="media/d1a320e206afdd8c1ca3354a9b02d770.png" referrerpolicy="no-referrer"></p><p><span>图4-2</span></p><p><span>3、List all the jobs in the EMP table eliminating duplicates.</span></p><p><span>语句：</span></p><p><span>select distinct JOB from Employment2017303010;</span></p><p><span>结果：（图4-3）</span></p><p><img src="media/4c2f73731dc1d9007bca8325e57cc528.png" referrerpolicy="no-referrer"></p><p><span>图4-3</span></p><p><span>4、What is the name, job title and employee number of the person in department 20 who earns more than £25000?</span></p><p><span>语句：</span></p><p><span>select ENAME,JOB,EMPNO from Employment2017303010 where SAL </span><span>&gt;</span><span>= 25000 and DEPTNO = 20 order by SAL desc;</span></p><p><span>结果：（图4-4）</span></p><p><img src="media/8d34d4c6a4f280aa2dd2459ed13a1e91.png" referrerpolicy="no-referrer"></p><p><span>图4-4</span></p><p><span>5、Find any Clerk who is not in department 10.</span></p><p><span>语句：</span></p><p><span>select </span><span>*</span><span> from Employment2017303010 where JOB = ‘CLERK’ and DEPTNO </span><span>&lt;</span><span>&gt;</span><span> 10;</span></p><p><span>结果：（图4-5）</span></p><p><img src="media/2dc709f5e2d2ca1ac0c62f0c1b057c85.png" referrerpolicy="no-referrer"></p><p><span>图4-5</span></p><p><span>6、Find all the employees who earn between £15,000 and £20,000.</span></p><p><span>Show the employee name, department and salary.</span></p><p><span>语句：</span></p><p><span>select Employment2017303010.ENAME,Department2017303010.DNAME,Employment2017303010.SAL from Employment2017303010 inner join Department2017303010 on Employment2017303010.DEPTNO = Department2017303010.DEPTNO where SAL between 15000 and 20000;</span></p><p><span>结果：（图4-6）</span></p><p><img src="media/621fcd52806a6a3843e4a821e79f64fd.png" referrerpolicy="no-referrer"></p><p><span>图4-6</span></p><p><span>7、Find all the employees whose last names end with S</span></p><p><span>语句：</span></p><p><span>select </span><span>*</span><span> from Employment2017303010 where ENAME like ‘%S’;</span></p><p><span>结果：（图4-7）</span></p><p><img src="media/17f97670f6e00028e02fa3e42735a666.png" referrerpolicy="no-referrer"></p><p><span>图4-7</span></p><p><span>8、List only those employees who receive commission.</span></p><p><span>语句：（由于我前面对COMM项进行了默认约束为0，所以COMM不等于0即可）</span></p><p><span>select </span><span>*</span><span> from Employment2017303010 where COMM </span><span>&lt;</span><span>&gt;</span><span> 0;</span></p><p><span>结果：（图4-8）</span></p><p><img src="media/0d36e291edf43ad9de26afff100218e6.png" referrerpolicy="no-referrer"></p><p><span>图4-8</span></p><p><span>9、Find the name, job, salary , hiredate and department number of all</span></p><p><span>employees in ascending order by their salaries.</span></p><p><span>语句：</span></p><p><span>select ENAME,JOB,SAL,HIREDATE,DEPTNO from Employment2017303010 order by SAL asc;</span></p><p><span>结果：（图4-9）</span></p><p><img src="media/5321c593cdaf2bdc5fbba12c595b924c.png" referrerpolicy="no-referrer"></p><p><span>图4-9</span></p><p><span>10、Order employees in department 30 who receive commision, in</span></p><p><span>ascending order by commission.</span></p><p><span>语句：</span></p><p><span>select </span><span>*</span><span> from Employment2017303010 where COMM </span><span>&lt;</span><span>&gt;</span><span> 0 and DEPTNO = 30 order by COMM asc;</span></p><p><span>结果：（图4-10）</span></p><p><img src="media/22d3d1360dd8afe67da52952503e9cec.png" referrerpolicy="no-referrer"></p><p><span>图4-10</span></p><p><span>11、Find all the salesmen in department 30 who have a salary greater than</span></p><p><span>or equal to £18000.</span></p><p><span>语句：</span></p><p><span>select </span><span>*</span><span> from Employment2017303010 where DEPTNO = 30 and job = ‘SALESMAN’ and sal </span><span>&gt;</span><span>= 18000;</span></p><p><span>结果：（图4-11）</span></p><p><img src="media/835c2a450954a3188368caf803c90bac.png" referrerpolicy="no-referrer"></p><p><span>图4-11</span></p><p><strong><span>五.问题分析（碰到什么问题，如何解决）</span></strong></p><p><span>1、在配置centos磁盘分区时，遇到了小键盘无法输入数字的问题，换了台式电脑的键盘，按了NumLock才修好。</span></p><p><span>2、在配置centos最后一步，配网时遇到了问题，不管是桥接模式还是NAT模式，都ping不上网址（图5-1）。</span></p><p><img src="media/ddc798fe7ee5dc5594a192bb5f61efab.png" referrerpolicy="no-referrer"></p><p><span>图5-2</span></p><p><span>3、配置本地yum时，发现没有local.repo（图5-3），后来发现，需要切换国内的npm源，我先利用本地yum下载了wget（图5-4），备份一下之前的配置文件mv ./CentOS-Base.repo ./CentOS-Base.repo.bak（图5-5）。然后通过用wget下载163的源，且将其设置为默认源（图5-6），最后重新生成缓存即可（图5-7）。</span></p><p><img src="media/38d195403727a1d7d072cc6a43026414.png" referrerpolicy="no-referrer"></p><p><span>图5-3</span></p><p><img src="media/a805ae9dfab021738978f48bd478b5dc.png" referrerpolicy="no-referrer"></p><p><span>图5-4</span></p><p><img src="media/3ce6bd41ef2c59d5f049d562765fef53.png" referrerpolicy="no-referrer"></p><p><span>图5-5</span></p><p><img src="media/cdbe9b29cb853c8644c7d02dc2ec8a89.png" referrerpolicy="no-referrer"></p><p><span>图5-6</span></p><p><img src="media/2d1471323439443dfb81a410a8ee2ce0.png" referrerpolicy="no-referrer"></p><p><span>图5-7</span></p><p><span>4、由于我安装设置的桥接模式，但是无论安装的时候还是安装完成都连接不上以太网（图5-4），最后终于让我找到了破绽，打开任务管理器，查看到以太网能上网的网卡是叫USB的而不是无线网的网卡（图5-6）！</span></p><p><img src="media/e6b5d7805d39440dff61e61d0bfba7d8.png" referrerpolicy="no-referrer"></p><p><span>图5-4</span></p><p><img src="media/d4ebfb748f6a0dda1078c600f1b9d2b9.png" referrerpolicy="no-referrer"></p><p><span>图5-5</span></p><p><img src="media/e5a4dad26a376ac89bd1b7ff8c1fcedd.png" referrerpolicy="no-referrer"></p><p><span>图5-6</span></p><p><span>5、在设置好4之后，我开始设置静态地址，由于我的ip地址是172.29.15.28，所以不能和教程一样，但是配置完后出现以下情况（图5-7），最后是把虚拟机改成NAT模式就行了。。。</span></p><p><img src="media/7d1d439cfb991fc887e0688091a7ce3e.png" referrerpolicy="no-referrer"></p><p><span>图5-7</span></p><p><img src="media/ed10ee46af9359a0ed1fa1c9c843b444.png" referrerpolicy="no-referrer"></p><p><span>图5-8</span></p><p><span>6、在进入创建好的用户的数据库时，显示previous connection kept（图5-9），后面才知道，当时根本没有创建成功用户！因为我少了个分号（图5-10），真的很无语。</span></p><p><img src="media/fe017ea70365d9ed5310b65fb320ac81.png" referrerpolicy="no-referrer"></p><p><span>图5-9</span></p><p><img src="media/925743d9bc4eaf14a4b8474ad1df0c54.png" referrerpolicy="no-referrer"></p><p><span>图5-10</span></p><p><strong><span>六.实验心得</span></strong></p><p><span>1、mysql配置环境一直都是十分复杂麻烦的步骤，尤其是当电脑里有两个mysql的软件时，配置环境发生的冲突就显得十分的不可理解。</span></p><p><span>2、通过上老师的课了解到，mysql虽然目前免费，但是他们想卡你脖子就卡你脖子，因为已经被oracle商业化了，所以开发一个数据库势在必行，而且学习mysql已经有点晚了，所以我非常认同老师说的改革数据库课程。</span></p><p><span>3、在这个实验报告中，最让我头疼，最花时间的不是做题，而是postgresql的环境配置，为了实现centos的postgre-13，我甚至花了三天来进行配环境，一是因为我对centos完全陌生，导致安装过程复杂而且还重复了好多次，二是我对postgresql的陌生，导致重装了postgre-12又重装了postgre-13。</span></p><p><span>4、通过这个实验，我深刻体会到了环境搭建时的心态的重要性，不要动不动就重装，会导致很多环境冲突，并且深刻了解了centos在vmware上面的配网，熟悉了桥接模式与NAT模式的配置，并知道了他们的区别。</span></p><p><span>5、明白了主键与外键的区别，如果要设置外键，主键是必须要先设置的，然后外键也只能设置其他表的主键，否则不成功。</span></p><p><span>6、在这个实验进行时，我也深刻体会到了官方文档的重要性，什么csdn都不如一个官方文档，只要你会看官方文档，你什么都能学会。</span></p><p><span>7、这个实验至少耗费了我一个星期的学习时间，但是我觉得值，因为我不仅学会了postgresql的相关语句，也学会了搭配centos与基于centos的postgre环境的搭配，更明白了postgre作为开源数据库需要改进的许多地方，比如说没加冒号（；）不会报错等等。</span></p><p>&nbsp;</p><figure><table><thead><tr><th>&nbsp;</th></tr></thead><tbody><tr><td>&nbsp;</td></tr></tbody></table></figure></div>
+</body>
+</html>

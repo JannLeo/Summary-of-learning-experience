@@ -1,0 +1,19 @@
+Create or replace function find_firstweekday(d1 date) returns
+        Date as $$
+        DECLARE
+        D2 date;
+        Begin
+D2=to_date(to_char(date_trunc('month',d1),'YYYY/MM/DD'),'YYYY/MM/DD');
+        if extract(DOW FROM cast(D2 as TIMESTAMP)) = 6 
+then D2 = D2 + 2 ‘day’; 
+        elseif  extract(DOW FROM cast(D2 as TIMESTAMP)) = 0
+        then D2 = D2 + 1 ‘day’; 
+        end if;
+        return D2 ;
+        end ;
+        $$ LANGUAGE plpgsql;
+      2、select语句
+        select ename,find_firstweekday(hiredate) as First_weekday from emp2017303010;
+
+
+onclick="dengLu(this)"

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang = "en">
+   <head></head>
+   <body>
+
+      <h3>
+         <a href = "{{ url_for('show_all') }}">刘俊楠-2017303010-增删改查</a>
+      </h3>
+
+      <hr/>
+      {%- for message in get_flashed_messages() %}
+         {{ message }}
+      {%- endfor %}
+
+      <h3>Sign (<a href = "{{ url_for('new') }}">Add Sign
+         </a>)(<a href = "{{ url_for('change') }}">Change Sign
+         </a>)(<a href = "{{ url_for('delete') }}">Delete Sign
+         </a>)(<a href = "{{ url_for('search') }}">Search Sign
+         </a>)</h3>
+
+      <table>
+         <thead>
+            <tr>
+               <th>customernumber</th>
+               <th>signupnumber</th>
+               <th>dealnumber</th>
+            </tr>
+         </thead>
+
+         <tbody>
+            {% for signs in new_sign %}
+               <tr>
+                  <td>{{ signs.customernumber }}</td>
+                  <td>{{ signs.signupnumber }}</td>
+                  <td>{{ signs.dealnumber}}</td>
+               </tr>
+            {% endfor %}
+         </tbody>
+      </table>
+
+   </body>
+</html>

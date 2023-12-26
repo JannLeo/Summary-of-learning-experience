@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+  <display-name></display-name>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>pd</servlet-name>
+    <servlet-class>movie.servlet.pd</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>MoivesServlet</servlet-name>
+    <servlet-class>movie.servlet.MoivesServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>deleteMovies</servlet-name>
+    <servlet-class>movie.servlet.deleteMovies</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>addMovies</servlet-name>
+    <servlet-class>movie.servlet.addMovies</servlet-class>
+  </servlet>
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>pd</servlet-name>
+    <url-pattern>/servlet/pd</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MoivesServlet</servlet-name>
+    <url-pattern>/servlet/MoivesServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>deleteMovies</servlet-name>
+    <url-pattern>/servlet/deleteMovies</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>addMovies</servlet-name>
+    <url-pattern>/servlet/addMovies</url-pattern>
+  </servlet-mapping>	
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

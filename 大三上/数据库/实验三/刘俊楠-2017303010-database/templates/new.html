@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>增</title>
+</head>
+<body>
+
+      <h3>刘俊楠-2017303010--增</h3>
+      <hr/>
+
+      {%- for category, message in get_flashed_messages(with_categories = true) %}
+         <div class = "alert alert-danger">
+            {{ message }}
+         </div>
+      {%- endfor %}
+
+      <form action = "{{ request.path }}" method = "post">
+         <label for = "customernumber">customernumber</label><br>
+         <input type = "customernumber" name = "customernumber" placeholder = "customernumber" /><br>
+         <label for = "signupnumber">signupnumber</label><br>
+         <input type = "text" name = "signupnumber" placeholder = "signupnumber" /><br>
+         <label for = "dealnumber">dealnumber</label><br>
+         <textarea name = "dealnumber" placeholder = "dealnumber"></textarea><br>
+         <input type = "submit" value = "Submit" />
+      </form>
+
+   </body>
+</html>
