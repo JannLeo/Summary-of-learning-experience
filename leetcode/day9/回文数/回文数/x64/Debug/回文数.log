@@ -1,0 +1,4 @@
+﻿  源.cpp
+D:\作业与课件\leetcode\day9\回文数\回文数\源.cpp(16,9): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+D:\作业与课件\leetcode\day9\回文数\回文数\源.cpp(26,13): warning C4326: “main”的返回类型应为“int”而非“void”
+  回文数.vcxproj -> D:\作业与课件\leetcode\day9\回文数\x64\Debug\回文数.exe
