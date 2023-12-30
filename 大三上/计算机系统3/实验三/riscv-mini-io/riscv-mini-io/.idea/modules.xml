@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lib.iml" filepath="$PROJECT_DIR$/.idea/modules/lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/riscv-mini.iml" filepath="$PROJECT_DIR$/.idea/modules/riscv-mini.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/riscv-mini-build.iml" filepath="$PROJECT_DIR$/.idea/modules/riscv-mini-build.iml" />
+    </modules>
+  </component>
+</project>

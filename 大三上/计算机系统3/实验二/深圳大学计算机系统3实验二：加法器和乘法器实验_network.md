@@ -1,0 +1,93 @@
+1） 修改测试激励程序 （harness.cpp），仅观察1011+0001、0111-0010，给出verilator上的仿真波形，并解释结果
+
+1、修改harness.cpp，将top-\>io_A=a改为top-\>io_A=0x1011; 将top-\>io_B的值改为0x0001,将top-\>io_alu_op值改为0。
+
+![](https://img2023.cnblogs.com/blog/3334628/202311/3334628-20231130013429101-1960202607.png)
+
+2、生成波形文件后，运行gtkwave，显示如下波形，发现io_A与io_B加法结果为1012，
+
+![C:\\Users\\11440\\AppData\\Local\\Temp\\WeChat Files\\e719f64821b45b659521df6e38b1cea.png](https://img2023.cnblogs.com/blog/3334628/202311/3334628-20231130013430092-83159706.png)
+
+3、相同方法修改harness.cpp，将top-\>io_A=a改为top-\>io_A=0x0111; 将top-\>io_B的值改为0x0010,将top-\>io_alu_op值改为1。
+
+![](https://img2023.cnblogs.com/blog/3334628/202311/3334628-20231130013430915-668500051.png)
+
+4、生成波形图并打开gtkwave发现答案正确:0111-0010=0101.
+
+![C:\\Users\\11440\\AppData\\Local\\Temp\\WeChat Files\\cab990cd879721a1af6bc42439abf03.png](https://img2023.cnblogs.com/blog/3334628/202311/3334628-20231130013431847-1441313587.png)
+
+2） 2号功能（乘法）替换成取反功能，然后观察0101和1100的仿真结果并记录波形截屏
+
+1、进入// src/main/scala/ALU/ALU.scala，并修改如下代码
+
+![C:\\Users\\11440\\AppData\\Local\\Temp\\WeChat Files\\b1cb38de52a6b3c1512071b17982c45.png](https://img2023.cnblogs.com/blog/3334628/202311/3334628-20231130013432462-819189595.png)
+
+2、回到chisel-template目录，运行sbt run，编译通过后修改harness.cpp，top-\>io_A=a改为top-\>io_A=0x0101;将top-\>io_alu_op值改为2。
+
+![](https://img2023.cnblogs.com/blog/3334628/202311/3334628-20231130013433078-139742576.png)
+
+3、修改harness.cpp，将top-\>io_A=a改为top-\>io_A=0x0101;将top-\>io_alu_op值改为2，生成波形图并打开gtkwave发现答案正确:\~0101=FFFFFEFE.
+
+![C:\\Users\\11440\\AppData\\Local\\Temp\\WeChat Files\\aaf84f9baa567480ea5c031f94b4c62.png](https://img2023.cnblogs.com/blog/3334628/202311/3334628-20231130013433636-2041098494.png)
+
+4、修改harness.cpp，将top-\>io_A=a改为top-\>io_A=0x1100;将top-\>io_alu_op值改为2，生成波形图并打开gtkwave发现答案正确:\~1100=FFFFEEFF.
+
+![C:\\Users\\11440\\AppData\\Local\\Temp\\WeChat Files\\123ef0b6f78b5751884828feb4a026b.png](https://img2023.cnblogs.com/blog/3334628/202311/3334628-20231130013434559-1676435832.png)
+
+3） FPGA板上加法和乘法功能的照片，并说明你所施加的操作数和结果数值。
+
+1、将multiplier.v导入项目中，填写约束文件如下，设置乘数与被乘数的io为1，将高2位设置成1，低两位用于板子上面的G15.P15.W13.I16进行操作，M14.M15.G14.D18.V12.W16.J15.H15作为结果输出，K18设置为复位键。
+
+![C:\\Users\\11440\\AppData\\Local\\Temp\\WeChat Files\\d2be785d2f180e917f8bd4ddfec9c4b.jpg](https://img2023.cnblogs.com/blog/3334628/202311/3334628-20231130013437643-549036550.jpg)
+
+2、连接板子，进行编译与烧录，出现如下界面。
+
+![C:\\Users\\11440\\AppData\\Local\\Temp\\WeChat Files\\574d2c0855428efe0686b0cf5f812fc.jpg](https://img2023.cnblogs.com/blog/3334628/202311/3334628-20231130013440585-1307246588.jpg)
+
+3、对板子进行操作，因为板子只能看到前四位结果的亮灯，图中计算的是1100\*1101，其结果应该为1001 1100，而看到低四位所连接的灯分别为亮亮灭灭，所以为1101，结果正确。
+
+![](https://img2023.cnblogs.com/blog/3334628/202311/3334628-20231130013458563-985944930.png)
+
+4、新建一个项目，导入ALU.V的文件进入项目中，更改ALU.V为四位加法计算文件，内容如下：
+
+module ALU(
+
+input clock,
+
+input reset,
+
+input [2:0] io_A,
+
+input [2:0] io_B,
+
+input [1:0] io_alu_op,
+
+output [2:0] io_out
+
+);
+
+wire [2:0] \_io_out_T_1 = io_A + io_B; // @[ALU.scala 26:24]
+
+wire [2:0] \_io_out_T_3 = io_A - io_B; // @[ALU.scala 27:24]
+
+wire [2:0] \_io_out_T_4 = \~io_A; // @[ALU.scala 28:20]
+
+wire [2:0] \_io_out_T_6 = 2'h0 == io_alu_op ? \_io_out_T_1 : 3'h0; // @[Mux.scala 80:57]
+
+wire [2:0] \_io_out_T_8 = 2'h1 == io_alu_op ? \_io_out_T_3 : \_io_out_T_6; // @[Mux.scala 80:57]
+
+assign io_out = 2'h2 == io_alu_op ? \_io_out_T_4 : \_io_out_T_8; // @[Mux.scala 80:57]
+
+endmodule
+
+5、对ALU.V的限制文件写成下列语句，M14.M15.G14.D18分别控制加法的输出，V13.U17.T17.Y17为两个加数的高两位，分别设置为0，G15.P15.W13.T16为两个加数的低两位，设置为开关控制，K18设置为复位键。
+
+![C:\\Users\\11440\\AppData\\Local\\Temp\\WeChat Files\\c100ad589048265912d7daa0d18b76e.jpg](https://img2023.cnblogs.com/blog/3334628/202311/3334628-20231130013508913-449008034.jpg)
+
+6、连接板子，烧录结果如下所示：
+
+![C:\\Users\\11440\\AppData\\Local\\Temp\\WeChat Files\\8bf6f1df8d52c908e31b1a93f2ad54e.jpg](https://img2023.cnblogs.com/blog/3334628/202311/3334628-20231130013514310-873924849.jpg)
+
+7、对板子按下复位键，开关设置为关开关开即两个加数为0001+0001，所以结果为0010，其灯亮灭顺序也如图一致。
+
+![](https://img2023.cnblogs.com/blog/3334628/202311/3334628-20231130013533792-665955010.png)

@@ -1,0 +1,43 @@
+##Clock signal
+set_property -dict { PACKAGE_PIN K17 IOSTANDARD LVCMOS33 } [get_ports { clock }]; #IO_L12P_T1_MRCC_35 Sch=sysclk
+create_clock -add -name sys_clk_pin -period 8.00 -waveform {0 4} [get_ports { clock }];
+##Buttons
+set_property -dict { PACKAGE_PIN K18 IOSTANDARD LVCMOS33 } [get_ports { reset }]; #IO_L12N_T1_MRCC_35 Sch=btn[0]
+set_property -dict { PACKAGE_PIN P16 IOSTANDARD LVCMOS33 } [get_ports { io_inputValid }]; #IO_L24N_T3_34 Sch=btn[1]
+##LEDs
+set_property -dict { PACKAGE_PIN M14 IOSTANDARD LVCMOS33 } [get_ports { io_out[0] }]; #IO_L23P_T3_35 Sch=led[0]
+set_property -dict { PACKAGE_PIN M15 IOSTANDARD LVCMOS33 } [get_ports { io_out[1] }]; #IO_L23N_T3_35 Sch=led[1]
+set_property -dict { PACKAGE_PIN G14 IOSTANDARD LVCMOS33 } [get_ports { io_out[2] }]; #IO_0_35 Sch=led[2]
+set_property -dict { PACKAGE_PIN D18 IOSTANDARD LVCMOS33 } [get_ports { io_out[3] }]; #IO_L3N_T0_DQS_AD1N_35 Sch=led[3]
+##RGB LED 5 (Zybo Z7-20 only)
+set_property -dict { PACKAGE_PIN Y12 IOSTANDARD LVCMOS33 } [get_ports { io_outputValid }]; #IO_L20P_T3_13 Sch=led5_b
+##Switches
+set_property -dict { PACKAGE_PIN G15 IOSTANDARD LVCMOS33 } [get_ports { io_A[0] }]; #IO_L19N_T3_VREF_35 Sch=sw[0]
+set_property -dict { PACKAGE_PIN P15 IOSTANDARD LVCMOS33 } [get_ports { io_A[1] }]; #IO_L24P_T3_34 Sch=sw[1]
+set_property -dict { PACKAGE_PIN W13 IOSTANDARD LVCMOS33 } [get_ports { io_B[0] }]; #IO_L4N_T0_34 Sch=sw[2]
+set_property -dict { PACKAGE_PIN T16 IOSTANDARD LVCMOS33 } [get_ports { io_B[1] }]; #IO_L9P_T1_DQS_34 Sch=sw[3]
+##Pmod Header JE
+set_property -dict { PACKAGE_PIN V13 IOSTANDARD LVCMOS33 PULLDOWN true} [get_ports { io_A[2] }]; #IO_L3N_T0_DQS_34Sch=je[7]
+set_property -dict { PACKAGE_PIN U17 IOSTANDARD LVCMOS33 PULLDOWN true} [get_ports { io_A[3] }]; #IO_L9N_T1_DQS_34Sch=je[8]
+set_property -dict { PACKAGE_PIN T17 IOSTANDARD LVCMOS33 PULLDOWN true} [get_ports { io_B[2] }]; #IO_L20P_T3_34 Sch=je[9]
+set_property -dict { PACKAGE_PIN Y17 IOSTANDARD LVCMOS33 PULLDOWN true} [get_ports { io_B[3] }]; #IO_L7N_T1_34 Sch=je[10]
+set_property -dict { PACKAGE_PIN H15 IOSTANDARD LVCMOS33 PULLDOWN true} [get_ports { io_alu_op[0] }]; #IO_L7N_T1_34 Sch=je[10]
+set_property -dict { PACKAGE_PIN J15 IOSTANDARD LVCMOS33 PULLDOWN true} [get_ports { io_alu_op[1] }]; #IO_L7N_T1_34 Sch=je[10]
+
+module ALU(
+  input        clock,
+  input        reset,
+  input  [2:0] io_A,
+  input  [2:0] io_B,
+  input  [1:0] io_alu_op,
+  output [2:0] io_out
+);
+  wire [2:0] _io_out_T_1 = io_A + io_B; // @[ALU.scala 26:24]
+  wire [2:0] _io_out_T_3 = io_A - io_B; // @[ALU.scala 27:24]
+  wire [2:0] _io_out_T_4 = ~io_A; // @[ALU.scala 28:20]
+  wire [2:0] _io_out_T_6 = 2'h0 == io_alu_op ? _io_out_T_1 : 3'h0; // @[Mux.scala 80:57]
+  wire [2:0] _io_out_T_8 = 2'h1 == io_alu_op ? _io_out_T_3 : _io_out_T_6; // @[Mux.scala 80:57]
+  assign io_out = 2'h2 == io_alu_op ? _io_out_T_4 : _io_out_T_8; // @[Mux.scala 80:57]
+endmodule
+
+
