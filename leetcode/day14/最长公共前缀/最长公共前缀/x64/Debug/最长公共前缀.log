@@ -1,4 +1,4 @@
 ﻿  源.cpp
-D:\作业与课件\leetcode\day14\最长公共前缀\最长公共前缀\源.cpp(53,13): warning C4326: “main”的返回类型应为“int”而非“void”
-D:\作业与课件\leetcode\day14\最长公共前缀\最长公共前缀\源.cpp(52): warning C4715: “longestCommonPrefix”: 不是所有的控件路径都返回值
+D:\作业与课件\leetcode\day14\最长公共前缀\最长公共前缀\源.cpp(65,19): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\作业与课件\leetcode\day14\最长公共前缀\最长公共前缀\源.cpp(132,13): warning C4326: “main”的返回类型应为“int”而非“void”
   最长公共前缀.vcxproj -> D:\作业与课件\leetcode\day14\最长公共前缀\x64\Debug\最长公共前缀.exe
