@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <queue>
 using namespace std;
 struct ListNode {
 	int val;
@@ -57,16 +58,42 @@ ListNode* dividelists(vector<ListNode*> lists,int left,int right) {
 	return combinetoone(p1, p2);
 }
 
-ListNode* mergeKLists(vector<ListNode*>& lists) {
-	if (lists.size() == 0) {
-		return NULL;
-	}
-	else if (lists.size() == 1) {
-		return lists[0];
-	}
+//ListNode* mergeKLists(vector<ListNode*>& lists) {
+//	if (lists.size() == 0) {
+//		return NULL;
+//	}
+//	else if (lists.size() == 1) {
+//		return lists[0];
+//	}
+//
+//	//分治法
+//	return dividelists(lists, 0, lists.size() - 1);
+//}
 
-	//分治法
-	return dividelists(lists, 0, lists.size() - 1);
+
+//优先队列做法
+
+struct status {
+	int val;
+	ListNode* p;
+	bool operator < (const status& temp) const {
+		return val > temp.val;
+	}
+};
+priority_queue <status> q;
+ListNode* mergeKLists(vector<ListNode*>& lists) {
+	for (auto node : lists) {
+		if (node)q.push({ node->val ,node });
+	}
+	ListNode head, * tail = &head;
+	while (!q.empty()) {
+		auto f = q.top(); q.pop();
+		tail->next = f.p;
+		tail = tail->next;
+		if (f.p->next) q.push({ f.p->next->val,f.p->next });
+
+	}
+	return head.next;
 }
 void main() {
 	//初始化
