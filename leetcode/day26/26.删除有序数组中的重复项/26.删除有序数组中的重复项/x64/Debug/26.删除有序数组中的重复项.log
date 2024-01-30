@@ -1,4 +1,4 @@
 ﻿  源.cpp
 D:\作业与课件\leetcode\day26\26.删除有序数组中的重复项\26.删除有序数组中的重复项\源.cpp(5,8): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-D:\作业与课件\leetcode\day26\26.删除有序数组中的重复项\26.删除有序数组中的重复项\源.cpp(20,13): warning C4326: “main”的返回类型应为“int”而非“void”
+D:\作业与课件\leetcode\day26\26.删除有序数组中的重复项\26.删除有序数组中的重复项\源.cpp(24,13): warning C4326: “main”的返回类型应为“int”而非“void”
   26.删除有序数组中的重复项.vcxproj -> D:\作业与课件\leetcode\day26\26.删除有序数组中的重复项\x64\Debug\26.删除有序数组中的重复项.exe

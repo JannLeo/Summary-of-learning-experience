@@ -9,6 +9,7 @@ int removeDuplicates(vector<int>& nums) {
 	int num=nums[0];
 	//÷∏’Î2
 	k = 1;
+	//  0,0,1,1,1,2,2,3,3,4
 	for (int i = 1; i < nums.size(); i++) {
 		if (num != nums[i]) {
 			num = nums[i];
