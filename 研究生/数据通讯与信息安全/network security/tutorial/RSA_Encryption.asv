@@ -1,0 +1,27 @@
+%c=m^e mod N
+c=RSA_Enc(1235,54,2537);
+% c= m^e mod N we need find a quick way to calculate c
+%1. change the decimalism of e to binary of e
+%2. if the lowest bit of the e is 1 record the number after multiply and mod N
+%3. if the lowest bit of the e is 0 just calculate the lastnum (sqrt and mod N)
+function [c]= RSA_Enc(N,e,m) %Encrypt the secret key (c)
+    i=1; % The node point to the situation of the n_num
+    bin=length(dec2bin(e)); %gGet the size of the n_num
+    n_num = ones(1, bin); % Record the mod number (lastnum)
+    lastnum=sym(m); % The current base number
+    % Get the first binary of the bin_num
+    % If it is 1 then store the lastnum to the n_num
+    % n_num is record the mod number
+    % lastnum is record the last time mod number
+    while e %Until the e is 0
+        if(bitget(e, 1))
+            n_num(i)=lastnum;
+        end
+        lastnum=mod(lastnum*lastnum,N);
+        i= i+1;
+        e=bitshift(e, -1);
+    end
+    % disp(n_num);
+    c=mod(prod(n_num),N);
+    disp(c);
+end

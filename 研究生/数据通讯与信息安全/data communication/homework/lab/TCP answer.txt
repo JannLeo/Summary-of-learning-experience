@@ -1,0 +1,17 @@
+1
+IP Address:192.168.1.109
+TCP Port:2538
+
+2 
+IP address of gaia.cs.umass.edu: 128.119.245.12
+It sending and receiving TCP segments for this connection use the 80 port number.
+
+1 2 题用的官方trace  接下来用的自己的trace
+
+3
+Client computer Ip Address: 10.41.127.92
+TCP Port:63494
+
+4
+0x002
+It's the SYN identifies the SYN segment, which is in the TCP's header.

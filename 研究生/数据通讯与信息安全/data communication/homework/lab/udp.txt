@@ -1,0 +1,28 @@
+1 
+8 Byte 
+source port  
+destination port 
+length 
+checksum
+
+2 
+source port: 2 Byte 
+destination port:2Byte 
+length:2 Byte 
+checksum:2Byte
+
+3 
+length include the header of the udp and the UDP payload.
+
+4
+2^8-8
+
+5
+2^16
+
+6
+hexadecimal:0x11
+decimal:17
+
+7
+The first packet's source port is the client to the server which is also the destination port of the second packet. The destination port of the first packet is also the source port of the second packet.

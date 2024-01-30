@@ -1,0 +1,3 @@
+﻿  project.cpp
+D:\作业与课件\研究生\programming\project\project\project.cpp(38,13): warning C4326: “main”的返回类型应为“int”而非“void”
+  project.vcxproj -> D:\作业与课件\研究生\programming\project\x64\Debug\project.exe

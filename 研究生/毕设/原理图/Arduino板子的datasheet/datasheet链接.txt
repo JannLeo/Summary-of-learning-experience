@@ -1,0 +1,4 @@
+板子指导：https://learn.sparkfun.com/tutorials/redboard-plus-hookup-guide#hardware-overview
+
+
+板子购买链接：https://www.sparkfun.com/products/18158
