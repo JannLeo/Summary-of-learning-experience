@@ -8,6 +8,7 @@ int removeElement(vector<int>& nums, int val) {
 	int i = 0;
 	int length = nums.size();
 	int gap = 0;
+	// 0,1,2,2,3,0,4,2  val = 2
 	while ( i < length) {
 		if (val == nums[i]) {
 			gap++;

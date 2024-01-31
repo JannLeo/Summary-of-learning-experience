@@ -5,7 +5,7 @@ echo "wait 5s"
 choice /t 5 /d y /n >nul
 
 echo "load to the file"
-D:
+d:
 cd 作业与课件
 
 echo "git add"
