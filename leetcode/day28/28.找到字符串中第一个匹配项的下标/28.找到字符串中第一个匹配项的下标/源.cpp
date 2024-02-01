@@ -46,7 +46,13 @@ int strStr(string haystack, string needle) {
 	else return -1;
 }
 void main() {
+	//最大公共前缀
+	// next 数组
+	//
+	//
 	string haystack = "aabaaabaaac";
 	string needle = "aabaaac";
+	// a a b a a a c
+	// 0 0 1 0 1 2 2
 	int result=strStr(haystack,needle);
 }
