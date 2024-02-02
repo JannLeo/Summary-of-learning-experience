@@ -8,6 +8,8 @@ vector<int> findnext(string needle) {
 		return next;
 	}
 	int i = 1, j = 0;
+	// a a b a a a c
+	// 0 0 1 0 1 2 2
 	while (i < length-1) {
 		if (needle[i] == needle[j]) {
 			next[++i] = ++j;
@@ -53,6 +55,6 @@ void main() {
 	string haystack = "aabaaabaaac";
 	string needle = "aabaaac";
 	// a a b a a a c
-	// 0 0 1 0 1 2 2
+	// 0 0 1 0 1 2 2 
 	int result=strStr(haystack,needle);
 }
