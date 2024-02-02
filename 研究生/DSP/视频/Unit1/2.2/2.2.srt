@@ -1,0 +1,1444 @@
+1
+00:00:01,200 --> 00:00:02,100
+welcome back
+
+2
+00:00:05,133 --> 00:00:09,466
+this is Alec 5 4 4 2 and we're on unit 1
+
+3
+00:00:09,700 --> 00:00:12,466
+we're now looking at the third short video
+
+4
+00:00:12,966 --> 00:00:17,366
+to help you read through my notes limitations of DSP
+
+5
+00:00:17,866 --> 00:00:20,200
+now just in case you've looked at the other two videos
+
+6
+00:00:20,200 --> 00:00:20,900
+and think wow
+
+7
+00:00:20,900 --> 00:00:22,300
+it's going very fast
+
+8
+00:00:22,566 --> 00:00:26,200
+these videos are simply short byte sized 10 to 15
+
+9
+00:00:26,200 --> 00:00:27,533
+minute videos
+
+10
+00:00:27,666 --> 00:00:30,700
+to help you to go through the PDS
+
+11
+00:00:30,900 --> 00:00:33,966
+and they're simply to highlight some important points
+
+12
+00:00:34,000 --> 00:00:36,300
+and just to give you an overview
+
+13
+00:00:36,400 --> 00:00:38,900
+of what each section is about
+
+14
+00:00:39,500 --> 00:00:42,300
+so don't worry if you think they're going a little bit
+
+15
+00:00:42,300 --> 00:00:43,200
+too fast
+
+16
+00:00:43,700 --> 00:00:46,066
+they'll simply help you with your own self study
+
+17
+00:00:46,066 --> 00:00:47,466
+and that's the important thing
+
+18
+00:00:47,566 --> 00:00:49,866
+you have to do your own self study
+
+19
+00:00:49,900 --> 00:00:51,266
+these are not traditional
+
+20
+00:00:52,300 --> 00:00:53,300
+so there's the
+
+21
+00:00:54,533 --> 00:00:57,933
+generic setup with the five boxes the low pass
+
+22
+00:00:58,133 --> 00:01:00,133
+filter and the elasing filter
+
+23
+00:01:00,466 --> 00:01:02,733
+X of C continuous time signal into the analog
+
+24
+00:01:02,733 --> 00:01:03,800
+the digital converter
+
+25
+00:01:04,166 --> 00:01:07,566
+DSP chip the digital to 1 low converter
+
+26
+00:01:07,566 --> 00:01:09,900
+and the low past smoothing filter
+
+27
+00:01:10,866 --> 00:01:11,900
+will come on to this
+
+28
+00:01:12,600 --> 00:01:13,566
+so the
+
+29
+00:01:15,133 --> 00:01:17,100
+the errors that you can have inside a DSP
+
+30
+00:01:17,133 --> 00:01:18,900
+system are non ideal behavior
+
+31
+00:01:19,100 --> 00:01:21,200
+of the anti elysium Lupas filter so
+
+32
+00:01:21,366 --> 00:01:23,800
+this should cut off say exactly at
+
+33
+00:01:23,866 --> 00:01:27,300
+for example 4khz or 8khz or 10khz
+
+34
+00:01:27,533 --> 00:01:30,366
+but no filter will be exactly correct it
+
+35
+00:01:31,000 --> 00:01:32,700
+will not have a brick wall effect
+
+36
+00:01:33,100 --> 00:01:34,400
+transfer function like this
+
+37
+00:01:34,533 --> 00:01:36,600
+it'll have some ripples and it'll have a transition
+
+38
+00:01:36,600 --> 00:01:40,966
+band so that's because of the non ideal behavior of the
+
+39
+00:01:41,133 --> 00:01:42,766
+anti lec filter
+
+40
+00:01:42,966 --> 00:01:43,966
+some signal
+
+41
+00:01:43,966 --> 00:01:46,600
+energy will get through above the cutoff frequency
+
+42
+00:01:47,200 --> 00:01:50,000
+so you'll get aliasing errors at the a to d converter
+
+43
+00:01:50,000 --> 00:01:52,733
+very small depending on how good this filter is
+
+44
+00:01:54,733 --> 00:01:57,966
+you get quantization error here so you don't
+
+45
+00:01:58,166 --> 00:02:01,000
+when you sample the signal you don't actually
+
+46
+00:02:01,866 --> 00:02:04,466
+represent the signal samples exactly
+
+47
+00:02:04,466 --> 00:02:06,800
+you have to quantize them up as we've seen
+
+48
+00:02:08,600 --> 00:02:09,933
+you get to find out word effects
+
+49
+00:02:09,933 --> 00:02:12,333
+now what that means is that inside the DSP chip
+
+50
+00:02:12,333 --> 00:02:13,100
+say for example
+
+51
+00:02:13,100 --> 00:02:14,766
+using fixed point arithmetic
+
+52
+00:02:15,066 --> 00:02:17,533
+so every number was represented by it bits
+
+53
+00:02:17,766 --> 00:02:20,166
+that means where you get a multiplication for example
+
+54
+00:02:20,200 --> 00:02:21,866
+a 0 times x of n
+
+55
+00:02:22,100 --> 00:02:24,600
+that's going to be it bits that's going to be it bits
+
+56
+00:02:24,766 --> 00:02:27,400
+if you multiply two 8 bit numbers together you get 16
+
+57
+00:02:27,400 --> 00:02:28,200
+bits
+
+58
+00:02:28,800 --> 00:02:30,066
+and then you have to
+
+59
+00:02:30,466 --> 00:02:31,600
+round that down
+
+60
+00:02:31,766 --> 00:02:35,300
+to 8 bit so you get product rounding issues
+
+61
+00:02:35,466 --> 00:02:36,766
+so that will give you an error
+
+62
+00:02:37,000 --> 00:02:38,266
+when you add together
+
+63
+00:02:38,300 --> 00:02:41,166
+the individual terms a 0 x of n plus
+
+64
+00:02:41,300 --> 00:02:43,733
+a 1 x of n minus 1
+
+65
+00:02:43,866 --> 00:02:46,266
+so you're adding together to 8 bit numbers
+
+66
+00:02:46,933 --> 00:02:48,400
+you can get a 9 bit number
+
+67
+00:02:48,500 --> 00:02:51,400
+so you can get overflow that's outer overflow
+
+68
+00:02:51,400 --> 00:02:52,533
+adder overflow
+
+69
+00:02:54,000 --> 00:02:57,100
+in addition when you represent these coefficients
+
+70
+00:02:57,100 --> 00:02:58,133
+they're not represented
+
+71
+00:02:58,133 --> 00:02:59,900
+say for example you were designing a
+
+72
+00:02:59,933 --> 00:03:01,866
+very specific bound stop filter
+
+73
+00:03:01,933 --> 00:03:05,966
+and a 0 was minus 1.679432
+
+74
+00:03:06,266 --> 00:03:07,733
+you have to represent that
+
+75
+00:03:07,900 --> 00:03:11,066
+decimal number into 8 bits and so you'll get
+
+76
+00:03:11,200 --> 00:03:12,366
+coefficient
+
+77
+00:03:13,166 --> 00:03:14,800
+rounding or coefficient
+
+78
+00:03:15,666 --> 00:03:18,933
+quantization so coefficient quantization
+
+79
+00:03:19,366 --> 00:03:22,900
+multiplication product rind off rounding and
+
+80
+00:03:23,766 --> 00:03:24,966
+addition overflow
+
+81
+00:03:24,966 --> 00:03:26,733
+so there are some of the examples of the
+
+82
+00:03:26,900 --> 00:03:28,466
+finite word length effects
+
+83
+00:03:29,533 --> 00:03:31,733
+you get something else we're going to come onto called
+
+84
+00:03:31,866 --> 00:03:34,800
+multiply accumulate time restrictions of a DSP chip
+
+85
+00:03:34,800 --> 00:03:36,766
+I've put this in red because I'm going to come on
+
+86
+00:03:36,766 --> 00:03:37,566
+and cover this
+
+87
+00:03:37,666 --> 00:03:40,133
+and you get what's called the sync X distortion
+
+88
+00:03:40,200 --> 00:03:42,466
+of the Digital Tomato Loc converter
+
+89
+00:03:43,000 --> 00:03:45,800
+finally you get non ideal behavior of the
+
+90
+00:03:45,800 --> 00:03:47,266
+smoothing low pass filter
+
+91
+00:03:47,300 --> 00:03:49,700
+so just like the anti aliasing filter was not an
+
+92
+00:03:49,700 --> 00:03:51,166
+exact low pass filter
+
+93
+00:03:51,400 --> 00:03:53,066
+similarly for the smoothing filter
+
+94
+00:03:53,366 --> 00:03:54,166
+should point out
+
+95
+00:03:54,533 --> 00:03:57,866
+with all these errors DSP is still better than analog
+
+96
+00:03:58,000 --> 00:03:59,500
+so the only restriction
+
+97
+00:04:00,266 --> 00:04:02,300
+in using DSP is really the sampling rate
+
+98
+00:04:02,300 --> 00:04:03,766
+and that's gone up from you know
+
+99
+00:04:03,766 --> 00:04:05,133
+killer Hertz in the early days
+
+100
+00:04:05,133 --> 00:04:06,400
+to no gigahertz
+
+101
+00:04:06,500 --> 00:04:08,800
+so there really is very little restriction
+
+102
+00:04:08,900 --> 00:04:11,366
+but as carrier frequencies go further and further up
+
+103
+00:04:11,366 --> 00:04:12,366
+than the adidi converter
+
+104
+00:04:12,366 --> 00:04:14,266
+hasty try to match that
+
+105
+00:04:17,566 --> 00:04:20,733
+so what are multiply accumulate time restrictions so
+
+106
+00:04:20,900 --> 00:04:23,766
+here's the example of how we we are together
+
+107
+00:04:24,266 --> 00:04:25,900
+now the reason we call multiply accumulate
+
+108
+00:04:25,900 --> 00:04:27,333
+first of all let's explain that
+
+109
+00:04:27,566 --> 00:04:30,566
+we have to take say a 0 x of n plus a 1
+
+110
+00:04:30,566 --> 00:04:33,200
+x of n minus one plus a 2 x of n minus 2
+
+111
+00:04:33,500 --> 00:04:36,533
+what we're doing is we're taking a number of
+
+112
+00:04:36,900 --> 00:04:39,166
+products and we're adding them together
+
+113
+00:04:40,000 --> 00:04:41,400
+that is we're accumulating them
+
+114
+00:04:41,766 --> 00:04:44,200
+so if you look here that's addition
+
+115
+00:04:44,466 --> 00:04:45,733
+that's multiplication
+
+116
+00:04:45,900 --> 00:04:48,533
+and so here's the most common operation in DSP
+
+117
+00:04:48,866 --> 00:04:53,666
+it's multiply and accumulate so B time C+D becomes a
+
+118
+00:04:54,200 --> 00:04:56,766
+and you store a away and then you get F times G
+
+119
+00:04:56,766 --> 00:04:57,566
+and you add that to a
+
+120
+00:04:57,566 --> 00:04:59,333
+you accumulate that with a to get E
+
+121
+00:04:59,766 --> 00:05:01,800
+so multiply accumulate is
+
+122
+00:05:02,333 --> 00:05:05,533
+a really important function in a DSP ship chip
+
+123
+00:05:05,733 --> 00:05:06,966
+as is shifting
+
+124
+00:05:07,266 --> 00:05:09,166
+and that's why DSP chips have a
+
+125
+00:05:09,166 --> 00:05:11,333
+certain architecture that's different than normal
+
+126
+00:05:11,333 --> 00:05:12,533
+microprocessors
+
+127
+00:05:12,533 --> 00:05:13,566
+to deal with us
+
+128
+00:05:14,500 --> 00:05:17,533
+so we call and multiply accumulator mic operation
+
+129
+00:05:18,000 --> 00:05:22,666
+we look at we have optimized that in a DSP chip
+
+130
+00:05:22,700 --> 00:05:23,700
+so say for example
+
+131
+00:05:23,700 --> 00:05:26,933
+it might take 70 clock cycles with ordinary processors
+
+132
+00:05:27,066 --> 00:05:30,066
+it would be reduced onto one clock cycle with a DSP
+
+133
+00:05:30,766 --> 00:05:31,566
+chip
+
+134
+00:05:31,700 --> 00:05:35,133
+so that's what multiply accumulate as a multiply an art
+
+135
+00:05:36,966 --> 00:05:39,866
+so Mac I'm going to use that word multiply accumulate
+
+136
+00:05:40,366 --> 00:05:43,466
+down here multiply art and accumulate
+
+137
+00:05:45,700 --> 00:05:47,200
+okay so let's take a question
+
+138
+00:05:47,200 --> 00:05:50,500
+so let's assume a DSP chip is like this
+
+139
+00:05:50,900 --> 00:05:53,966
+we want to and the DSP chip is able to perform 100
+
+140
+00:05:54,166 --> 00:05:56,866
+million multiply cumula operations per second
+
+141
+00:05:57,133 --> 00:05:59,000
+calculate the maximum bandwidth
+
+142
+00:05:59,566 --> 00:06:01,866
+XC of t where XC of t is up here
+
+143
+00:06:02,566 --> 00:06:04,500
+so you can't remember a formula for this
+
+144
+00:06:04,500 --> 00:06:05,333
+you've just got to
+
+145
+00:06:05,366 --> 00:06:07,566
+write down the information and try to see
+
+146
+00:06:08,300 --> 00:06:09,566
+how you come up with the answer
+
+147
+00:06:09,566 --> 00:06:11,066
+so let's look at the problem
+
+148
+00:06:11,066 --> 00:06:13,366
+here we have the signal and sampled XC of t
+
+149
+00:06:13,366 --> 00:06:14,700
+continuous time signal
+
+150
+00:06:16,266 --> 00:06:17,700
+and what we have to do is
+
+151
+00:06:18,366 --> 00:06:21,000
+when we're working looking at the outputs I'd say
+
+152
+00:06:21,000 --> 00:06:22,300
+time n minus 1
+
+153
+00:06:22,466 --> 00:06:23,266
+and
+
+154
+00:06:23,266 --> 00:06:25,600
+looking at trying to calculate the output at time n
+
+155
+00:06:26,000 --> 00:06:28,733
+so we'll have the input x of n x of n minus 1
+
+156
+00:06:28,733 --> 00:06:29,766
+x P m minus 2
+
+157
+00:06:30,266 --> 00:06:31,266
+between that
+
+158
+00:06:32,066 --> 00:06:34,966
+we need to perform 20 multiply accumulates
+
+159
+00:06:35,266 --> 00:06:38,466
+so 20 multiply accumulates must be performed between
+
+160
+00:06:38,900 --> 00:06:41,300
+any one sampling period
+
+161
+00:06:42,300 --> 00:06:44,400
+otherwise we won't have calculated the
+
+162
+00:06:44,700 --> 00:06:48,000
+next output by the time the new input arrives
+
+163
+00:06:48,333 --> 00:06:53,566
+so using that principle there you can then say you need
+
+164
+00:06:54,066 --> 00:06:56,300
+um you can work out what the time is
+
+165
+00:06:56,300 --> 00:06:57,766
+for one multiply accumulate
+
+166
+00:06:57,800 --> 00:07:00,733
+and you need 20 of those must be less than equal to t
+
+167
+00:07:01,000 --> 00:07:03,800
+don't forget what the anoina is the Anoina's F of s
+
+168
+00:07:04,166 --> 00:07:05,300
+and once you find
+
+169
+00:07:05,300 --> 00:07:05,566
+f of
+
+170
+00:07:05,566 --> 00:07:07,666
+s then you know the bandwidth is going to be half of
+
+171
+00:07:07,666 --> 00:07:10,400
+s over 2 so that's really all there is to it
+
+172
+00:07:10,966 --> 00:07:13,200
+you don't have to remember that you just have to
+
+173
+00:07:13,266 --> 00:07:15,566
+understand what what the restriction is
+
+174
+00:07:16,000 --> 00:07:17,333
+so in this particular case
+
+175
+00:07:17,333 --> 00:07:19,966
+remind yourself there's 20 multiply accumulates
+
+176
+00:07:19,966 --> 00:07:22,100
+look k equals 0 to 19
+
+177
+00:07:22,466 --> 00:07:26,000
+a zero times x ban a 1 x ban minus 1 etc
+
+178
+00:07:27,766 --> 00:07:29,600
+and you can consider yourself the trade offs that might
+
+179
+00:07:29,600 --> 00:07:33,900
+exist in terms of if you can't manage to satisfy this
+
+180
+00:07:33,900 --> 00:07:34,733
+what do you do
+
+181
+00:07:34,866 --> 00:07:37,400
+well you could reduce the order of the filter but that
+
+182
+00:07:37,466 --> 00:07:39,600
+means your filter would behave worse
+
+183
+00:07:39,600 --> 00:07:42,500
+you could get a faster DSP chip etc etc
+
+184
+00:07:45,000 --> 00:07:48,333
+so what's the other limitation this Sync X equivalent
+
+185
+00:07:48,500 --> 00:07:50,466
+transfer function bdiwa converter
+
+186
+00:07:50,800 --> 00:07:53,000
+so let's look at the output here
+
+187
+00:07:53,800 --> 00:07:55,166
+from the d to a converter
+
+188
+00:07:55,333 --> 00:07:58,566
+so that's what the output y CFT will look like
+
+189
+00:07:58,800 --> 00:08:01,600
+from a 0 order hole d to a converter
+
+190
+00:08:01,666 --> 00:08:03,100
+and you can see why you need the
+
+191
+00:08:03,100 --> 00:08:04,533
+smoothing loop pass filter
+
+192
+00:08:04,766 --> 00:08:07,933
+to take out the high frequency content that's present
+
+193
+00:08:07,966 --> 00:08:09,700
+in those little
+
+194
+00:08:10,766 --> 00:08:11,666
+steps
+
+195
+00:08:15,400 --> 00:08:16,200
+now
+
+196
+00:08:16,600 --> 00:08:18,133
+one of the problems we have is
+
+197
+00:08:18,133 --> 00:08:20,600
+what's the equivalent transfer function for a data way
+
+198
+00:08:20,600 --> 00:08:23,400
+converter that might seem like a strange question but
+
+199
+00:08:23,533 --> 00:08:24,366
+think about it
+
+200
+00:08:24,566 --> 00:08:25,366
+you've got
+
+201
+00:08:25,533 --> 00:08:28,766
+discrete time in and you've got continuous time out
+
+202
+00:08:28,900 --> 00:08:29,700
+so
+
+203
+00:08:30,166 --> 00:08:32,166
+it's rather difficult to think of a
+
+204
+00:08:32,500 --> 00:08:35,000
+transfer function normally a transfer function
+
+205
+00:08:35,166 --> 00:08:37,566
+in the analog time domain as equal to the
+
+206
+00:08:37,666 --> 00:08:40,166
+Fury transform of the impulse response
+
+207
+00:08:40,533 --> 00:08:41,933
+and then the discrete time domain
+
+208
+00:08:41,933 --> 00:08:44,200
+you'll see later on it's equal to the dtft
+
+209
+00:08:44,533 --> 00:08:45,733
+of the impulse response
+
+210
+00:08:45,733 --> 00:08:47,100
+but here we've got
+
+211
+00:08:48,600 --> 00:08:51,333
+discrete time input continuous time output
+
+212
+00:08:51,400 --> 00:08:53,400
+so let's see what we can do with that
+
+213
+00:08:53,400 --> 00:08:55,266
+we're not being mathematically very rigorous
+
+214
+00:08:55,266 --> 00:08:56,600
+but we get the right answer
+
+215
+00:08:56,800 --> 00:08:57,766
+take me too long to
+
+216
+00:08:57,766 --> 00:08:59,900
+explain it in a more rigorous mathematical way
+
+217
+00:09:00,466 --> 00:09:02,366
+so there's a delta function
+
+218
+00:09:02,733 --> 00:09:03,533
+for discrete time
+
+219
+00:09:03,533 --> 00:09:05,300
+that's the impulse we put in
+
+220
+00:09:05,366 --> 00:09:08,333
+and that's the impulse response that we get coming out
+
+221
+00:09:08,500 --> 00:09:10,333
+so there's the impulse response
+
+222
+00:09:11,700 --> 00:09:13,166
+and we know that the
+
+223
+00:09:13,266 --> 00:09:14,966
+transfer functions equal to free
+
+224
+00:09:14,966 --> 00:09:16,600
+transform of the impulse response
+
+225
+00:09:16,600 --> 00:09:19,166
+that's from undergraduate lectures in
+
+226
+00:09:19,800 --> 00:09:22,100
+analog signal proceing or free transforms
+
+227
+00:09:22,366 --> 00:09:23,966
+so there's the fur E transform
+
+228
+00:09:24,133 --> 00:09:26,500
+if you take the fur E transform of H of t
+
+229
+00:09:26,800 --> 00:09:29,100
+make sure you can do it it's not difficult
+
+230
+00:09:29,400 --> 00:09:31,366
+you end up getting this expression here
+
+231
+00:09:32,900 --> 00:09:34,400
+and don't forget what sync is
+
+232
+00:09:34,400 --> 00:09:36,666
+sync X is sine X over X
+
+233
+00:09:36,900 --> 00:09:40,266
+so sine that over that gives you the sync function
+
+234
+00:09:41,166 --> 00:09:43,500
+so that's what the transfer function looks like
+
+235
+00:09:43,700 --> 00:09:44,900
+and if you plot that
+
+236
+00:09:44,933 --> 00:09:46,866
+function let's see what it looks like
+
+237
+00:09:49,500 --> 00:09:51,800
+so once it goes through the smoothing filter
+
+238
+00:09:51,866 --> 00:09:53,333
+we get back the original
+
+239
+00:09:53,600 --> 00:09:55,866
+say if you had a sine wave going in
+
+240
+00:09:55,866 --> 00:09:57,366
+you get a sine wave coming up
+
+241
+00:09:58,766 --> 00:10:02,400
+so what we can say is that in the frequency demand
+
+242
+00:10:03,600 --> 00:10:06,466
+here we have the furry transform of the output
+
+243
+00:10:07,133 --> 00:10:09,666
+equals the transfer function of the system
+
+244
+00:10:09,666 --> 00:10:10,966
+which was that sync function
+
+245
+00:10:11,200 --> 00:10:13,400
+times the furry transform of the input
+
+246
+00:10:13,666 --> 00:10:15,600
+and the furry transform of the input
+
+247
+00:10:15,600 --> 00:10:17,266
+is not a traditional furry transform
+
+248
+00:10:17,266 --> 00:10:19,166
+it's what's called the DTFT
+
+249
+00:10:19,333 --> 00:10:22,133
+discreet Timefurry transform will come to that later
+
+250
+00:10:22,133 --> 00:10:23,400
+I've explained that here
+
+251
+00:10:24,100 --> 00:10:26,100
+but that's the normal relationship between
+
+252
+00:10:26,666 --> 00:10:29,466
+output equals transfer function times input
+
+253
+00:10:29,733 --> 00:10:33,466
+where that's the very transform of YM
+
+254
+00:10:35,266 --> 00:10:39,666
+so there is the spectrum of y of N
+
+255
+00:10:39,800 --> 00:10:42,266
+that's the signal going into the dataway converter
+
+256
+00:10:42,333 --> 00:10:44,533
+we know that the spectrum repeats itself
+
+257
+00:10:44,700 --> 00:10:47,966
+every FS FS is the sampling frequency
+
+258
+00:10:48,466 --> 00:10:50,533
+now if you take that sync function
+
+259
+00:10:50,766 --> 00:10:53,366
+and be careful it's not totally obvious
+
+260
+00:10:53,666 --> 00:10:56,000
+plot it then it looks like this
+
+261
+00:10:56,133 --> 00:10:57,333
+so what do you get
+
+262
+00:10:57,333 --> 00:11:00,333
+coming out for the Freerier transform of y C
+
+263
+00:11:00,400 --> 00:11:02,300
+C meaning continuous time of t
+
+264
+00:11:02,900 --> 00:11:04,200
+will be the product of
+
+265
+00:11:04,566 --> 00:11:09,333
+H of F modulus H of F times modulus y in blue
+
+266
+00:11:10,300 --> 00:11:12,533
+so it's the red one multiplied with the blue
+
+267
+00:11:12,533 --> 00:11:14,566
+now you can see two problems that you get from the
+
+268
+00:11:14,566 --> 00:11:15,400
+sync function
+
+269
+00:11:15,866 --> 00:11:17,733
+the sync function is letting through
+
+270
+00:11:18,166 --> 00:11:21,866
+this part of the first repeated part of the spectrum
+
+271
+00:11:21,866 --> 00:11:23,100
+this part of the second
+
+272
+00:11:23,400 --> 00:11:24,666
+repeated part of the spectrum
+
+273
+00:11:24,666 --> 00:11:27,166
+so some of the high frequencies being picked up
+
+274
+00:11:27,166 --> 00:11:29,866
+and that's due to the strip lines
+
+275
+00:11:30,700 --> 00:11:32,366
+the other thing that happens is that
+
+276
+00:11:32,533 --> 00:11:34,166
+withinside the passbound
+
+277
+00:11:34,533 --> 00:11:35,333
+of
+
+278
+00:11:36,000 --> 00:11:36,800
+the
+
+279
+00:11:38,366 --> 00:11:39,266
+this bit here
+
+280
+00:11:39,266 --> 00:11:40,933
+which is what you really want to recover
+
+281
+00:11:40,933 --> 00:11:42,800
+because that's the furrier transform
+
+282
+00:11:43,066 --> 00:11:45,333
+of the analog signal that's what you want to recover
+
+283
+00:11:46,566 --> 00:11:47,800
+it's not flat
+
+284
+00:11:48,000 --> 00:11:50,766
+and so you get same X over X distortion
+
+285
+00:11:50,933 --> 00:11:52,066
+inside the pass band
+
+286
+00:11:52,066 --> 00:11:53,733
+so you get two things happening here
+
+287
+00:11:53,866 --> 00:11:56,133
+you get distortion inside the pass band
+
+288
+00:11:56,266 --> 00:11:58,533
+and you pick up some high frequency content
+
+289
+00:11:58,700 --> 00:12:00,566
+that's why we need the smoothing filter
+
+290
+00:12:01,066 --> 00:12:03,533
+so if you have an ideal smoothing filter
+
+291
+00:12:03,666 --> 00:12:05,600
+then what it does is it
+
+292
+00:12:06,166 --> 00:12:08,333
+gets rid of all that high frequency content
+
+293
+00:12:08,333 --> 00:12:09,333
+that you're picking up
+
+294
+00:12:09,500 --> 00:12:12,466
+by the Dataway Converter sine X over X
+
+295
+00:12:14,000 --> 00:12:16,300
+and what it also does
+
+296
+00:12:16,300 --> 00:12:18,300
+unfortunately does not do I should say
+
+297
+00:12:18,466 --> 00:12:19,333
+is this
+
+298
+00:12:19,533 --> 00:12:22,166
+distortion that you get with inside the pass band
+
+299
+00:12:23,766 --> 00:12:25,266
+one way rind that would be to have a
+
+300
+00:12:25,266 --> 00:12:26,766
+smoothing filter that goes like that
+
+301
+00:12:26,766 --> 00:12:30,066
+the inverse of the top of the sink
+
+302
+00:12:30,100 --> 00:12:31,866
+and they're quite difficult to design
+
+303
+00:12:31,866 --> 00:12:33,300
+so we don't normally do that
+
+304
+00:12:33,533 --> 00:12:37,066
+the way we do it is by up sampling after the
+
+305
+00:12:37,766 --> 00:12:40,300
+d to way after the DSP chip
+
+306
+00:12:40,333 --> 00:12:42,533
+so we increase the sampling frequency
+
+307
+00:12:42,533 --> 00:12:44,533
+and if you think if you stretch this out
+
+308
+00:12:45,000 --> 00:12:45,700
+then what will happen
+
+309
+00:12:45,700 --> 00:12:48,200
+this line it will come down shallower and shallower
+
+310
+00:12:48,366 --> 00:12:49,166
+and so it will
+
+311
+00:12:50,200 --> 00:12:52,800
+take in less and less high frequency components
+
+312
+00:12:53,100 --> 00:12:53,700
+but more
+
+313
+00:12:53,700 --> 00:12:55,800
+importantly as it becomes shallower and shallower
+
+314
+00:12:58,000 --> 00:12:59,400
+it becomes flutter and flutter
+
+315
+00:12:59,400 --> 00:13:02,400
+and so you reduce the cyan X over X distortion
+
+316
+00:13:03,133 --> 00:13:04,500
+so we don't have
+
+317
+00:13:04,900 --> 00:13:07,166
+our loopass filter which is the inverse
+
+318
+00:13:07,300 --> 00:13:08,500
+of the sync function
+
+319
+00:13:08,800 --> 00:13:10,366
+what we normally do is
+
+320
+00:13:10,366 --> 00:13:12,600
+we have what's called an up sampler here at yn
+
+321
+00:13:12,600 --> 00:13:14,866
+that is we increase the sampling frequency
+
+322
+00:13:14,900 --> 00:13:16,766
+so double it quadruplet whatever
+
+323
+00:13:16,866 --> 00:13:19,200
+and effectively if you increase f of s
+
+324
+00:13:19,266 --> 00:13:20,500
+and stretch that out
+
+325
+00:13:20,900 --> 00:13:24,200
+then you flatten this bit inside the passbound
+
+326
+00:13:27,800 --> 00:13:29,366
+and you can listen to this demo
+
+327
+00:13:29,666 --> 00:13:32,366
+which in my mudlog files which should help you
+
+328
+00:13:32,600 --> 00:13:33,400
+understand that
+
+329
+00:13:33,900 --> 00:13:37,100
+so that's two limitations of DSP
+
+330
+00:13:37,266 --> 00:13:39,500
+that I cover just to give you a feeling for them
+
+331
+00:13:41,466 --> 00:13:43,700
+so summary of the five DSP blocks
+
+332
+00:13:44,166 --> 00:13:45,266
+we should really say
+
+333
+00:13:45,333 --> 00:13:47,866
+what each block does and why it is needed
+
+334
+00:13:48,166 --> 00:13:50,333
+so I've done this for you and you can read through this
+
+335
+00:13:50,333 --> 00:13:51,700
+again be careful now I've
+
+336
+00:13:52,100 --> 00:13:54,400
+carefully chosen every single word
+
+337
+00:13:54,566 --> 00:13:57,500
+what each block does and why it is needed
+
+338
+00:13:57,533 --> 00:13:59,366
+they're two completely different things
+
+339
+00:14:00,766 --> 00:14:01,766
+so there's the five
+
+340
+00:14:03,133 --> 00:14:04,666
+and the first low pass filter
+
+341
+00:14:04,666 --> 00:14:06,400
+I'll just do this from what it does
+
+342
+00:14:06,400 --> 00:14:08,166
+it's a low pass down to the leasing filter
+
+343
+00:14:08,166 --> 00:14:09,900
+it moves all the signal energy
+
+344
+00:14:10,000 --> 00:14:11,533
+above half the sampling frequency
+
+345
+00:14:11,533 --> 00:14:12,766
+or sometimes even lower
+
+346
+00:14:12,800 --> 00:14:13,933
+if there's a guard bun
+
+347
+00:14:14,600 --> 00:14:15,400
+why
+
+348
+00:14:15,800 --> 00:14:17,133
+why do you do that
+
+349
+00:14:17,300 --> 00:14:18,566
+it's there to ensure that no
+
+350
+00:14:18,566 --> 00:14:21,333
+lacing occurs in the sample signal right
+
+351
+00:14:21,333 --> 00:14:23,000
+for this the sampling rate can be greater than an
+
+352
+00:14:23,000 --> 00:14:24,266
+equal to the niquis rate
+
+353
+00:14:24,333 --> 00:14:26,666
+so when the analog signal comes into the attid
+
+354
+00:14:26,666 --> 00:14:28,866
+converter you've no idea what Bondworth it is
+
+355
+00:14:29,066 --> 00:14:31,366
+by putting it through the low pass filter first
+
+356
+00:14:31,500 --> 00:14:33,466
+you know exactly what the Bondworth is
+
+357
+00:14:34,900 --> 00:14:37,300
+so if you read through these yourselves
+
+358
+00:14:37,333 --> 00:14:40,133
+what and why each block is used
+
+359
+00:14:46,133 --> 00:14:47,400
+we've come with that already
+
+360
+00:14:49,600 --> 00:14:54,600
+okay so I'll stop there and that's the end of video 3
+
+361
+00:14:54,933 --> 00:15:00,266
+I'll continue with video 4 for discrete time signals
+
