@@ -6,7 +6,7 @@ choice /t 5 /d y /n >nul
 
 echo "load to the file"
 d:
-cd 作业与课件
+cd 浣滀笟涓庤浠禱
 
 echo "git add"
 git add .
