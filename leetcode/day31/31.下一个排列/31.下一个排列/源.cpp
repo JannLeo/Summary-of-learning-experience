@@ -3,22 +3,36 @@
 #include <algorithm>
 using namespace std;
 void nextPermutation(vector<int>& nums) {
-	// 1 3 1 2 1
-	int flag = 0;
+	// 5 4 1 4 3 1
+	// 5 4 3 1 1 4
 	int length = nums.size();
-	int max_index = length - 1;
-	for (int i = length - 1; i >= 1; i--) {
-		if (nums[max_index] > nums[i - 1]) {
-			nums.insert(nums.begin()+i, nums[max_index]);
-			flag = 1;
-			break;
+	// index  num
+	pair<int, int> max_num(-1,-1);
+	for (int i = length - 1; i > 0; i--) {
+		if (nums[i] <= nums[i - 1]) {
+			continue;
 		}
+		max_num.second = nums[i - 1];
+		max_num.first = i - 1;
+		int temp = nums[i - 1];
+		for (int j = i; j < length; j++) {
+			if (max_num.second == nums[i - 1] && max_num.second < nums[j]) {
+				max_num.second = nums[j];
+				max_num.first = j;
+			}
+			else if (max_num.second != nums[i - 1] && max_num.second > nums[j] && nums[j] > nums[i - 1]) {
+				max_num.second = nums[j];
+				max_num.first = j;
+			}
+		}
+		nums[i - 1] = max_num.second;
+		nums[max_num.first] = temp;
+		sort(nums.begin() + i, nums.end());
+		return;
 	}
-	if (!flag) {
-		sort(nums.begin(), nums.end());
-	}
+	sort(nums.begin(), nums.end());
 }
 void main() {
-	vector<int> nums({ 3,2,1 });
+	vector<int> nums({ 1,3,2 });
 	nextPermutation(nums);
 }
