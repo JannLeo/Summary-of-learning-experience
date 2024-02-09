@@ -1,0 +1,4 @@
+﻿  源.cpp
+D:\作业与课件\leetcode\day33\33.搜索旋转排序数组\33.搜索旋转排序数组\源.cpp(22,13): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\作业与课件\leetcode\day33\33.搜索旋转排序数组\33.搜索旋转排序数组\源.cpp(28,13): warning C4326: “main”的返回类型应为“int”而非“void”
+  33.搜索旋转排序数组.vcxproj -> D:\作业与课件\leetcode\day33\33.搜索旋转排序数组\x64\Debug\33.搜索旋转排序数组.exe
