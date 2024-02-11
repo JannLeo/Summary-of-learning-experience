@@ -1,8 +1,8 @@
-# README-TEMPLATE
+# 
 
 # [icon]
 
-# # Name
+# Name
 # # Badge-徽章
 
 *------ 备注：某些 READMEs 上，可能会看到小图像，例如项目是否通过了所有测试。可以使用*[护盾](http://shields.io/?fileGuid=2wAlXOVLNVUJQjAP)*在阅读器中添加说明。许多服务中也有添加徽章的说明。*
