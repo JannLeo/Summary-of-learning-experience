@@ -1,0 +1,4 @@
+﻿  源.cpp
+D:\homeworkandppt\leetcode\day34\34.在排序数组中查找元素的第一个和最后一个位置\34.在排序数组中查找元素的第一个和最后一个位置\源.cpp(30,13): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\homeworkandppt\leetcode\day34\34.在排序数组中查找元素的第一个和最后一个位置\34.在排序数组中查找元素的第一个和最后一个位置\源.cpp(56,13): warning C4326: “main”的返回类型应为“int”而非“void”
+  34.在排序数组中查找元素的第一个和最后一个位置.vcxproj -> D:\homeworkandppt\leetcode\day34\34.在排序数组中查找元素的第一个和最后一个位置\x64\Debug\34.在排序数组中查找元素的第一个和最后一个位置.exe
