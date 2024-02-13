@@ -19,6 +19,7 @@ int searchInsert(vector<int>& nums, int target) {
 	if (!length)
 		return 0;
 	else if (length == 1)
+		// nums={1}  target = 0  target = 2
 		if (nums[0] < target)
 			return 1;
 		else
