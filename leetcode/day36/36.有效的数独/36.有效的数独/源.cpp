@@ -3,6 +3,9 @@
 #include <unordered_map>
 using namespace std;
 bool isValidSudoku(vector<vector<char>>& board) {
+
+}
+bool isValidSudoku(vector<vector<char>>& board) {
     vector<unordered_map<char, int>> a(27);
     for (int i = 0; i < 9; i++) {
         for (int j = 0; j < 9; j++) {
@@ -11,7 +14,6 @@ bool isValidSudoku(vector<vector<char>>& board) {
                 if (!a[i][board[i][j]] && !a[(i / 3) * 3 + j / 3 + 18][board[i][j]]) {
                     a[i][board[i][j]]++;
                     a[(i / 3) * 3 + j / 3 +18][board[i][j]]++;
-
                 }
                 else 
                     return false;
@@ -23,11 +25,13 @@ bool isValidSudoku(vector<vector<char>>& board) {
                 else return false;
             }
         }
-    }
-    
+    } 
     return true;
 }
 void main() {
+    // 1,3
+    // 2,5
+    // j/3+ (i/3)*3
     vector<vector<char>> board = {
     {'.','.','.','.','5','.','.','1','.'},
     {'.','4','.','3','.','.','.','.','.'},
