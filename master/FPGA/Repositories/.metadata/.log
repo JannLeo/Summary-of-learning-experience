@@ -1,0 +1,52 @@
+!SESSION 2024-02-16 10:56:10.495 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.9.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data D:\homeworkandppt\master\FPGA\Repositories
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-02-16 10:56:20.674
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\11440'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.python.pydev.shared_core 1 1 2024-02-16 10:56:24.103
+!MESSAGE Restoring info for: D:\Program Files\Arm\Development Studio 2022.2\sw\ide\plugins\com.arm.tpip.jython_2.7.2.20221205_193717\lib\jython-2.7.2-standalone.jar
+!STACK 0
+java.lang.RuntimeException: Restoring info for: D:\Program Files\Arm\Development Studio 2022.2\sw\ide\plugins\com.arm.tpip.jython_2.7.2.20221205_193717\lib\jython-2.7.2-standalone.jar
+	at org.python.pydev.ast.interpreter_managers.AbstractInterpreterManager.getInterpretersFromPersistedString(AbstractInterpreterManager.java:461)
+	at org.python.pydev.ast.interpreter_managers.AbstractInterpreterManager.internalRecreateCacheGetInterpreterInfos(AbstractInterpreterManager.java:287)
+	at org.python.pydev.ast.interpreter_managers.AbstractInterpreterManager.setInfos(AbstractInterpreterManager.java:584)
+	at com.arm.pydev.StartupListener.updateConfig(StartupListener.java:223)
+	at com.arm.pydev.StartupListener.earlyStartup(StartupListener.java:82)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.runEarlyStartup(EarlyStartupRunnable.java:79)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:55)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.Workbench$40.run(Workbench.java:2667)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: Expecting: D:\homeworkandppt\master\FPGA\Repositories\.metadata\.plugins\org.python.pydev\v1_3v02jn4ue7b2tvvp7n78g21wm\modulesKeys to exist (and be a file).
+	at org.python.pydev.ast.codecompletion.revisited.ModulesManager.loadFromFile(ModulesManager.java:330)
+	at org.python.pydev.ast.codecompletion.revisited.SystemModulesManager.load(SystemModulesManager.java:443)
+	at org.python.pydev.ast.interpreter_managers.AbstractInterpreterManager.getInterpretersFromPersistedString(AbstractInterpreterManager.java:459)
+	... 9 more
+
+!ENTRY org.python.pydev.shared_core 1 1 2024-02-16 10:56:24.163
+!MESSAGE Finished restoring information for: D:\Program Files\Arm\Development Studio 2022.2\sw\ide\plugins\com.arm.tpip.jython_2.7.2.20221205_193717\lib\jython-2.7.2-standalone.jar at: D:\homeworkandppt\master\FPGA\Repositories\.metadata\.plugins\org.python.pydev\v1_3v02jn4ue7b2tvvp7n78g21wm
+!STACK 0
+java.lang.RuntimeException: Finished restoring information for: D:\Program Files\Arm\Development Studio 2022.2\sw\ide\plugins\com.arm.tpip.jython_2.7.2.20221205_193717\lib\jython-2.7.2-standalone.jar at: D:\homeworkandppt\master\FPGA\Repositories\.metadata\.plugins\org.python.pydev\v1_3v02jn4ue7b2tvvp7n78g21wm
+	at org.python.pydev.core.log.Log.logInfo(Log.java:45)
+	at org.python.pydev.ast.interpreter_managers.AbstractInterpreterManager.getInterpretersFromPersistedString(AbstractInterpreterManager.java:506)
+	at org.python.pydev.ast.interpreter_managers.AbstractInterpreterManager.internalRecreateCacheGetInterpreterInfos(AbstractInterpreterManager.java:287)
+	at org.python.pydev.ast.interpreter_managers.AbstractInterpreterManager.setInfos(AbstractInterpreterManager.java:584)
+	at com.arm.pydev.StartupListener.updateConfig(StartupListener.java:223)
+	at com.arm.pydev.StartupListener.earlyStartup(StartupListener.java:82)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.runEarlyStartup(EarlyStartupRunnable.java:79)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:55)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.Workbench$40.run(Workbench.java:2667)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.python.pydev.shared_core 4 4 2024-02-16 10:56:24.214
+!MESSAGE Info: Rebuilding internal caches: D:\homeworkandppt\master\FPGA\Repositories\.metadata\.plugins\com.python.pydev.analysis\jython_v1_3v02jn4ue7b2tvvp7n78g21wm\jython.pydevsysteminfo (Expected error to be provided and got no error!)
