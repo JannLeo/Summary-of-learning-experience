@@ -11,12 +11,12 @@ void DFS(vector<vector<int>>& result, vector<int>& candidates, int target,int po
 	int temp = target - candidates[pos];
 	if (temp == 0)
 		return;
-	else
+	else {
 		DFS(result, candidates, temp, pos + 1);
+	}
 
 }
 vector<vector<int>> combinationSum(vector<int>& candidates, int target) {
-
 	vector<vector<int>> result;
 	if (candidates[0] > target)
 		return result;
