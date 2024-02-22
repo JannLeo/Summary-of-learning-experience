@@ -10,7 +10,7 @@ void DFS(vector<int>& candidates, int target, int pos,vector<vector<int>> &resul
 	for (int i = pos; i < candidates.size() && candidates[i] <= target; i++) {
 		if (i > pos && candidates[i] == candidates[i - 1]) {
 			// 跳过当前递归层次的重复元素
-			// 1 1 2  target = 2
+			// 1 1 2  target = 3
 			continue;
 		}
 		temp.push_back(candidates[i]);
@@ -25,14 +25,14 @@ vector<vector<int>> combinationSum2(vector<int>& candidates, int target) {
 		return result;
 	vector<int> temp;
 	DFS(candidates, target, 0, result, temp);
-	sort(result.begin(), result.end());
-	result.erase(unique(result.begin(), result.end()), result.end());
+	/*sort(result.begin(), result.end());
+	result.erase(unique(result.begin(), result.end()), result.end());*/
 	return result;
 }
 int main() {
 	//[10,1,2,7,6,1,5]   1 1 2 5 6 7 10  target=8
 	//[2,5,2,1,2] 1 2 2 2 5
-	vector<int> candidates({ 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1 });
+	vector<int> candidates({ 10,1,2,7,6,1,5 });
 	int target = 8;
 	combinationSum2(candidates, target);
 	return 0;
