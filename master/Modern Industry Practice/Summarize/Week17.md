@@ -25,16 +25,40 @@
 
   #### What did you find particularly interesting that week in the lecture and online content and what are the different opinions on any emerging topic raised? 在那一周的讲座和在线内容中，你发现了什么特别有趣的地方?对于新出现的话题，你有什么不同的看法?
 
-- 资源的浪费  和资源的垄断
+  This week's lecture primarily discussed the waste of resources and monopolies, narrating the rampant growth of the electronics industry and the consequent waste and pollution generated in the process. In my view, this is a vicious cycle that capitalism cannot escape, where the development of any industry inevitably follows the pattern of growth first and governance later. If we cannot break free from these shackles, then the so-called reduction of pollution and green industry are merely temporary solutions and cannot fundamentally solve the problem. We may witness the greenhouse gas emissions from chip manufacturers like TSMC and INTEL skyrocket, while those from automakers plummet. However, I do not see this as a problem. It is similar to the concerns people had three or four decades ago about overpopulation leading to insufficient food supply.
 
-- 资源可持续利用的八项原则
 
-- TSMC（台积电）的用水与环境消耗情况
 
-- Restriction of Hazardous Substances Directive 有害物质限制指令
 
-- ![image-20240220095117186](Week17.assets/image-20240220095117186.png)
 
-- 
+#### **Weekly Team Report - 17th Week's Summary**
 
-- 可持续性是至关重要的
+1. ##### **Weekly Mini-Project Work**
+   
+   - In week 17, I completed the task of the phase 1 draft and found 4 different projects based on the goals we aim to achieve. The context is summarized as follows:
+     - ###### Using muscle sensors in rehabilitation devices for health and well-being.
+       
+       - Home rehabilitation is beneficial for stroke recovery, but current devices are costly and not user-friendly, highlighting the need for more accessible solutions.
+  - ###### Digital behind-the-ear hearing aid to reduce inequality.
+       
+       - A significant percentage of individuals with hearing loss in lower-income countries lack access to affordable hearing aids, presenting a clear inequality issue.
+   
+2. ##### **Group Mini-Project Progress and Contributions**
+   
+- This week, I collaborated with LF to complete the phase 1 draft, focusing on projects aligned with our selected goals, while LF worked on introducing the SDGs. ZZ and CL concentrated on creating the phase 1 poster based on our draft.
+   
+3. ##### **Achievement of Learning Outcomes**
+   
+- I believe we have successfully reached the first goal of this module, which involves selecting appropriate goals and identifying suitable projects. We are approximately 30% through the module’s content.
+   
+4. ##### **Impactful Learning Experiences**
+   
+- My research on the prevalence of hearing loss in low- and middle-income countries and the lack of affordable hearing aids made a profound impact on me, motivating my desire to work towards reducing this inequality.
+   
+5. ##### **Influence of Module Learning on Career and Practice**
+   
+- The insights gained from this module have broadened my understanding of the modern industry and instilled in me a greater sense of empathy, making it an invaluable experience.
+   
+6. ##### **Lecture Insights and Emerging Topics**
+   
+   - This week's lecture primarily discussed the waste of resources and monopolies, narrating the rampant growth of the electronics industry and the consequent waste and pollution generated in the process. In my view, this is a vicious cycle that capitalism cannot escape, where the development of any industry inevitably follows the pattern of growth first and governance later. If we cannot break free from these shackles, then the so-called reduction of pollution and green industry are merely temporary solutions and cannot fundamentally solve the problem. We may witness the greenhouse gas emissions from chip manufacturers like TSMC and INTEL skyrocket, while those from automakers plummet. However, I do not see this as a problem. It is similar to the concerns people had three or four decades ago about overpopulation leading to insufficient food supply.
