@@ -37,7 +37,7 @@ int trap(vector<int>& height) {
 	vector<int> rightMax(size, 0);
 	leftMax[0] = height[0];
 	rightMax[size - 1] = height[size - 1];
-	for (int i = 1; i < size; i++) {
+	for (int i = 1 ; i < size; i++) {
 		leftMax[i] = max(leftMax[i - 1], height[i]);
 		rightMax[size - i - 1] = max(rightMax[size - i], height[size - i - 1]);
 	}
