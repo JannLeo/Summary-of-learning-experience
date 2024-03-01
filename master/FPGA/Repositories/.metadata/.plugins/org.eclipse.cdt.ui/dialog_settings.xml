@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item key="org.eclipse.cdt.utils.ui.controls.FileListControl" value="__vector_table"/>
+	<item key="org.eclipse.cdt.utils.ui.controls.FileListControl" value="-mno-unaligned-access"/>
 	<section name="OptionalMessageDialog.hide.">
 		<item key="askReindex.detail" value="0"/>
 	</section>
