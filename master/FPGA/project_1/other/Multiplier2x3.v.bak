@@ -1,0 +1,74 @@
+
+module Multiplier2x3 (
+    input  [1:0] m,
+    input  [2:0] q,
+    
+    output [4:0] p
+);
+
+
+wire [2:0] sub_q;//可以改
+
+wire [1:0] rtr;
+
+wire [3:0] ftr;
+
+
+and (p[0],q[0],m[0]);
+
+wire [1:0] addfirstrow;
+
+assign addfirstrow[0] = m[1];
+
+assign addfirstrow[1] = 1'b0;
+
+
+MultiplierFirstRow firstrow1(
+    .m   ( m[1:0]   ),
+    .q   ( q[1:0] ),
+    .cIn ( 1'b0   ),
+    
+    .qOut ( sub_q[1:0] ),
+    .cOut ( sub_q[2]   ),
+    .mOut ( ftr[0]   ),
+    .s    ( p[1]     )
+);
+
+
+MultiplierFirstRow firstrow2(
+    .m   ( addfirstrow[1:0] ),
+    .q   ( sub_q[1:0] ),
+    .cIn ( sub_q[2] ),
+    
+
+    .cOut ( ftr[3]   ),
+    .mOut ( ftr[2]     ),
+    .s    ( ftr[1]     )
+);
+
+MultiplierRemainingRow remainingrow1(
+    .pp ( ftr[1] ),
+    .m  ( ftr[0] ),
+    .q  ( q[2]   ),
+    .cIn( 1'b0   ),
+    
+    .qOut ( rtr[0]     ),
+    .cOut ( rtr[1]     ),
+
+    .s    ( p[2]       )
+);
+
+MultiplierRemainingRow remainingrow2(
+    .pp ( ftr[3] ),
+    .m  ( ftr[2] ),
+    .q  ( rtr[0] ),
+    .cIn( rtr[1] ),
+    
+
+    .cOut ( p[4]       ),
+
+    .s    ( p[3]       )
+);
+
+endmodule
+

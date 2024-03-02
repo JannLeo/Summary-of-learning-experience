@@ -1,0 +1,30 @@
+
+module MultiplierRemainingRow (
+    input  pp,
+    input  m,
+    input  q,
+    input  cIn,
+    
+    output qOut,
+    output cOut,
+    output mOut,
+    output s
+);
+wire a;
+
+
+and(a,m,q);
+assign mOut = m;
+assign qOut = q;
+
+	 Adder1Bit fulladder2 (
+        .cin (cIn),
+        .a   (a),
+        .b   (pp),
+        .sum (s),
+        .cout(cOut)
+    );
+
+
+
+endmodule

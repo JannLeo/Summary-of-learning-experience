@@ -1,0 +1,40 @@
+
+`timescale 1 ns/100 ps
+
+module Multiplier2x3_tb;
+// Test Bench Generated Signals
+reg [1:0] m;//min:00,max:11(3)  -4
+reg [2:0] q;//min:000,max:111(7) -8
+
+// DUT Output Signals
+
+wire  [4:0] p;
+// Device Under Test. Instance typically named "dut", or "ModuleName_dut".
+
+Multiplier2x3 dut(
+    .m    (m),
+    .q    (q),
+	 .p    (p)
+);
+// Test Bench Logic
+
+wire [4:0] expected_p;
+assign expected_p = m*q;
+
+integer i,j;
+
+initial begin
+   $display("%d ns\tSimulation Started",$time); 
+	$monitor("%d ns\t m=%d\t q=%d\t p=%d\t Expected:p=%d\t",$time,m,q,p,expected_p,);
+	
+	for (i = 0; i < 4; i = i + 1)begin
+		for( j = 0; j < 8; j = j + 1)begin
+			m = i;
+			q = j;
+			#10;
+		end
+
+	end
+	$display("%d ns\tSimulation Finished",$time); //Finished
+end
+endmodule

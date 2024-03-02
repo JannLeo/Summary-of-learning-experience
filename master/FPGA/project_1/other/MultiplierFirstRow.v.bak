@@ -1,0 +1,31 @@
+
+module MultiplierFirstRow (
+    input  [1:0] m,
+    input  [1:0] q,
+    input        cIn,
+    
+    output [1:0] qOut,
+    output       cOut,
+    output       mOut,
+    output       s
+);
+wire a,b;
+
+and(a,m[0],q[1]);
+and(b,m[1],q[0]);
+assign qOut[0] = 1'b0;
+assign qOut[1] = q[1];
+assign mOut = m[0];
+    
+	 Adder1Bit fulladder1 (
+        .cin (cIn     ),
+        .a   (a),
+        .b   (b),
+        .sum (s),
+        .cout(cOut)
+    );
+
+
+
+
+endmodule
