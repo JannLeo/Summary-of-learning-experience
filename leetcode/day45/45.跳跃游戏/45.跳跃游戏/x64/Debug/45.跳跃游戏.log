@@ -1,0 +1,3 @@
+﻿  源.cpp
+D:\homeworkandppt\leetcode\day45\45.跳跃游戏\45.跳跃游戏\源.cpp(7,11): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  45.跳跃游戏.vcxproj -> D:\homeworkandppt\leetcode\day45\45.跳跃游戏\x64\Debug\45.跳跃游戏.exe
