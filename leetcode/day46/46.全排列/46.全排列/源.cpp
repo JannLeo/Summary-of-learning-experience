@@ -9,6 +9,7 @@ void DFS(vector<int>& nums,vector<vector<int>>& result,int first,
 		result.push_back(temp);
 		return;
 	}
+	// 1 2 3 4
 	for (int i = 0; i < n; i++) {
 		if (!flag[i]) {
 			temp.push_back(nums[i]);
