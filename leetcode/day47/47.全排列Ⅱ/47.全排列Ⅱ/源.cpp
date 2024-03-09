@@ -10,6 +10,10 @@ void DFS(vector<int>& nums, vector<vector<int>>& result,
 		return;
 	}
 	for (int i = 0; i < n; i++) {
+		// 1a 1b 2   1 1 2  
+		// 0 0 0
+		if (flag[i] || i > 0 && nums[i] == nums[i - 1] && !flag[i - 1])
+			continue;
 		if (!flag[i]) {
 			temp.push_back(nums[i]);
 			flag[i] = true;
@@ -28,9 +32,10 @@ vector<vector<int>> permuteUnique(vector<int>& nums) {
 		result.push_back(nums);
 		return result;
 	}
+	sort(nums.begin(), nums.end());
 	DFS(nums, result, temp, 0, flag);
-	sort(result.begin(), result.end());
-	result.erase(unique(result.begin(), result.end()), result.end());
+	/*sort(result.begin(), result.end());
+	result.erase(unique(result.begin(), result.end()), result.end());*/
 	return result;
 }
 int main() {

@@ -1,4 +1,4 @@
 ﻿  源.cpp
 D:\homeworkandppt\leetcode\day47\47.全排列Ⅱ\47.全排列Ⅱ\源.cpp(7,8): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-D:\homeworkandppt\leetcode\day47\47.全排列Ⅱ\47.全排列Ⅱ\源.cpp(23,8): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\homeworkandppt\leetcode\day47\47.全排列Ⅱ\47.全排列Ⅱ\源.cpp(25,8): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
   47.全排列Ⅱ.vcxproj -> D:\homeworkandppt\leetcode\day47\47.全排列Ⅱ\x64\Debug\47.全排列Ⅱ.exe
