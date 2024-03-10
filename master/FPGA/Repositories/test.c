@@ -46,6 +46,60 @@ void DE1SoC_SevenSeg_SetSingle(unsigned int display, unsigned int value) {
 
 	// Address assignment for different values of value
 	if(value <= 15){
+		// switch(value){
+		// case 0:
+			// value = 0x3f;
+			// break;
+		// case 1:
+			// value = 0x6;
+			// break;
+		// case 2:
+			// value = 0x5b;
+			// break;
+		// case 3:
+			// value = 0x4f;
+			// break;
+		// case 4:
+			// value = 0x66;
+			// break;
+		// case 5:
+			// value = 0x6d;
+			// break;
+		// case 6:
+			// value = 0x7d;
+			// break;
+		// case 7:
+			// value = 0x7;
+			// break;
+		// case 8:
+			// value = 0x7f;
+			// break;
+		// case 9:
+			// value = 0x6f;
+			// break;
+		// case 10:
+			// value = 0x77;
+			// break;
+		// case 11:
+			// value = 0x7c;
+			// break;
+		// case 12:
+			// value = 0x39;
+			// break;
+		// case 13:
+			// value = 0x5e;
+			// break;
+		// case 14:
+			// value = 0x79;
+			// break;
+		// case 15:
+			// value = 0x71;
+			// break;
+		// //Unexpected values in 0-15 will become dashes, that is
+		// // only 6 bits are high bits.
+		// default: value = 0x40;
+	// }
+	// DE1SoC_SevenSeg_Write(display,value);
 		static const unsigned char display_mapping[] = {
 			0x3F, // 0
 			0x06, // 1
@@ -89,13 +143,17 @@ void DE1SoC_SevenSeg_SetDoubleHex(unsigned int display, unsigned int value) {
      *       30 |     1E |        1 |      E
      *     0x60 |     60 |        6 |      0
      */
-	if(value > 0xff){
-		DE1SoC_SevenSeg_SetSingle(display,16);
-		DE1SoC_SevenSeg_SetSingle(display+1,16);
+	 int default_num = 16;
+	 unsigned int  range = 0xff;
+	 int first_bit = value % 0xf;
+	 int second_bit = (value& 0xf0) >> 4;
+	if(value > range){
+		DE1SoC_SevenSeg_SetSingle(display,default_num);
+		DE1SoC_SevenSeg_SetSingle(display+1,default_num);
 	}
 	else{
-		DE1SoC_SevenSeg_SetSingle(display,value & 0xf);
-		DE1SoC_SevenSeg_SetSingle(display+1,(value & 0xf0)>>4);
+		DE1SoC_SevenSeg_SetSingle(display,first_bit);
+		DE1SoC_SevenSeg_SetSingle(display+1,second_bit);
 	}
 }
 
@@ -115,12 +173,16 @@ void DE1SoC_SevenSeg_SetDoubleDec(unsigned int display, unsigned int value) {
      *       30 |     30 |        3 |      0
      *     0x60 |     96 |        9 |      6
      */
-	if(value > 0x63 ){
-		DE1SoC_SevenSeg_SetSingle(display,16);
-		DE1SoC_SevenSeg_SetSingle(display+1,16);
+	 int default_num = 16;
+	 unsigned int  range = 0x63;
+	 int first_bit = value % 10;
+	 int second_bit = (value / 10) %10;
+	if(value > range ){
+		DE1SoC_SevenSeg_SetSingle(display,default_num);
+		DE1SoC_SevenSeg_SetSingle(display+1,default_num);
 	}
 	else{
-		DE1SoC_SevenSeg_SetSingle(display,value % 10);
-		DE1SoC_SevenSeg_SetSingle(display+1,(value / 10) % 10);
+		DE1SoC_SevenSeg_SetSingle(display,first_bit);
+		DE1SoC_SevenSeg_SetSingle(display+1,second_bit);
 	}
 }
