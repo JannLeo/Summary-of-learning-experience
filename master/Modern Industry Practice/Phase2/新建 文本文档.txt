@@ -1,0 +1,20 @@
+Function of EMG 
+To achieve the function of the EMG system module, the most important thing is know how to extract the surface electromyogram signal of the muscle group and identify the signal. When using the Compound carbon aerogel electrode (2 test electrodes, 1 reference electrode) get the SEMG from the muscle group, the test electrodes will transmit the signal to amplifier. The differential amplifier is used to reduce the common noise signal of two electrodes and amplify the difference of these two signal. 
+ 
+Figure 6 The connection locations of the three electrodes of the EMG sensor, by MyoWare 2.0  QuickStartGuide
+The signal after these steps will become the Raw EMG Output, which can be processed by MATLAB [20], also can be processed through High-Pass Filter, Full-Wave Rectifier, diffience Amplifier and Integration Amplifier and get the Envelope EMG Output.
+
+When raw signals are processed with MATLAB,We need to transplant the following functions implemented on hardware to matlab:
+(1)	Put the amplified signal into High-Pass Filter to eliminate the Low frequency signal and potential DC offset to block signals of muscle activity. 
+(2)	Use Lead-and-lag rectifier (Precision rectifier) to output the absolute value of the EMG signal.
+(3)	Use differencial amplifier to amplify the difference between the reference electrode and Emg signal after full wave rectifier. 
+(4)	Use the Integration Amplifier to get the Envelope EMG Output. 
+In conclusion, after the EMG signal is measured, the reference signal and the signal at two points of the test electrode are used to amplify and make a difference, rectification, removal of the offset and finally integrated into an EMG envelope signal.
+ 
+Figure 7 Implementation principle of EMG sensor, reproduced from [24]
+However, during the process of the signal collection we need to overcome problems such as the noise, motion artifact and the unstable signal. To encounter the error of the  surface electromyogram signal, we need to take different signal processing technique to get relyable signal.[19]
+
+We use a neural network of standard reverse-phase propagation algorithms to learn the relationship between the EMG patterns of FR analysis and the muscle movements of different parts. Using the FFT to analyse the mode of the electromyographic signal and make the signal that should be returned as the expected output (Monitor Mode). Under this mode we can realize the diversification of control modes through using I-channel surface EMG allowing multiple muscles to work together on the drone.[21]
+ 
+Figure 8 The architecture of using the Neural Network to learn to analyze the muscle movement, reproduced from [21]
+During the EMG testing the electromyogram signal, we can also use the Electrical impedance myogram (EIMG) [22] through the Support vector machine (SVM)[24]  to obtain the information of the Muscle health. Observing muscle fatigue and so on to judge the physical health of the operator, which can ensure the safety of the staff. [18]
