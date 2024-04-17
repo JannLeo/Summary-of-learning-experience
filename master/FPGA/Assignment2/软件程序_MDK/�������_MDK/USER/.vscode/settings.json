@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "common.h": "c",
+        "draw.h": "c",
+        "oled_font.h": "c",
+        "oled_driver.h": "c"
+    }
+}
