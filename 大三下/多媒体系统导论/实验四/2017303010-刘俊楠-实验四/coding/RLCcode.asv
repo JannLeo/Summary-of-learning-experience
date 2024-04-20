@@ -1,0 +1,27 @@
+function [output] = RLCcode(arr,length)
+    %DLCCODE 此处显示有关此函数的摘要
+    %   
+    for k=1:1:64
+        for j=1:1:length/64
+            num=0;
+            k=1;
+            for i=2:1:64
+                if(i==length&&arr(k,(j-1)*64+i)==0)
+                    output(k)=0;
+                    k=k+1;
+                    output(k)=0;
+                    break;
+                end
+                if(arr(k,(j-1)*64+i)==0)
+                    num=num+1;
+                elseif(arr(k,(j-1)*64+i)~=0)
+                    output(k)=num;
+                    k=k+1;
+                    output(k)=arr(k,(j-1)*64+i);
+                    num=0;
+                end
+            end
+        end
+    end
+end
+
