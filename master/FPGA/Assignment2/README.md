@@ -41,8 +41,9 @@
       - 将以上参数传入mat2mif代码即可生成mif文件
 
     - ③完成IIC驱动（该部分内容大部分从网上搜集整理学习，主要参考《Embedded SoPC design with NIOS II processor and Verilog Examples》）：WM8731 器件可通过控制接口进行配置，该接口支持 2 线和 3 线串行总线协议。 DEI 板的构造支持 2 线 I C（内部集成电路）总线协议。有关IIC的知识架构图总结如下图所示：
-      - <img src="README.assets/IIC-en.png" alt="IIC-en" style="zoom:200%;" />
-
+      
+    - <img src="README.assets/IIC-en.png" alt="IIC-en" style="zoom:200%;" />
+      
     - <center><b><font size ='2'>Figure 5 IIC知识体系架构</font></b></center></font>
 
       - HDL实现
@@ -56,7 +57,7 @@
 
     - 在实际情况中，我们需要在每次传输过程中传递1个bit的数据，为了使数据传输平稳，我们需要data1-data3三个状态，在data2状态的时候才执行数据的读写，data1和data3状态负责稳定数据。具体如下图所示：
 
-         - ![image-20240423170835342](README.assets/image-20240423170835342.png)
+       - ![image-20240423170835342](README.assets/image-20240423170835342.png)
 
        - <center><b><font size ='2'>Figure 7 IIC主设备和从设备不同状态所占时钟周期</font></b></center></font>
 
@@ -71,6 +72,9 @@
            - 3、其他：idle状态
          - 在信号传输过程中，经常会出现瞬时干扰和不稳定信号的情况，为了解决这个情况，我们需要对时钟信号的输出和数据信号的输出分别做一个缓冲器来确保信号的稳定性。
            - IIC控制器代码逻辑：
+             - s
+           - 状态机具体实现如下图所示
+             - ![image-20240424122719907](README.assets/image-20240424122719907.png)
              - 
 
     - ④完成WM8731的驱动设计
@@ -94,4 +98,6 @@
       - 这是因为我的输入数据的长度（即 `data_depth`）大于了目标存储器的深度（即 `memory_depth`），也就是说我要存储的数据超出了存储器的容量限制，所以我需要对memory_depth进行修改，它应该略大于numel(data).
     - Input data value at index 4482 is negative. Values must be unsigned.
       - 这是因为我从网上下载的wav文件经过audioread转换成data之后没有对数据进行处理，所以导致了data里面有负值。
+    - 因为
+      - ![image-20240424121240468](README.assets/image-20240424121240468.png)
 
