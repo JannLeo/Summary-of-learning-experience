@@ -61,23 +61,41 @@
 
        - <center><b><font size ='2'>Figure 7 IIC主设备和从设备不同状态所占时钟周期</font></b></center></font>
 
-           - 根据以上分析我们可以知道HDL主要的数据结构：
-             - 主输入 message_in：24bit，主要包括7位寄存器id地址+9位寄存器数据值+7位WM8731地址+1bit方向位（0）
-             - 两个主输出i2c_scl和i2c_sda：连接到双向scl和sda。
-             - 输入命令wr_i2c：用于控制数据传输启动和停止。
-             - 三个输出状态信号： i2c_idle 、 i2c_fail和i2c_down_tick，分别对应三种状态：待机状态，传输失败状态和传输完成计数状态。
+         - 根据以上分析我们可以知道HDL主要的数据结构：
+           - 主输入 message_in：24bit，主要包括7位寄存器id地址+9位寄存器数据值+7位WM8731地址+1bit方向位（0）
+           - 两个主输出i2c_scl和i2c_sda：连接到双向scl和sda。
+           - 输入命令wr_i2c：用于控制数据传输启动和停止。
+           - 三个输出状态信号： i2c_idle 、 i2c_fail和i2c_down_tick，分别对应三种状态：待机状态，传输失败状态和传输完成计数状态。
          - 此外，由于一般IIC的传输速率为每秒100K，也就是每bit数据占10微秒，然而DE1-SOC的时钟为50MHz约为0.02微妙/周期，为了让每个状态有足够的时间，我们需要对时钟数进行计数并且合理分配每个状态所占时间，并且根据图7我们知道，不同状态所耗时间就三种类型：
            - 1、占用半个时钟周期（5微妙）：start、turn、stop、data2或者是ack2状态
            - 2、占用1/4个时钟周期（2.5微妙）：scl_begin、data1、data3、ack1、ack3和scl_end状态
            - 3、其他：idle状态
          - 在信号传输过程中，经常会出现瞬时干扰和不稳定信号的情况，为了解决这个情况，我们需要对时钟信号的输出和数据信号的输出分别做一个缓冲器来确保信号的稳定性。
-           - IIC控制器代码逻辑：
-             - s
            - 状态机具体实现如下图所示
              - ![image-20240424122719907](README.assets/image-20240424122719907.png)
-             - 
 
     - ④完成WM8731的驱动设计
+
+       - 提前了解WM8731知识，总结如下图（路径：/Audio/docx/WM8731.png）：
+          - ![WM8731](README.assets/WM8731.png)
+       - WM8731架构图如下图所示：
+          - ![image-20240424180602800](README.assets/image-20240424180602800.png)
+          - 根据上图我们可以知道，我们需要走的电路由放大电路（右边）、两个ADC、数字滤波器和数字音频接口组成，相关信号解释如下：
+             - 模拟信号相关：
+                - rlinein、llinein: 模拟信号右左声道线路输入
+                - micin：麦克风输入
+                - rhpout、lhpout：右左声道耳机输出
+             - 数字信号相关：
+                - dacdat：数据到DAC
+                - adcdat：来自ADC的数据
+                - mclk：主时钟信号
+                - bclk：位时钟
+                - daclrc：DAC左右信道的时钟信号
+                - adclrc：ADC左右信道的时钟信号
+             - 控制接口的信号
+                - sdin：串行数据输入
+                - sclk：串行时钟
+       - 
 
 - Reference：
     - [FPGA配置采集WM8731小白应用笔记-CSDN博客](https://blog.csdn.net/qq_41667729/article/details/120753491)
@@ -86,6 +104,7 @@
     - 《Embedded SoPC design with NIOS II processor and Verilog Examples》
     - 《DE1-SoC_User_Manual》
     - 《WM8731_Audio_Codec_Datasheet》
+  - [探索 Arrow SoCKit 第 VIII 部分 - 音频编解码器 --- Exploring the Arrow SoCKit Part VIII - The Audio Codec (zhehaomao.com)](https://zhehaomao.com/blog/fpga/2014/01/15/sockit-8.html)
   
 - #### 遇到的问题（201715540）
 
