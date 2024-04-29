@@ -97,6 +97,8 @@
                 - sclk：串行时钟
        - rom的ip核的testbench
           - ![image-20240427214802525](README.assets/image-20240427214802525.png)
+       - clock的引脚
+          - ![image-20240428175326157](README.assets/image-20240428175326157.png)
 
 - Reference：
     - [FPGA配置采集WM8731小白应用笔记-CSDN博客](https://blog.csdn.net/qq_41667729/article/details/120753491)
