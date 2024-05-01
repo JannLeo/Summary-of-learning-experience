@@ -26,20 +26,20 @@ module adc_dac (
     input wire reset,
     // dac input data
     input wire [31:0] dac_data_in,
-    // adc output data
-    output wire [31:0] adc_data_out,
+    // // adc output data
+    // output wire [31:0] adc_data_out,
     // main clock
     output wire m_clk,
     // bit clock
     output wire b_clk,
     // dac left tunnel clock
     output wire dac_lr_clk,
-    // adc left tunnel clock
-    output wire adc_lr_clk,
+    // // adc left tunnel clock
+    // output wire adc_lr_clk,
     // dac clock
     output wire dacdat,
-    // adc clock
-    input wire adcdat,
+    // // adc clock
+    // input wire adcdat,
     // whether the load is finished.
     output wire load_done_tick
 );
@@ -145,10 +145,10 @@ end
 //                              ADC Buffer logic
 //============================================================================
     
-    // ADC shift register determines whether the data reception is completed
-    assign adc_buf_next = b_pos_tick ? {adc_buf_reg[30:0], adcdat}:
-                                        adc_buf_reg;
-    // Assign the received data to the output
-    assign adc_data_out = adc_buf_reg;
+    // // ADC shift register determines whether the data reception is completed
+    // assign adc_buf_next = b_pos_tick ? {adc_buf_reg[30:0], adcdat}:
+                                        // adc_buf_reg;
+    // // Assign the received data to the output
+    // assign adc_data_out = adc_buf_reg;
 
 endmodule
