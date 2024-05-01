@@ -73,8 +73,8 @@ wire 	[B_DVSR-1:0] 	b_next;
 reg 	[LR_DVSR-1:0] 	lr_reg;
 wire	[LR_DVSR-1:0] 	lr_next;
 // 32-bit shift register, buffer register for storing dac and adc data
-reg 	[31:0] dac_buf_reg, 	adc_buf_reg;
-wire 	[31:0] dac_buf_next, 	adc_buf_next;
+reg 	[31:0] dac_buf_reg;
+wire 	[31:0] dac_buf_next;
 reg 	lr_delayed_reg, 		b_delayed_reg;
 // Create multiple status signals to facilitate data processing
 // b_neg_tick and b_pos_tick will change 
