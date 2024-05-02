@@ -125,7 +125,6 @@ end
     assign lr_next 			= b_neg_tick? lr_reg + 1 : lr_reg;
     // dac and adc left channel clock level
     assign dac_lr_clk 		= lr_reg[LR_DVSR-1];
-    assign adc_lr_clk 		= lr_reg[LR_DVSR-1];
     
     // Record the completion of stereo processing
     assign load_tick 		= !lr_delayed_reg & lr_reg[LR_DVSR-1];

@@ -37,7 +37,7 @@ module rom (
 	clock,
 	q);
 
-	input	[18:0]  address;
+	input	[17:0]  address;
 	input	  clock;
 	output	[15:0]  q;
 `ifndef ALTERA_RESERVED_QIS
@@ -70,42 +70,42 @@ endmodule
 // Retrieval info: PRIVATE: JTAG_ENABLED NUMERIC "0"
 // Retrieval info: PRIVATE: JTAG_ID STRING "NONE"
 // Retrieval info: PRIVATE: MAXIMUM_DEPTH NUMERIC "0"
-// Retrieval info: PRIVATE: MIFfilename STRING "./Audio/music/gameover.wav.mif"
-// Retrieval info: PRIVATE: NUMWORDS_A NUMERIC "262150"
+// Retrieval info: PRIVATE: MIFfilename STRING "./music/test_1.mif"
+// Retrieval info: PRIVATE: NUMWORDS_A NUMERIC "214198"
 // Retrieval info: PRIVATE: RAM_BLOCK_TYPE NUMERIC "0"
 // Retrieval info: PRIVATE: RegAddr NUMERIC "1"
 // Retrieval info: PRIVATE: RegOutput NUMERIC "1"
 // Retrieval info: PRIVATE: SYNTH_WRAPPER_GEN_POSTFIX STRING "0"
 // Retrieval info: PRIVATE: SingleClock NUMERIC "1"
 // Retrieval info: PRIVATE: UseDQRAM NUMERIC "0"
-// Retrieval info: PRIVATE: WidthAddr NUMERIC "19"
+// Retrieval info: PRIVATE: WidthAddr NUMERIC "18"
 // Retrieval info: PRIVATE: WidthData NUMERIC "16"
 // Retrieval info: PRIVATE: rden NUMERIC "0"
 // Retrieval info: LIBRARY: altera_mf altera_mf.altera_mf_components.all
 // Retrieval info: CONSTANT: ADDRESS_ACLR_A STRING "NONE"
 // Retrieval info: CONSTANT: CLOCK_ENABLE_INPUT_A STRING "BYPASS"
 // Retrieval info: CONSTANT: CLOCK_ENABLE_OUTPUT_A STRING "BYPASS"
-// Retrieval info: CONSTANT: INIT_FILE STRING "./Audio/music/gameover.wav.mif"
+// Retrieval info: CONSTANT: INIT_FILE STRING "./music/test_1.mif"
 // Retrieval info: CONSTANT: INTENDED_DEVICE_FAMILY STRING "Cyclone V"
 // Retrieval info: CONSTANT: LPM_HINT STRING "ENABLE_RUNTIME_MOD=NO"
 // Retrieval info: CONSTANT: LPM_TYPE STRING "altsyncram"
-// Retrieval info: CONSTANT: NUMWORDS_A NUMERIC "262150"
+// Retrieval info: CONSTANT: NUMWORDS_A NUMERIC "214198"
 // Retrieval info: CONSTANT: OPERATION_MODE STRING "ROM"
 // Retrieval info: CONSTANT: OUTDATA_ACLR_A STRING "NONE"
 // Retrieval info: CONSTANT: OUTDATA_REG_A STRING "CLOCK0"
-// Retrieval info: CONSTANT: WIDTHAD_A NUMERIC "19"
+// Retrieval info: CONSTANT: WIDTHAD_A NUMERIC "18"
 // Retrieval info: CONSTANT: WIDTH_A NUMERIC "16"
 // Retrieval info: CONSTANT: WIDTH_BYTEENA_A NUMERIC "1"
-// Retrieval info: USED_PORT: address 0 0 19 0 INPUT NODEFVAL "address[18..0]"
+// Retrieval info: USED_PORT: address 0 0 18 0 INPUT NODEFVAL "address[17..0]"
 // Retrieval info: USED_PORT: clock 0 0 0 0 INPUT VCC "clock"
 // Retrieval info: USED_PORT: q 0 0 16 0 OUTPUT NODEFVAL "q[15..0]"
-// Retrieval info: CONNECT: @address_a 0 0 19 0 address 0 0 19 0
+// Retrieval info: CONNECT: @address_a 0 0 18 0 address 0 0 18 0
 // Retrieval info: CONNECT: @clock0 0 0 0 0 clock 0 0 0 0
 // Retrieval info: CONNECT: q 0 0 16 0 @q_a 0 0 16 0
 // Retrieval info: GEN_FILE: TYPE_NORMAL rom.v TRUE
 // Retrieval info: GEN_FILE: TYPE_NORMAL rom.inc FALSE
 // Retrieval info: GEN_FILE: TYPE_NORMAL rom.cmp FALSE
 // Retrieval info: GEN_FILE: TYPE_NORMAL rom.bsf FALSE
-// Retrieval info: GEN_FILE: TYPE_NORMAL rom_inst.v FALSE
+// Retrieval info: GEN_FILE: TYPE_NORMAL rom_inst.v TRUE
 // Retrieval info: GEN_FILE: TYPE_NORMAL rom_bb.v TRUE
 // Retrieval info: LIB_FILE: altera_mf
