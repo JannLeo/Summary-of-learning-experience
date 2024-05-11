@@ -1,0 +1,176 @@
+21:44:00 **** Incremental Build of configuration Debug for project ELEC5620M-Mini-Project-Group-19 ****
+make all 
+'Building file: ../LCDGame/main.c'
+'Invoking: Arm C Compiler for Embedded 6'
+armclang.exe --target=arm-arm-none-eabi -mcpu=cortex-a9 -mfpu=none -mfloat-abi=soft -marm -I"D:\homeworkandppt\master\FPGA\Repositories\ELEC5620M-Resources\Drivers" -O0 -g -mno-unaligned-access -MD -MP -c -o "LCDGame/main.o" "../LCDGame/main.c"
+../LCDGame/main.c:118:26: warning: incompatible pointer types passing 'PLT24Ctx_t *' (aka 'LT24Ctx_t **') to parameter of type 'PLT24Ctx_t' (aka 'LT24Ctx_t *'); remove & [-Wincompatible-pointer-types]
+                                LT24_copyFrameBuffer(&lt24,frameBuffer, 0, 0, 240, 320);
+                                                     ^~~~~
+D:\homeworkandppt\master\FPGA\Repositories\ELEC5620M-Resources\Drivers\DE1SoC_LT24/DE1SoC_LT24.h:91:43: note: passing argument to parameter 'ctx' here
+HpsErr_t LT24_copyFrameBuffer( PLT24Ctx_t ctx, const unsigned short* framebuffer,
+                                          ^
+../LCDGame/main.c:226:26: warning: incompatible pointer types passing 'PLT24Ctx_t *' (aka 'LT24Ctx_t **') to parameter of type 'PLT24Ctx_t' (aka 'LT24Ctx_t *'); remove & [-Wincompatible-pointer-types]
+                                LT24_copyFrameBuffer(&lt24,frameBuffer, 0, 0, 240, 320);
+                                                     ^~~~~
+D:\homeworkandppt\master\FPGA\Repositories\ELEC5620M-Resources\Drivers\DE1SoC_LT24/DE1SoC_LT24.h:91:43: note: passing argument to parameter 'ctx' here
+HpsErr_t LT24_copyFrameBuffer( PLT24Ctx_t ctx, const unsigned short* framebuffer,
+                                          ^
+../LCDGame/main.c:240:26: warning: incompatible pointer types passing 'PLT24Ctx_t *' (aka 'LT24Ctx_t **') to parameter of type 'PLT24Ctx_t' (aka 'LT24Ctx_t *'); remove & [-Wincompatible-pointer-types]
+                                LT24_copyFrameBuffer(&lt24,frameBuffer, 0, 0, 240, 320);
+                                                     ^~~~~
+D:\homeworkandppt\master\FPGA\Repositories\ELEC5620M-Resources\Drivers\DE1SoC_LT24/DE1SoC_LT24.h:91:43: note: passing argument to parameter 'ctx' here
+HpsErr_t LT24_copyFrameBuffer( PLT24Ctx_t ctx, const unsigned short* framebuffer,
+                                          ^
+3 warnings generated.
+'Finished building: ../LCDGame/main.c'
+' '
+'Building file: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/Util/driver_crc.c'
+'Invoking: Arm C Compiler for Embedded 6'
+armclang.exe --target=arm-arm-none-eabi -mcpu=cortex-a9 -mfpu=none -mfloat-abi=soft -marm -I"D:\homeworkandppt\master\FPGA\Repositories\ELEC5620M-Resources\Drivers" -O0 -g -mno-unaligned-access -MD -MP -c -o "Drivers/Util/driver_crc.o" "D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/Util/driver_crc.c"
+'Finished building: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/Util/driver_crc.c'
+' '
+'Building file: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/Util/driver_ctx.c'
+'Invoking: Arm C Compiler for Embedded 6'
+armclang.exe --target=arm-arm-none-eabi -mcpu=cortex-a9 -mfpu=none -mfloat-abi=soft -marm -I"D:\homeworkandppt\master\FPGA\Repositories\ELEC5620M-Resources\Drivers" -O0 -g -mno-unaligned-access -MD -MP -c -o "Drivers/Util/driver_ctx.o" "D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/Util/driver_ctx.c"
+'Finished building: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/Util/driver_ctx.c'
+' '
+'Building file: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/Util/driver_flash.c'
+'Invoking: Arm C Compiler for Embedded 6'
+armclang.exe --target=arm-arm-none-eabi -mcpu=cortex-a9 -mfpu=none -mfloat-abi=soft -marm -I"D:\homeworkandppt\master\FPGA\Repositories\ELEC5620M-Resources\Drivers" -O0 -g -mno-unaligned-access -MD -MP -c -o "Drivers/Util/driver_flash.o" "D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/Util/driver_flash.c"
+'Finished building: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/Util/driver_flash.c'
+' '
+'Building file: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/Util/enum_lookup.c'
+'Invoking: Arm C Compiler for Embedded 6'
+armclang.exe --target=arm-arm-none-eabi -mcpu=cortex-a9 -mfpu=none -mfloat-abi=soft -marm -I"D:\homeworkandppt\master\FPGA\Repositories\ELEC5620M-Resources\Drivers" -O0 -g -mno-unaligned-access -MD -MP -c -o "Drivers/Util/enum_lookup.o" "D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/Util/enum_lookup.c"
+'Finished building: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/Util/enum_lookup.c'
+' '
+'Building file: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/Util/error.c'
+'Invoking: Arm C Compiler for Embedded 6'
+armclang.exe --target=arm-arm-none-eabi -mcpu=cortex-a9 -mfpu=none -mfloat-abi=soft -marm -I"D:\homeworkandppt\master\FPGA\Repositories\ELEC5620M-Resources\Drivers" -O0 -g -mno-unaligned-access -MD -MP -c -o "Drivers/Util/error.o" "D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/Util/error.c"
+'Finished building: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/Util/error.c'
+' '
+'Building file: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/Util/startup_arm.c'
+'Invoking: Arm C Compiler for Embedded 6'
+armclang.exe --target=arm-arm-none-eabi -mcpu=cortex-a9 -mfpu=none -mfloat-abi=soft -marm -I"D:\homeworkandppt\master\FPGA\Repositories\ELEC5620M-Resources\Drivers" -O0 -g -mno-unaligned-access -MD -MP -c -o "Drivers/Util/startup_arm.o" "D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/Util/startup_arm.c"
+'Finished building: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/Util/startup_arm.c'
+' '
+'Building file: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/Util/verbosity.c'
+'Invoking: Arm C Compiler for Embedded 6'
+armclang.exe --target=arm-arm-none-eabi -mcpu=cortex-a9 -mfpu=none -mfloat-abi=soft -marm -I"D:\homeworkandppt\master\FPGA\Repositories\ELEC5620M-Resources\Drivers" -O0 -g -mno-unaligned-access -MD -MP -c -o "Drivers/Util/verbosity.o" "D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/Util/verbosity.c"
+'Finished building: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/Util/verbosity.c'
+' '
+'Building file: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/HPS_usleep/HPS_usleep.c'
+'Invoking: Arm C Compiler for Embedded 6'
+armclang.exe --target=arm-arm-none-eabi -mcpu=cortex-a9 -mfpu=none -mfloat-abi=soft -marm -I"D:\homeworkandppt\master\FPGA\Repositories\ELEC5620M-Resources\Drivers" -O0 -g -mno-unaligned-access -MD -MP -c -o "Drivers/HPS_usleep/HPS_usleep.o" "D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/HPS_usleep/HPS_usleep.c"
+'Finished building: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/HPS_usleep/HPS_usleep.c'
+' '
+'Building file: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/HPS_IRQ/HPS_IRQ.c'
+'Invoking: Arm C Compiler for Embedded 6'
+armclang.exe --target=arm-arm-none-eabi -mcpu=cortex-a9 -mfpu=none -mfloat-abi=soft -marm -I"D:\homeworkandppt\master\FPGA\Repositories\ELEC5620M-Resources\Drivers" -O0 -g -mno-unaligned-access -MD -MP -c -o "Drivers/HPS_IRQ/HPS_IRQ.o" "D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/HPS_IRQ/HPS_IRQ.c"
+'Finished building: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/HPS_IRQ/HPS_IRQ.c'
+' '
+'Building file: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/HPS_I2C/HPS_I2C.c'
+'Invoking: Arm C Compiler for Embedded 6'
+armclang.exe --target=arm-arm-none-eabi -mcpu=cortex-a9 -mfpu=none -mfloat-abi=soft -marm -I"D:\homeworkandppt\master\FPGA\Repositories\ELEC5620M-Resources\Drivers" -O0 -g -mno-unaligned-access -MD -MP -c -o "Drivers/HPS_I2C/HPS_I2C.o" "D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/HPS_I2C/HPS_I2C.c"
+'Finished building: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/HPS_I2C/HPS_I2C.c'
+' '
+'Building file: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/HPS_GPIO/HPS_GPIO.c'
+'Invoking: Arm C Compiler for Embedded 6'
+armclang.exe --target=arm-arm-none-eabi -mcpu=cortex-a9 -mfpu=none -mfloat-abi=soft -marm -I"D:\homeworkandppt\master\FPGA\Repositories\ELEC5620M-Resources\Drivers" -O0 -g -mno-unaligned-access -MD -MP -c -o "Drivers/HPS_GPIO/HPS_GPIO.o" "D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/HPS_GPIO/HPS_GPIO.c"
+'Finished building: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/HPS_GPIO/HPS_GPIO.c'
+' '
+'Building file: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/FatFS/hwlib/cv/alt_clock_manager.c'
+'Invoking: Arm C Compiler for Embedded 6'
+armclang.exe --target=arm-arm-none-eabi -mcpu=cortex-a9 -mfpu=none -mfloat-abi=soft -marm -I"D:\homeworkandppt\master\FPGA\Repositories\ELEC5620M-Resources\Drivers" -O0 -g -mno-unaligned-access -MD -MP -c -o "Drivers/FatFS/hwlib/cv/alt_clock_manager.o" "D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/FatFS/hwlib/cv/alt_clock_manager.c"
+'Finished building: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/FatFS/hwlib/cv/alt_clock_manager.c'
+' '
+'Building file: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/FatFS/hwlib/a10/alt_clock_manager.c'
+'Invoking: Arm C Compiler for Embedded 6'
+armclang.exe --target=arm-arm-none-eabi -mcpu=cortex-a9 -mfpu=none -mfloat-abi=soft -marm -I"D:\homeworkandppt\master\FPGA\Repositories\ELEC5620M-Resources\Drivers" -O0 -g -mno-unaligned-access -MD -MP -c -o "Drivers/FatFS/hwlib/a10/alt_clock_manager.o" "D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/FatFS/hwlib/a10/alt_clock_manager.c"
+'Finished building: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/FatFS/hwlib/a10/alt_clock_manager.c'
+' '
+'Building file: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/FatFS/hwlib/alt_globaltmr.c'
+'Invoking: Arm C Compiler for Embedded 6'
+armclang.exe --target=arm-arm-none-eabi -mcpu=cortex-a9 -mfpu=none -mfloat-abi=soft -marm -I"D:\homeworkandppt\master\FPGA\Repositories\ELEC5620M-Resources\Drivers" -O0 -g -mno-unaligned-access -MD -MP -c -o "Drivers/FatFS/hwlib/alt_globaltmr.o" "D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/FatFS/hwlib/alt_globaltmr.c"
+'Finished building: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/FatFS/hwlib/alt_globaltmr.c'
+' '
+'Building file: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/FatFS/hwlib/alt_sdmmc.c'
+'Invoking: Arm C Compiler for Embedded 6'
+armclang.exe --target=arm-arm-none-eabi -mcpu=cortex-a9 -mfpu=none -mfloat-abi=soft -marm -I"D:\homeworkandppt\master\FPGA\Repositories\ELEC5620M-Resources\Drivers" -O0 -g -mno-unaligned-access -MD -MP -c -o "Drivers/FatFS/hwlib/alt_sdmmc.o" "D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/FatFS/hwlib/alt_sdmmc.c"
+'Finished building: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/FatFS/hwlib/alt_sdmmc.c'
+' '
+'Building file: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/FatFS/hwlib/alt_timers.c'
+'Invoking: Arm C Compiler for Embedded 6'
+armclang.exe --target=arm-arm-none-eabi -mcpu=cortex-a9 -mfpu=none -mfloat-abi=soft -marm -I"D:\homeworkandppt\master\FPGA\Repositories\ELEC5620M-Resources\Drivers" -O0 -g -mno-unaligned-access -MD -MP -c -o "Drivers/FatFS/hwlib/alt_timers.o" "D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/FatFS/hwlib/alt_timers.c"
+'Finished building: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/FatFS/hwlib/alt_timers.c'
+' '
+'Building file: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/FatFS/hwlib/alt_watchdog.c'
+'Invoking: Arm C Compiler for Embedded 6'
+armclang.exe --target=arm-arm-none-eabi -mcpu=cortex-a9 -mfpu=none -mfloat-abi=soft -marm -I"D:\homeworkandppt\master\FPGA\Repositories\ELEC5620M-Resources\Drivers" -O0 -g -mno-unaligned-access -MD -MP -c -o "Drivers/FatFS/hwlib/alt_watchdog.o" "D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/FatFS/hwlib/alt_watchdog.c"
+'Finished building: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/FatFS/hwlib/alt_watchdog.c'
+' '
+'Building file: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/FatFS/diskio_socfpga.c'
+'Invoking: Arm C Compiler for Embedded 6'
+armclang.exe --target=arm-arm-none-eabi -mcpu=cortex-a9 -mfpu=none -mfloat-abi=soft -marm -I"D:\homeworkandppt\master\FPGA\Repositories\ELEC5620M-Resources\Drivers" -O0 -g -mno-unaligned-access -MD -MP -c -o "Drivers/FatFS/diskio_socfpga.o" "D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/FatFS/diskio_socfpga.c"
+'Finished building: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/FatFS/diskio_socfpga.c'
+' '
+'Building file: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/FatFS/ff.c'
+'Invoking: Arm C Compiler for Embedded 6'
+armclang.exe --target=arm-arm-none-eabi -mcpu=cortex-a9 -mfpu=none -mfloat-abi=soft -marm -I"D:\homeworkandppt\master\FPGA\Repositories\ELEC5620M-Resources\Drivers" -O0 -g -mno-unaligned-access -MD -MP -c -o "Drivers/FatFS/ff.o" "D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/FatFS/ff.c"
+'Finished building: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/FatFS/ff.c'
+' '
+'Building file: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/FatFS/ffsystem.c'
+'Invoking: Arm C Compiler for Embedded 6'
+armclang.exe --target=arm-arm-none-eabi -mcpu=cortex-a9 -mfpu=none -mfloat-abi=soft -marm -I"D:\homeworkandppt\master\FPGA\Repositories\ELEC5620M-Resources\Drivers" -O0 -g -mno-unaligned-access -MD -MP -c -o "Drivers/FatFS/ffsystem.o" "D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/FatFS/ffsystem.c"
+'Finished building: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/FatFS/ffsystem.c'
+' '
+'Building file: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/FatFS/ffunicode.c'
+'Invoking: Arm C Compiler for Embedded 6'
+armclang.exe --target=arm-arm-none-eabi -mcpu=cortex-a9 -mfpu=none -mfloat-abi=soft -marm -I"D:\homeworkandppt\master\FPGA\Repositories\ELEC5620M-Resources\Drivers" -O0 -g -mno-unaligned-access -MD -MP -c -o "Drivers/FatFS/ffunicode.o" "D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/FatFS/ffunicode.c"
+'Finished building: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/FatFS/ffunicode.c'
+' '
+'Building file: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/FPGA_PIO/FPGA_PIO.c'
+'Invoking: Arm C Compiler for Embedded 6'
+armclang.exe --target=arm-arm-none-eabi -mcpu=cortex-a9 -mfpu=none -mfloat-abi=soft -marm -I"D:\homeworkandppt\master\FPGA\Repositories\ELEC5620M-Resources\Drivers" -O0 -g -mno-unaligned-access -MD -MP -c -o "Drivers/FPGA_PIO/FPGA_PIO.o" "D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/FPGA_PIO/FPGA_PIO.c"
+'Finished building: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/FPGA_PIO/FPGA_PIO.c'
+' '
+'Building file: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/FPGA_IrDAController/FPGA_IrDAController.c'
+'Invoking: Arm C Compiler for Embedded 6'
+armclang.exe --target=arm-arm-none-eabi -mcpu=cortex-a9 -mfpu=none -mfloat-abi=soft -marm -I"D:\homeworkandppt\master\FPGA\Repositories\ELEC5620M-Resources\Drivers" -O0 -g -mno-unaligned-access -MD -MP -c -o "Drivers/FPGA_IrDAController/FPGA_IrDAController.o" "D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/FPGA_IrDAController/FPGA_IrDAController.c"
+'Finished building: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/FPGA_IrDAController/FPGA_IrDAController.c'
+' '
+'Building file: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/DE1SoC_WM8731/DE1SoC_WM8731.c'
+'Invoking: Arm C Compiler for Embedded 6'
+armclang.exe --target=arm-arm-none-eabi -mcpu=cortex-a9 -mfpu=none -mfloat-abi=soft -marm -I"D:\homeworkandppt\master\FPGA\Repositories\ELEC5620M-Resources\Drivers" -O0 -g -mno-unaligned-access -MD -MP -c -o "Drivers/DE1SoC_WM8731/DE1SoC_WM8731.o" "D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/DE1SoC_WM8731/DE1SoC_WM8731.c"
+'Finished building: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/DE1SoC_WM8731/DE1SoC_WM8731.c'
+' '
+'Building file: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/DE1SoC_Servo/DE1SoC_Servo.c'
+'Invoking: Arm C Compiler for Embedded 6'
+armclang.exe --target=arm-arm-none-eabi -mcpu=cortex-a9 -mfpu=none -mfloat-abi=soft -marm -I"D:\homeworkandppt\master\FPGA\Repositories\ELEC5620M-Resources\Drivers" -O0 -g -mno-unaligned-access -MD -MP -c -o "Drivers/DE1SoC_Servo/DE1SoC_Servo.o" "D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/DE1SoC_Servo/DE1SoC_Servo.c"
+'Finished building: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/DE1SoC_Servo/DE1SoC_Servo.c'
+' '
+'Building file: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/DE1SoC_Mandelbrot/DE1SoC_Mandelbrot.c'
+'Invoking: Arm C Compiler for Embedded 6'
+armclang.exe --target=arm-arm-none-eabi -mcpu=cortex-a9 -mfpu=none -mfloat-abi=soft -marm -I"D:\homeworkandppt\master\FPGA\Repositories\ELEC5620M-Resources\Drivers" -O0 -g -mno-unaligned-access -MD -MP -c -o "Drivers/DE1SoC_Mandelbrot/DE1SoC_Mandelbrot.o" "D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/DE1SoC_Mandelbrot/DE1SoC_Mandelbrot.c"
+'Finished building: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/DE1SoC_Mandelbrot/DE1SoC_Mandelbrot.c'
+' '
+'Building file: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/DE1SoC_LT24/DE1SoC_LT24.c'
+'Invoking: Arm C Compiler for Embedded 6'
+armclang.exe --target=arm-arm-none-eabi -mcpu=cortex-a9 -mfpu=none -mfloat-abi=soft -marm -I"D:\homeworkandppt\master\FPGA\Repositories\ELEC5620M-Resources\Drivers" -O0 -g -mno-unaligned-access -MD -MP -c -o "Drivers/DE1SoC_LT24/DE1SoC_LT24.o" "D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/DE1SoC_LT24/DE1SoC_LT24.c"
+'Finished building: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/DE1SoC_LT24/DE1SoC_LT24.c'
+' '
+'Building file: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/BasicFont/BasicFont.c'
+'Invoking: Arm C Compiler for Embedded 6'
+armclang.exe --target=arm-arm-none-eabi -mcpu=cortex-a9 -mfpu=none -mfloat-abi=soft -marm -I"D:\homeworkandppt\master\FPGA\Repositories\ELEC5620M-Resources\Drivers" -O0 -g -mno-unaligned-access -MD -MP -c -o "Drivers/BasicFont/BasicFont.o" "D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/BasicFont/BasicFont.c"
+'Finished building: D:/homeworkandppt/master/FPGA/Repositories/ELEC5620M-Resources/Drivers/BasicFont/BasicFont.c'
+' '
+'Building target: ELEC5620M-Mini-Project-Group-19.axf'
+'Invoking: Arm Linker 6'
+armlink.exe --entry=__vector_table --scatter="D:\homeworkandppt\master\FPGA\Repositories\ELEC5620M-Resources\ScatterFiles\FPGARomRam.scat" --info=sizes -o "ELEC5620M-Mini-Project-Group-19.axf"  ./LCDGame/gameProcess/GameProcess.o  ./LCDGame/framebuffer/framebuffer.o  ./LCDGame/SevenSeg/SevenSeg.o  ./LCDGame/Bitmap/bg1.o ./LCDGame/Bitmap/bg2.o ./LCDGame/Bitmap/bg3.o ./LCDGame/Bitmap/bg4.o ./LCDGame/Bitmap/blast1.o ./LCDGame/Bitmap/blast2.o ./LCDGame/Bitmap/blast3.o ./LCDGame/Bitmap/blast4.o ./LCDGame/Bitmap/blast5.o ./LCDGame/Bitmap/bombshoot.o ./LCDGame/Bitmap/enemyfly.o ./LCDGame/Bitmap/gameover.o ./LCDGame/Bitmap/intro.o ./LCDGame/Bitmap/planefront.o ./LCDGame/Bitmap/planestatic.o  ./LCDGame/main.o  ./Drivers/Util/driver_crc.o ./Drivers/Util/driver_ctx.o ./Drivers/Util/driver_flash.o ./Drivers/Util/enum_lookup.o ./Drivers/Util/error.o ./Drivers/Util/startup_arm.o ./Drivers/Util/verbosity.o  ./Drivers/HPS_usleep/HPS_usleep.o  ./Drivers/HPS_IRQ/HPS_IRQ.o  ./Drivers/HPS_I2C/HPS_I2C.o  ./Drivers/HPS_GPIO/HPS_GPIO.o  ./Drivers/FatFS/hwlib/cv/alt_clock_manager.o  ./Drivers/FatFS/hwlib/a10/alt_clock_manager.o  ./Drivers/FatFS/hwlib/alt_globaltmr.o ./Drivers/FatFS/hwlib/alt_sdmmc.o ./Drivers/FatFS/hwlib/alt_timers.o ./Drivers/FatFS/hwlib/alt_watchdog.o  ./Drivers/FatFS/diskio_socfpga.o ./Drivers/FatFS/ff.o ./Drivers/FatFS/ffsystem.o ./Drivers/FatFS/ffunicode.o  ./Drivers/FPGA_PIO/FPGA_PIO.o  ./Drivers/FPGA_IrDAController/FPGA_IrDAController.o  ./Drivers/DE1SoC_WM8731/DE1SoC_WM8731.o  ./Drivers/DE1SoC_Servo/DE1SoC_Servo.o  ./Drivers/DE1SoC_Mandelbrot/DE1SoC_Mandelbrot.o  ./Drivers/DE1SoC_LT24/DE1SoC_LT24.o  ./Drivers/BasicFont/BasicFont.o   
+Error: L6220E: Load region FPGA_OCRAM size (970072 bytes) exceeds limit (65536 bytes). Region contains 33 bytes of padding and 0 bytes of veneers (total 33 bytes of linker generated content).
+Finished: 0 information, 0 warning and 1 error messages.
+make: *** [makefile:82: ELEC5620M-Mini-Project-Group-19.axf] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+
+21:44:20 Build Failed. 2 errors, 3 warnings. (took 19s.591ms)
+
