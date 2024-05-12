@@ -642,3 +642,227 @@ HpsErr_t HPS_IRQ_registerHandler(
 1 warning and 9 errors generated.
 make: *** [Pong-Embedded-C-main/Pong/Sound/subdir.mk:20: Pong-Embedded-C-main/Pong/Sound/Sound.o] Error 1
 "make all" terminated with exit code 2. Build might be incomplete.
+16:20:06 **** Clean-only build of configuration Debug for project test ****
+make clean 
+clean   ./Pong-Embedded-C-main/Pong/Sound/Sound.o  ./Pong-Embedded-C-main/Pong/SevenSegDisplay/SevenSegDisplay.o  ./Pong-Embedded-C-main/Pong/PrivateTimer/PrivateTimer.o  ./Pong-Embedded-C-main/Pong/LCDEngine/LCDEngine.o  ./Pong-Embedded-C-main/Pong/Interrupts/Interrupts.o  ./Pong-Embedded-C-main/Pong/Image/Pong.o  ./Pong-Embedded-C-main/Pong/GameEngine/GameEngine.o  ./Pong-Embedded-C-main/Pong/main.o  ./Drivers/Util/driver_crc.o ./Drivers/Util/driver_ctx.o ./Drivers/Util/driver_flash.o ./Drivers/Util/enum_lookup.o ./Drivers/Util/error.o ./Drivers/Util/startup_arm.o ./Drivers/Util/verbosity.o  ./Drivers/HPS_usleep/HPS_usleep.o  ./Drivers/HPS_IRQ/HPS_IRQ.o  ./Drivers/HPS_I2C/HPS_I2C.o  ./Drivers/HPS_GPIO/HPS_GPIO.o  ./Drivers/FatFS/hwlib/cv/alt_clock_manager.o  ./Drivers/FatFS/hwlib/a10/alt_clock_manager.o  ./Drivers/FatFS/hwlib/alt_globaltmr.o ./Drivers/FatFS/hwlib/alt_sdmmc.o ./Drivers/FatFS/hwlib/alt_timers.o ./Drivers/FatFS/hwlib/alt_watchdog.o  ./Drivers/FatFS/diskio_socfpga.o ./Drivers/FatFS/ff.o ./Drivers/FatFS/ffsystem.o ./Drivers/FatFS/ffunicode.o  ./Drivers/FPGA_PIO/FPGA_PIO.o  ./Drivers/FPGA_IrDAController/FPGA_IrDAController.o  ./Drivers/DE1SoC_WM8731/DE1SoC_WM8731.o  ./Drivers/DE1SoC_Servo/DE1SoC_Servo.o  ./Drivers/DE1SoC_Mandelbrot/DE1SoC_Mandelbrot.o  ./Drivers/DE1SoC_LT24/DE1SoC_LT24.o  ./Drivers/BasicFont/BasicFont.o   ./Pong-Embedded-C-main/Pong/Sound/Sound.d  ./Pong-Embedded-C-main/Pong/SevenSegDisplay/SevenSegDisplay.d  ./Pong-Embedded-C-main/Pong/PrivateTimer/PrivateTimer.d  ./Pong-Embedded-C-main/Pong/LCDEngine/LCDEngine.d  ./Pong-Embedded-C-main/Pong/Interrupts/Interrupts.d  ./Pong-Embedded-C-main/Pong/Image/Pong.d  ./Pong-Embedded-C-main/Pong/GameEngine/GameEngine.d  ./Pong-Embedded-C-main/Pong/main.d  ./Drivers/Util/driver_crc.d ./Drivers/Util/driver_ctx.d ./Drivers/Util/driver_flash.d ./Drivers/Util/enum_lookup.d ./Drivers/Util/error.d ./Drivers/Util/startup_arm.d ./Drivers/Util/verbosity.d  ./Drivers/HPS_usleep/HPS_usleep.d  ./Drivers/HPS_IRQ/HPS_IRQ.d  ./Drivers/HPS_I2C/HPS_I2C.d  ./Drivers/HPS_GPIO/HPS_GPIO.d  ./Drivers/FatFS/hwlib/cv/alt_clock_manager.d  ./Drivers/FatFS/hwlib/a10/alt_clock_manager.d  ./Drivers/FatFS/hwlib/alt_globaltmr.d ./Drivers/FatFS/hwlib/alt_sdmmc.d ./Drivers/FatFS/hwlib/alt_timers.d ./Drivers/FatFS/hwlib/alt_watchdog.d  ./Drivers/FatFS/diskio_socfpga.d ./Drivers/FatFS/ff.d ./Drivers/FatFS/ffsystem.d ./Drivers/FatFS/ffunicode.d  ./Drivers/FPGA_PIO/FPGA_PIO.d  ./Drivers/FPGA_IrDAController/FPGA_IrDAController.d  ./Drivers/DE1SoC_WM8731/DE1SoC_WM8731.d  ./Drivers/DE1SoC_Servo/DE1SoC_Servo.d  ./Drivers/DE1SoC_Mandelbrot/DE1SoC_Mandelbrot.d  ./Drivers/DE1SoC_LT24/DE1SoC_LT24.d  ./Drivers/BasicFont/BasicFont.d  test.axf 
+' '
+16:20:08 **** Incremental Build of configuration Debug for project test ****
+make all 
+'Building file: ../Pong-Embedded-C-main/Pong/Sound/Sound.c'
+'Invoking: Arm C Compiler for Embedded 6'
+armclang.exe --target=aarch64-arm-none-eabi -I"D:\tmp\ELEC5620M-Resources\Drivers" -O0 -g -mno-unaligned-access -MD -MP -c -o "Pong-Embedded-C-main/Pong/Sound/Sound.o" "../Pong-Embedded-C-main/Pong/Sound/Sound.c"
+In file included from ../Pong-Embedded-C-main/Pong/Sound/Sound.c:12:
+In file included from ../Pong-Embedded-C-main/Pong/Sound/Sound.h:14:
+In file included from ../Pong-Embedded-C-main/Pong/Sound/../Interrupts/Interrupts.h:15:
+D:\tmp\ELEC5620M-Resources\Drivers\HPS_Watchdog/HPS_Watchdog.h:20:1: error: unknown type name '__forceinline'
+__forceinline static void HPS_ResetWatchdog() {
+^
+D:\tmp\ELEC5620M-Resources\Drivers\HPS_Watchdog/HPS_Watchdog.h:25:1: error: unknown type name '__forceinline'
+__forceinline static unsigned int HPS_WatchdogValue() {
+^
+2 errors generated.
+make: *** [Pong-Embedded-C-main/Pong/Sound/subdir.mk:20: Pong-Embedded-C-main/Pong/Sound/Sound.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+16:24:31 **** Incremental Build of configuration Debug for project test ****
+make all 
+'Building file: ../Pong-Embedded-C-main/Pong/Sound/Sound.c'
+'Invoking: Arm C Compiler for Embedded 6'
+armclang.exe --target=aarch64-arm-none-eabi -I"D:\tmp\ELEC5620M-Resources\Drivers" -O0 -g -mno-unaligned-access -MD -MP -c -o "Pong-Embedded-C-main/Pong/Sound/Sound.o" "../Pong-Embedded-C-main/Pong/Sound/Sound.c"
+'Finished building: ../Pong-Embedded-C-main/Pong/Sound/Sound.c'
+' '
+'Building file: ../Pong-Embedded-C-main/Pong/SevenSegDisplay/SevenSegDisplay.c'
+'Invoking: Arm C Compiler for Embedded 6'
+armclang.exe --target=aarch64-arm-none-eabi -I"D:\tmp\ELEC5620M-Resources\Drivers" -O0 -g -mno-unaligned-access -MD -MP -c -o "Pong-Embedded-C-main/Pong/SevenSegDisplay/SevenSegDisplay.o" "../Pong-Embedded-C-main/Pong/SevenSegDisplay/SevenSegDisplay.c"
+'Finished building: ../Pong-Embedded-C-main/Pong/SevenSegDisplay/SevenSegDisplay.c'
+' '
+'Building file: ../Pong-Embedded-C-main/Pong/PrivateTimer/PrivateTimer.c'
+'Invoking: Arm C Compiler for Embedded 6'
+armclang.exe --target=aarch64-arm-none-eabi -I"D:\tmp\ELEC5620M-Resources\Drivers" -O0 -g -mno-unaligned-access -MD -MP -c -o "Pong-Embedded-C-main/Pong/PrivateTimer/PrivateTimer.o" "../Pong-Embedded-C-main/Pong/PrivateTimer/PrivateTimer.c"
+'Finished building: ../Pong-Embedded-C-main/Pong/PrivateTimer/PrivateTimer.c'
+' '
+'Building file: ../Pong-Embedded-C-main/Pong/LCDEngine/LCDEngine.c'
+'Invoking: Arm C Compiler for Embedded 6'
+armclang.exe --target=aarch64-arm-none-eabi -I"D:\tmp\ELEC5620M-Resources\Drivers" -O0 -g -mno-unaligned-access -MD -MP -c -o "Pong-Embedded-C-main/Pong/LCDEngine/LCDEngine.o" "../Pong-Embedded-C-main/Pong/LCDEngine/LCDEngine.c"
+../Pong-Embedded-C-main/Pong/LCDEngine/LCDEngine.c:21:49: error: call to undeclared library function 'strlen' with type 'unsigned long (const char *)'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+        for(current_character = 0; current_character < strlen(string); current_character++) {
+                                                       ^
+../Pong-Embedded-C-main/Pong/LCDEngine/LCDEngine.c:21:49: note: include the header <string.h> or explicitly provide a declaration for 'strlen'
+1 error generated.
+make: *** [Pong-Embedded-C-main/Pong/LCDEngine/subdir.mk:20: Pong-Embedded-C-main/Pong/LCDEngine/LCDEngine.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+16:25:41 **** Incremental Build of configuration Debug for project test ****
+make all 
+'Building file: ../Pong-Embedded-C-main/Pong/LCDEngine/LCDEngine.c'
+'Invoking: Arm C Compiler for Embedded 6'
+armclang.exe --target=aarch64-arm-none-eabi -I"D:\tmp\ELEC5620M-Resources\Drivers" -O0 -g -mno-unaligned-access -MD -MP -c -o "Pong-Embedded-C-main/Pong/LCDEngine/LCDEngine.o" "../Pong-Embedded-C-main/Pong/LCDEngine/LCDEngine.c"
+../Pong-Embedded-C-main/Pong/LCDEngine/LCDEngine.c:21:49: error: call to undeclared library function 'strlen' with type 'unsigned long (const char *)'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+        for(current_character = 0; current_character < strlen(string); current_character++) {
+                                                       ^
+../Pong-Embedded-C-main/Pong/LCDEngine/LCDEngine.c:21:49: note: include the header <string.h> or explicitly provide a declaration for 'strlen'
+1 error generated.
+make: *** [Pong-Embedded-C-main/Pong/LCDEngine/subdir.mk:20: Pong-Embedded-C-main/Pong/LCDEngine/LCDEngine.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+16:26:03 **** Incremental Build of configuration Debug for project test ****
+make all 
+'Building file: ../Pong-Embedded-C-main/Pong/LCDEngine/LCDEngine.c'
+'Invoking: Arm C Compiler for Embedded 6'
+armclang.exe --target=aarch64-arm-none-eabi -I"D:\tmp\ELEC5620M-Resources\Drivers" -O0 -g -mno-unaligned-access -MD -MP -c -o "Pong-Embedded-C-main/Pong/LCDEngine/LCDEngine.o" "../Pong-Embedded-C-main/Pong/LCDEngine/LCDEngine.c"
+'Finished building: ../Pong-Embedded-C-main/Pong/LCDEngine/LCDEngine.c'
+' '
+'Building file: ../Pong-Embedded-C-main/Pong/Interrupts/Interrupts.c'
+'Invoking: Arm C Compiler for Embedded 6'
+armclang.exe --target=aarch64-arm-none-eabi -I"D:\tmp\ELEC5620M-Resources\Drivers" -O0 -g -mno-unaligned-access -MD -MP -c -o "Pong-Embedded-C-main/Pong/Interrupts/Interrupts.o" "../Pong-Embedded-C-main/Pong/Interrupts/Interrupts.c"
+'Finished building: ../Pong-Embedded-C-main/Pong/Interrupts/Interrupts.c'
+' '
+'Building file: ../Pong-Embedded-C-main/Pong/Image/Pong.c'
+'Invoking: Arm C Compiler for Embedded 6'
+armclang.exe --target=aarch64-arm-none-eabi -I"D:\tmp\ELEC5620M-Resources\Drivers" -O0 -g -mno-unaligned-access -MD -MP -c -o "Pong-Embedded-C-main/Pong/Image/Pong.o" "../Pong-Embedded-C-main/Pong/Image/Pong.c"
+'Finished building: ../Pong-Embedded-C-main/Pong/Image/Pong.c'
+' '
+'Building file: ../Pong-Embedded-C-main/Pong/GameEngine/GameEngine.c'
+'Invoking: Arm C Compiler for Embedded 6'
+armclang.exe --target=aarch64-arm-none-eabi -I"D:\tmp\ELEC5620M-Resources\Drivers" -O0 -g -mno-unaligned-access -MD -MP -c -o "Pong-Embedded-C-main/Pong/GameEngine/GameEngine.o" "../Pong-Embedded-C-main/Pong/GameEngine/GameEngine.c"
+'Finished building: ../Pong-Embedded-C-main/Pong/GameEngine/GameEngine.c'
+' '
+'Building file: ../Pong-Embedded-C-main/Pong/main.c'
+'Invoking: Arm C Compiler for Embedded 6'
+armclang.exe --target=aarch64-arm-none-eabi -I"D:\tmp\ELEC5620M-Resources\Drivers" -O0 -g -mno-unaligned-access -MD -MP -c -o "Pong-Embedded-C-main/Pong/main.o" "../Pong-Embedded-C-main/Pong/main.c"
+'Finished building: ../Pong-Embedded-C-main/Pong/main.c'
+' '
+'Building file: D:/tmp/ELEC5620M-Resources/Drivers/VFP_Enable/VFP_Enable.c'
+'Invoking: Arm C Compiler for Embedded 6'
+armclang.exe --target=aarch64-arm-none-eabi -I"D:\tmp\ELEC5620M-Resources\Drivers" -O0 -g -mno-unaligned-access -MD -MP -c -o "Drivers/VFP_Enable/VFP_Enable.o" "D:/tmp/ELEC5620M-Resources/Drivers/VFP_Enable/VFP_Enable.c"
+'Finished building: D:/tmp/ELEC5620M-Resources/Drivers/VFP_Enable/VFP_Enable.c'
+' '
+'Building file: D:/tmp/ELEC5620M-Resources/Drivers/HPS_usleep/HPS_usleep.c'
+'Invoking: Arm C Compiler for Embedded 6'
+armclang.exe --target=aarch64-arm-none-eabi -I"D:\tmp\ELEC5620M-Resources\Drivers" -O0 -g -mno-unaligned-access -MD -MP -c -o "Drivers/HPS_usleep/HPS_usleep.o" "D:/tmp/ELEC5620M-Resources/Drivers/HPS_usleep/HPS_usleep.c"
+'Finished building: D:/tmp/ELEC5620M-Resources/Drivers/HPS_usleep/HPS_usleep.c'
+' '
+'Building file: D:/tmp/ELEC5620M-Resources/Drivers/HPS_IRQ/HPS_IRQ.c'
+'Invoking: Arm C Compiler for Embedded 6'
+armclang.exe --target=aarch64-arm-none-eabi -I"D:\tmp\ELEC5620M-Resources\Drivers" -O0 -g -mno-unaligned-access -MD -MP -c -o "Drivers/HPS_IRQ/HPS_IRQ.o" "D:/tmp/ELEC5620M-Resources/Drivers/HPS_IRQ/HPS_IRQ.c"
+D:/tmp/ELEC5620M-Resources/Drivers/HPS_IRQ/HPS_IRQ.c:89:7: error: expected '(' after 'asm'
+__asm __attribute__((section("vector_table"))) void vector_table(void) {
+      ^
+D:/tmp/ELEC5620M-Resources/Drivers/HPS_IRQ/HPS_IRQ.c:89:6: error: expected ';' after top-level asm block
+__asm __attribute__((section("vector_table"))) void vector_table(void) {
+     ^
+     ;
+D:/tmp/ELEC5620M-Resources/Drivers/HPS_IRQ/HPS_IRQ.c:91:5: error: use of undeclared identifier 'PRESERVE8'
+    PRESERVE8
+    ^
+D:/tmp/ELEC5620M-Resources/Drivers/HPS_IRQ/HPS_IRQ.c:94:12: error: type specifier missing, defaults to 'int'; ISO C99 and later do not support implicit int [-Wimplicit-int]
+    extern __rt_entry          ; // C Standard Library entry point
+    ~~~~~~ ^
+    int
+D:/tmp/ELEC5620M-Resources/Drivers/HPS_IRQ/HPS_IRQ.c:95:12: error: type specifier missing, defaults to 'int'; ISO C99 and later do not support implicit int [-Wimplicit-int]
+    extern __irq_isr           ; // IRQ Interrupt Handler
+    ~~~~~~ ^
+    int
+D:/tmp/ELEC5620M-Resources/Drivers/HPS_IRQ/HPS_IRQ.c:97:5: error: use of undeclared identifier 'LDR'
+    LDR         PC,=__main     ; // 0x00 Reset
+    ^
+D:/tmp/ELEC5620M-Resources/Drivers/HPS_IRQ/HPS_IRQ.c:98:5: error: use of undeclared identifier 'LDR'
+    LDR         PC,=__rt_entry ; // 0x04 Undefined Instructions
+    ^
+D:/tmp/ELEC5620M-Resources/Drivers/HPS_IRQ/HPS_IRQ.c:99:5: error: use of undeclared identifier 'DCD'
+    DCD         0              ; // 0x08 Software Interrupts (SWI)
+    ^
+D:/tmp/ELEC5620M-Resources/Drivers/HPS_IRQ/HPS_IRQ.c:100:5: error: use of undeclared identifier 'DCD'
+    DCD         0              ; // 0x0C Prefetch Abort
+    ^
+D:/tmp/ELEC5620M-Resources/Drivers/HPS_IRQ/HPS_IRQ.c:101:5: error: use of undeclared identifier 'DCD'
+    DCD         0              ; // 0x10 Data Abort
+    ^
+D:/tmp/ELEC5620M-Resources/Drivers/HPS_IRQ/HPS_IRQ.c:102:5: error: use of undeclared identifier 'DCD'
+    DCD         0              ; // 0x14 RESERVED
+    ^
+D:/tmp/ELEC5620M-Resources/Drivers/HPS_IRQ/HPS_IRQ.c:103:5: error: use of undeclared identifier 'LDR'
+    LDR         PC,=__irq_isr  ; // 0x18 IRQ
+    ^
+D:/tmp/ELEC5620M-Resources/Drivers/HPS_IRQ/HPS_IRQ.c:104:5: error: use of undeclared identifier 'DCD'
+    DCD         0              ; // 0x1C FIQ
+    ^
+D:/tmp/ELEC5620M-Resources/Drivers/HPS_IRQ/HPS_IRQ.c:114:1: error: unknown type name '__irq'
+__irq void __irq_isr (void) {
+^
+D:/tmp/ELEC5620M-Resources/Drivers/HPS_IRQ/HPS_IRQ.c:146:7: error: expected '(' after 'asm'
+__asm void HPS_IRQ_WriteStackPointer(unsigned int val) {
+      ^
+D:/tmp/ELEC5620M-Resources/Drivers/HPS_IRQ/HPS_IRQ.c:146:6: error: expected ';' after top-level asm block
+__asm void HPS_IRQ_WriteStackPointer(unsigned int val) {
+     ^
+     ;
+D:/tmp/ELEC5620M-Resources/Drivers/HPS_IRQ/HPS_IRQ.c:147:5: error: use of undeclared identifier 'MOV'
+    MOV SP, r0
+    ^
+D:/tmp/ELEC5620M-Resources/Drivers/HPS_IRQ/HPS_IRQ.c:153:38: error: unknown register name 'cpsr' in asm
+    register unsigned int cpsr __asm("cpsr");
+                                     ^
+D:/tmp/ELEC5620M-Resources/Drivers/HPS_IRQ/HPS_IRQ.c:162:43: error: unknown register name 'cp15:0:c12:c0:0' in asm
+    register unsigned int cp15_VBAR __asm("cp15:0:c12:c0:0");
+                                          ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+make: *** [Drivers/HPS_IRQ/subdir.mk:20: Drivers/HPS_IRQ/HPS_IRQ.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+16:34:50 **** Incremental Build of configuration Debug for project test ****
+make all 
+'Building file: ../Pong-Embedded-C-main/Pong/Sound/Sound.c'
+'Invoking: Arm C Compiler for Embedded 6'
+armclang.exe --target=aarch64-arm-none-eabi -I"D:\tmp\ELEC5620M-Resources\Drivers" -O0 -g -mno-unaligned-access -MD -MP -c -o "Pong-Embedded-C-main/Pong/Sound/Sound.o" "../Pong-Embedded-C-main/Pong/Sound/Sound.c"
+In file included from ../Pong-Embedded-C-main/Pong/Sound/Sound.c:12:
+In file included from ../Pong-Embedded-C-main/Pong/Sound/Sound.h:14:
+In file included from ../Pong-Embedded-C-main/Pong/Sound/../Interrupts/Interrupts.h:14:
+In file included from D:\tmp\ELEC5620M-Resources\Drivers\HPS_IRQ/HPS_IRQ.h:85:
+In file included from D:\tmp\ELEC5620M-Resources\Drivers\Util/error.h:67:
+D:\tmp\ELEC5620M-Resources\Drivers\Util/enum_lookup.h:38:2: error: Unknown System
+#error Unknown System
+ ^
+In file included from ../Pong-Embedded-C-main/Pong/Sound/Sound.c:12:
+In file included from ../Pong-Embedded-C-main/Pong/Sound/Sound.h:14:
+In file included from ../Pong-Embedded-C-main/Pong/Sound/../Interrupts/Interrupts.h:14:
+D:\tmp\ELEC5620M-Resources\Drivers\HPS_IRQ/HPS_IRQ.h:103:17: warning: unknown attribute 'interrupt' ignored [-Wunknown-attributes]
+typedef void (* __irq IsrHandlerFunc_t)(HPSIRQSource interruptID, void* param, bool* handled);
+                ^~~~~
+D:\tmp\ELEC5620M-Resources\Drivers\Util/irq_attr.h:25:32: note: expanded from macro '__irq'
+#define __irq   __attribute__((interrupt("IRQ")))
+                               ^~~~~~~~~~~~~~~~
+../Pong-Embedded-C-main/Pong/Sound/Sound.c:33:31: error: too few arguments to function call, expected 3, have 2
+    WM8731_clearFIFO(true,true);
+    ~~~~~~~~~~~~~~~~          ^
+D:\tmp\ELEC5620M-Resources\Drivers\DE1SoC_WM8731/DE1SoC_WM8731.h:55:10: note: 'WM8731_clearFIFO' declared here
+HpsErr_t WM8731_clearFIFO( PWM8731Ctx_t ctx, bool adc, bool dac);
+         ^
+../Pong-Embedded-C-main/Pong/Sound/Sound.c:34:21: error: call to undeclared function 'WM8731_getFIFOSpacePtr'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+    fifospace_ptr = WM8731_getFIFOSpacePtr();
+                    ^
+../Pong-Embedded-C-main/Pong/Sound/Sound.c:34:21: note: did you mean 'WM8731_getFIFOSpace'?
+D:\tmp\ELEC5620M-Resources\Drivers\DE1SoC_WM8731/DE1SoC_WM8731.h:58:10: note: 'WM8731_getFIFOSpace' declared here
+HpsErr_t WM8731_getFIFOSpace( PWM8731Ctx_t ctx, unsigned int* fifoSpace );
+         ^
+../Pong-Embedded-C-main/Pong/Sound/Sound.c:34:19: error: incompatible integer to pointer conversion assigning to 'volatile unsigned char *' from 'int' [-Wint-conversion]
+    fifospace_ptr = WM8731_getFIFOSpacePtr();
+                  ^ ~~~~~~~~~~~~~~~~~~~~~~~~
+../Pong-Embedded-C-main/Pong/Sound/Sound.c:35:22: error: call to undeclared function 'WM8731_getLeftFIFOPtr'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+    audio_left_ptr = WM8731_getLeftFIFOPtr();
+                     ^
+../Pong-Embedded-C-main/Pong/Sound/Sound.c:35:20: error: incompatible integer to pointer conversion assigning to 'volatile unsigned int *' from 'int' [-Wint-conversion]
+    audio_left_ptr = WM8731_getLeftFIFOPtr();
+                   ^ ~~~~~~~~~~~~~~~~~~~~~~~
+../Pong-Embedded-C-main/Pong/Sound/Sound.c:36:23: error: call to undeclared function 'WM8731_getRightFIFOPtr'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+    audio_right_ptr = WM8731_getRightFIFOPtr();
+                      ^
+../Pong-Embedded-C-main/Pong/Sound/Sound.c:36:21: error: incompatible integer to pointer conversion assigning to 'volatile unsigned int *' from 'int' [-Wint-conversion]
+    audio_right_ptr = WM8731_getRightFIFOPtr();
+                    ^ ~~~~~~~~~~~~~~~~~~~~~~~~
+../Pong-Embedded-C-main/Pong/Sound/Sound.c:82:55: error: too few arguments to function call, expected 3, have 2
+    HPS_IRQ_registerHandler(IRQ_TIMER_L4SP_0, timerISR);
+    ~~~~~~~~~~~~~~~~~~~~~~~                           ^
+D:\tmp\ELEC5620M-Resources\Drivers\HPS_IRQ/HPS_IRQ.h:170:10: note: 'HPS_IRQ_registerHandler' declared here
+HpsErr_t HPS_IRQ_registerHandler(HPSIRQSource interruptID, IsrHandlerFunc_t handlerFunction, void* handlerParam);
+         ^
+1 warning and 9 errors generated.
+make: *** [Pong-Embedded-C-main/Pong/Sound/subdir.mk:20: Pong-Embedded-C-main/Pong/Sound/Sound.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.

@@ -1,36 +1,36 @@
-21:56:11 **** Build of configuration Debug for project test ****
+16:34:50 **** Incremental Build of configuration Debug for project test ****
 make all 
 'Building file: ../Pong-Embedded-C-main/Pong/Sound/Sound.c'
 'Invoking: Arm C Compiler for Embedded 6'
-armclang.exe --target=aarch64-arm-none-eabi -I"D:\homeworkandppt\master\FPGA\Repositories\ELEC5620M-Resources\Drivers" -O0 -g -mno-unaligned-access -MD -MP -c -o "Pong-Embedded-C-main/Pong/Sound/Sound.o" "../Pong-Embedded-C-main/Pong/Sound/Sound.c"
+armclang.exe --target=aarch64-arm-none-eabi -I"D:\tmp\ELEC5620M-Resources\Drivers" -O0 -g -mno-unaligned-access -MD -MP -c -o "Pong-Embedded-C-main/Pong/Sound/Sound.o" "../Pong-Embedded-C-main/Pong/Sound/Sound.c"
 In file included from ../Pong-Embedded-C-main/Pong/Sound/Sound.c:12:
 In file included from ../Pong-Embedded-C-main/Pong/Sound/Sound.h:14:
 In file included from ../Pong-Embedded-C-main/Pong/Sound/../Interrupts/Interrupts.h:14:
-In file included from D:\homeworkandppt\master\FPGA\Repositories\ELEC5620M-Resources\Drivers\HPS_IRQ/HPS_IRQ.h:85:
-In file included from D:\homeworkandppt\master\FPGA\Repositories\ELEC5620M-Resources\Drivers\Util/error.h:67:
-D:\homeworkandppt\master\FPGA\Repositories\ELEC5620M-Resources\Drivers\Util/enum_lookup.h:38:2: error: Unknown System
+In file included from D:\tmp\ELEC5620M-Resources\Drivers\HPS_IRQ/HPS_IRQ.h:85:
+In file included from D:\tmp\ELEC5620M-Resources\Drivers\Util/error.h:67:
+D:\tmp\ELEC5620M-Resources\Drivers\Util/enum_lookup.h:38:2: error: Unknown System
 #error Unknown System
  ^
 In file included from ../Pong-Embedded-C-main/Pong/Sound/Sound.c:12:
 In file included from ../Pong-Embedded-C-main/Pong/Sound/Sound.h:14:
 In file included from ../Pong-Embedded-C-main/Pong/Sound/../Interrupts/Interrupts.h:14:
-D:\homeworkandppt\master\FPGA\Repositories\ELEC5620M-Resources\Drivers\HPS_IRQ/HPS_IRQ.h:103:17: warning: unknown attribute 'interrupt' ignored [-Wunknown-attributes]
+D:\tmp\ELEC5620M-Resources\Drivers\HPS_IRQ/HPS_IRQ.h:103:17: warning: unknown attribute 'interrupt' ignored [-Wunknown-attributes]
 typedef void (* __irq IsrHandlerFunc_t)(HPSIRQSource interruptID, void* param, bool* handled);
                 ^~~~~
-D:\homeworkandppt\master\FPGA\Repositories\ELEC5620M-Resources\Drivers\Util/irq_attr.h:25:32: note: expanded from macro '__irq'
+D:\tmp\ELEC5620M-Resources\Drivers\Util/irq_attr.h:25:32: note: expanded from macro '__irq'
 #define __irq   __attribute__((interrupt("IRQ")))
                                ^~~~~~~~~~~~~~~~
 ../Pong-Embedded-C-main/Pong/Sound/Sound.c:33:31: error: too few arguments to function call, expected 3, have 2
     WM8731_clearFIFO(true,true);
     ~~~~~~~~~~~~~~~~          ^
-D:\homeworkandppt\master\FPGA\Repositories\ELEC5620M-Resources\Drivers\DE1SoC_WM8731/DE1SoC_WM8731.h:55:10: note: 'WM8731_clearFIFO' declared here
+D:\tmp\ELEC5620M-Resources\Drivers\DE1SoC_WM8731/DE1SoC_WM8731.h:55:10: note: 'WM8731_clearFIFO' declared here
 HpsErr_t WM8731_clearFIFO( PWM8731Ctx_t ctx, bool adc, bool dac);
          ^
 ../Pong-Embedded-C-main/Pong/Sound/Sound.c:34:21: error: call to undeclared function 'WM8731_getFIFOSpacePtr'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
     fifospace_ptr = WM8731_getFIFOSpacePtr();
                     ^
 ../Pong-Embedded-C-main/Pong/Sound/Sound.c:34:21: note: did you mean 'WM8731_getFIFOSpace'?
-D:\homeworkandppt\master\FPGA\Repositories\ELEC5620M-Resources\Drivers\DE1SoC_WM8731/DE1SoC_WM8731.h:58:10: note: 'WM8731_getFIFOSpace' declared here
+D:\tmp\ELEC5620M-Resources\Drivers\DE1SoC_WM8731/DE1SoC_WM8731.h:58:10: note: 'WM8731_getFIFOSpace' declared here
 HpsErr_t WM8731_getFIFOSpace( PWM8731Ctx_t ctx, unsigned int* fifoSpace );
          ^
 ../Pong-Embedded-C-main/Pong/Sound/Sound.c:34:19: error: incompatible integer to pointer conversion assigning to 'volatile unsigned char *' from 'int' [-Wint-conversion]
@@ -51,12 +51,12 @@ HpsErr_t WM8731_getFIFOSpace( PWM8731Ctx_t ctx, unsigned int* fifoSpace );
 ../Pong-Embedded-C-main/Pong/Sound/Sound.c:82:55: error: too few arguments to function call, expected 3, have 2
     HPS_IRQ_registerHandler(IRQ_TIMER_L4SP_0, timerISR);
     ~~~~~~~~~~~~~~~~~~~~~~~                           ^
-D:\homeworkandppt\master\FPGA\Repositories\ELEC5620M-Resources\Drivers\HPS_IRQ/HPS_IRQ.h:171:10: note: 'HPS_IRQ_registerHandler' declared here
-HpsErr_t HPS_IRQ_registerHandler(
+D:\tmp\ELEC5620M-Resources\Drivers\HPS_IRQ/HPS_IRQ.h:170:10: note: 'HPS_IRQ_registerHandler' declared here
+HpsErr_t HPS_IRQ_registerHandler(HPSIRQSource interruptID, IsrHandlerFunc_t handlerFunction, void* handlerParam);
          ^
 1 warning and 9 errors generated.
 make: *** [Pong-Embedded-C-main/Pong/Sound/subdir.mk:20: Pong-Embedded-C-main/Pong/Sound/Sound.o] Error 1
 "make all" terminated with exit code 2. Build might be incomplete.
 
-21:56:11 Build Failed. 10 errors, 1 warnings. (took 943ms)
+16:34:53 Build Failed. 10 errors, 1 warnings. (took 2s.719ms)
 
