@@ -2295,3 +2295,16 @@ java.lang.Exception: Resource '/test/Debug/Drivers/VFP_Enable' does not exist.
 	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:406)
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SESSION 2024-05-12 20:52:16.181 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.9.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-05-12 20:52:49.320
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\11440'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
