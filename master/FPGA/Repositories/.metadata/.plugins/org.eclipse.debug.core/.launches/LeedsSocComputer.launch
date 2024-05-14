@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.arm.debugger.launcher2">
+    <booleanAttribute key="ADAPTIVE_CLOCK" value="false"/>
+    <mapAttribute key="AverageDurationTracker">
+        <mapEntry key="*Fetching Data Model" value="117725"/>
+        <mapEntry key="*list global low level symbols" value="441743"/>
+        <mapEntry key="AddEventObserver" value="137599"/>
+        <mapEntry key="Evaluate" value="520107"/>
+        <mapEntry key="compute execution mode" value="114755"/>
+        <mapEntry key="continue" value="6292034"/>
+        <mapEntry key="core" value="7239200"/>
+        <mapEntry key="disassemble" value="32308700"/>
+        <mapEntry key="get capabilities" value="81554"/>
+        <mapEntry key="get execution addresss" value="178334"/>
+        <mapEntry key="get source lines" value="154524"/>
+        <mapEntry key="initialize command help" value="15346741"/>
+        <mapEntry key="list breakpoint options" value="49298"/>
+        <mapEntry key="list breakpoints" value="197519"/>
+        <mapEntry key="list instruction sets" value="51686"/>
+        <mapEntry key="list signals" value="271161"/>
+        <mapEntry key="list watchpoint options" value="71576"/>
+        <mapEntry key="list watchpoints" value="92875"/>
+        <mapEntry key="loadfile" value="1057731796"/>
+        <mapEntry key="set CWD" value="372705"/>
+        <mapEntry key="set debug-from" value="243495"/>
+        <mapEntry key="source altera_target_check.py" value="315158617"/>
+        <mapEntry key="source debugload.ds" value="4124341575"/>
+        <mapEntry key="start" value="266862311"/>
+        <mapEntry key="waitForTargetToStop" value="304669867"/>
+    </mapAttribute>
+    <stringAttribute key="CLOCK_SPEED" value="20kHz"/>
+    <intAttribute key="DEBUG_TAB..RESOURCES.COUNT" value="0"/>
+    <intAttribute key="FILES.CONNECT_TO_GDB_SERVER.RESOURCES.COUNT" value="0"/>
+    <intAttribute key="FILES.DEBUG_EXISTING_ANDROID.RESOURCES.COUNT" value="0"/>
+    <listAttribute key="FILES.DEBUG_RESIDENT_ANDROID"/>
+    <stringAttribute key="FILES.DEBUG_RESIDENT_ANDROID.RESOURCES.0.TYPE" value="TARGET_WORKING_DIR"/>
+    <stringAttribute key="FILES.DEBUG_RESIDENT_ANDROID.RESOURCES.0.VALUE" value=""/>
+    <intAttribute key="FILES.DEBUG_RESIDENT_ANDROID.RESOURCES.COUNT" value="1"/>
+    <listAttribute key="FILES.DEBUG_RESIDENT_APP"/>
+    <stringAttribute key="FILES.DEBUG_RESIDENT_APP.RESOURCES.0.TYPE" value="APPLICATION_ON_TARGET"/>
+    <stringAttribute key="FILES.DEBUG_RESIDENT_APP.RESOURCES.0.VALUE" value=""/>
+    <stringAttribute key="FILES.DEBUG_RESIDENT_APP.RESOURCES.1.TYPE" value="TARGET_WORKING_DIR"/>
+    <stringAttribute key="FILES.DEBUG_RESIDENT_APP.RESOURCES.1.VALUE" value=""/>
+    <intAttribute key="FILES.DEBUG_RESIDENT_APP.RESOURCES.COUNT" value="2"/>
+    <listAttribute key="FILES.DOWNLOAD_AND_DEBUG"/>
+    <stringAttribute key="FILES.DOWNLOAD_AND_DEBUG.RESOURCES.0.TYPE" value="TARGET_DOWNLOAD_DIR"/>
+    <stringAttribute key="FILES.DOWNLOAD_AND_DEBUG.RESOURCES.0.VALUE" value=""/>
+    <stringAttribute key="FILES.DOWNLOAD_AND_DEBUG.RESOURCES.1.OPTION.ALSO_LOAD_SYMBOLS" value="true"/>
+    <stringAttribute key="FILES.DOWNLOAD_AND_DEBUG.RESOURCES.1.OPTION.ON_DEMAND_LOAD" value="true"/>
+    <stringAttribute key="FILES.DOWNLOAD_AND_DEBUG.RESOURCES.1.TYPE" value="APP_ON_HOST_TO_DOWNLOAD"/>
+    <stringAttribute key="FILES.DOWNLOAD_AND_DEBUG.RESOURCES.1.VALUE" value=""/>
+    <stringAttribute key="FILES.DOWNLOAD_AND_DEBUG.RESOURCES.2.TYPE" value="TARGET_WORKING_DIR"/>
+    <stringAttribute key="FILES.DOWNLOAD_AND_DEBUG.RESOURCES.2.VALUE" value=""/>
+    <intAttribute key="FILES.DOWNLOAD_AND_DEBUG.RESOURCES.COUNT" value="3"/>
+    <listAttribute key="FILES.DOWNLOAD_DEBUG"/>
+    <stringAttribute key="FILES.DOWNLOAD_DEBUG.RESOURCES.0.TYPE" value="TARGET_DOWNLOAD_DIR"/>
+    <stringAttribute key="FILES.DOWNLOAD_DEBUG.RESOURCES.0.VALUE" value=""/>
+    <stringAttribute key="FILES.DOWNLOAD_DEBUG.RESOURCES.1.OPTION.ALSO_LOAD_SYMBOLS" value="true"/>
+    <stringAttribute key="FILES.DOWNLOAD_DEBUG.RESOURCES.1.OPTION.ON_DEMAND_LOAD" value="true"/>
+    <stringAttribute key="FILES.DOWNLOAD_DEBUG.RESOURCES.1.TYPE" value="APP_ON_HOST_TO_DOWNLOAD"/>
+    <stringAttribute key="FILES.DOWNLOAD_DEBUG.RESOURCES.1.VALUE" value=""/>
+    <stringAttribute key="FILES.DOWNLOAD_DEBUG.RESOURCES.2.TYPE" value="TARGET_WORKING_DIR"/>
+    <stringAttribute key="FILES.DOWNLOAD_DEBUG.RESOURCES.2.VALUE" value=""/>
+    <intAttribute key="FILES.DOWNLOAD_DEBUG.RESOURCES.COUNT" value="3"/>
+    <intAttribute key="FILES.DOWNLOAD_DEBUG_ANDROID.RESOURCES.COUNT" value="0"/>
+    <listAttribute key="FILES.ICE_DEBUG"/>
+    <stringAttribute key="FILES.ICE_DEBUG.RESOURCES.0.OPTION.ALSO_LOAD_SYMBOLS" value="true"/>
+    <stringAttribute key="FILES.ICE_DEBUG.RESOURCES.0.OPTION.ON_DEMAND_LOAD" value="true"/>
+    <stringAttribute key="FILES.ICE_DEBUG.RESOURCES.0.TYPE" value="APP_ON_HOST_TO_DOWNLOAD"/>
+    <stringAttribute key="FILES.ICE_DEBUG.RESOURCES.0.VALUE" value="${workspace_loc:/ELEC5620M-Mini-Project-Group-19/Debug/ELEC5620M-Mini-Project-Group-19.axf}"/>
+    <stringAttribute key="FILES.ICE_DEBUG.RESOURCES.1.OPTION.ON_DEMAND_LOAD" value="true"/>
+    <stringAttribute key="FILES.ICE_DEBUG.RESOURCES.1.TYPE" value="SFR_SEARCH_DIRS"/>
+    <stringAttribute key="FILES.ICE_DEBUG.RESOURCES.1.VALUE" value="D:\homeworkandppt\master\FPGA\Repositories\ELEC5620M-Resources\DebugConfig"/>
+    <intAttribute key="FILES.ICE_DEBUG.RESOURCES.COUNT" value="2"/>
+    <listAttribute key="FILES.ICE_DEBUG_WITH_ETB_TRACE">
+        <listEntry value="ON_DEMAND_LOAD"/>
+        <listEntry value="ALSO_LOAD_SYMBOLS"/>
+    </listAttribute>
+    <stringAttribute key="FILES.ICE_DEBUG_WITH_ETB_TRACE.RESOURCES.0.OPTION.ALSO_LOAD_SYMBOLS" value="true"/>
+    <stringAttribute key="FILES.ICE_DEBUG_WITH_ETB_TRACE.RESOURCES.0.OPTION.ON_DEMAND_LOAD" value="true"/>
+    <stringAttribute key="FILES.ICE_DEBUG_WITH_ETB_TRACE.RESOURCES.0.TYPE" value="APP_ON_HOST_TO_DOWNLOAD"/>
+    <stringAttribute key="FILES.ICE_DEBUG_WITH_ETB_TRACE.RESOURCES.0.VALUE" value=""/>
+    <intAttribute key="FILES.ICE_DEBUG_WITH_ETB_TRACE.RESOURCES.COUNT" value="1"/>
+    <listAttribute key="FILES.ICE_DEBUG_WITH_TRACE">
+        <listEntry value="ON_DEMAND_LOAD"/>
+        <listEntry value="ALSO_LOAD_SYMBOLS"/>
+    </listAttribute>
+    <stringAttribute key="FILES.ICE_DEBUG_WITH_TRACE.RESOURCES.0.OPTION.ALSO_LOAD_SYMBOLS" value="true"/>
+    <stringAttribute key="FILES.ICE_DEBUG_WITH_TRACE.RESOURCES.0.OPTION.ON_DEMAND_LOAD" value="true"/>
+    <stringAttribute key="FILES.ICE_DEBUG_WITH_TRACE.RESOURCES.0.TYPE" value="APP_ON_HOST_TO_DOWNLOAD"/>
+    <stringAttribute key="FILES.ICE_DEBUG_WITH_TRACE.RESOURCES.0.VALUE" value=""/>
+    <intAttribute key="FILES.ICE_DEBUG_WITH_TRACE.RESOURCES.COUNT" value="1"/>
+    <stringAttribute key="FILES.SELECTED_DEBUG_OPEATION" value="ICE_DEBUG"/>
+    <stringAttribute key="HOST_WORKING_DIR" value="${workspace_loc}"/>
+    <booleanAttribute key="HOST_WORKING_DIR_USE_DEFAULT" value="true"/>
+    <booleanAttribute key="KEY_COMMANDS_AFTER_CONNECT" value="false"/>
+    <stringAttribute key="KEY_COMMANDS_AFTER_CONNECT_TEXT" value=""/>
+    <booleanAttribute key="KEY_COMMANDS_AS_CONNECT" value="false"/>
+    <booleanAttribute key="RSE_USE_HOSTNAME" value="true"/>
+    <booleanAttribute key="SWD" value="false"/>
+    <booleanAttribute key="SWJ" value="false"/>
+    <stringAttribute key="TCP_DISABLE_EXTENDED_MODE" value="true"/>
+    <booleanAttribute key="TCP_KILL_ON_EXIT" value="false"/>
+    <booleanAttribute key="VFS_ENABLED" value="true"/>
+    <stringAttribute key="VFS_LOCAL_DIR" value="${workspace_loc}"/>
+    <stringAttribute key="VFS_REMOTE_MOUNT" value="/writeable"/>
+    <stringAttribute key="breakpoints" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#10;&lt;breakpoints order=&quot;ALPHA&quot;&gt;&#10;&lt;/breakpoints&gt;&#10;"/>
+    <listAttribute key="com.arm.debug.views.common.AddressTracker.debugger.view.DisassemblyView.addresses">
+        <listEntry value="&lt;Next Instruction&gt;"/>
+    </listAttribute>
+    <listAttribute key="com.arm.debug.views.common.AddressTracker.debugger.view.DisassemblyView.ranges">
+        <listEntry value="100"/>
+    </listAttribute>
+    <stringAttribute key="config_db_activity_name" value="Debug Cortex-A9_0"/>
+    <stringAttribute key="config_db_connection_keys" value="rvi_address target_initialization_script dtsl_config dtsl_tracecapture_option dtsl_config_script config_file setup TCP_KILL_ON_EXIT TCP_DISABLE_EXTENDED_MODE"/>
+    <stringAttribute key="config_db_connection_type" value="Bare Metal Debug"/>
+    <stringAttribute key="config_db_platform_name" value="Intel SoC FPGA - Cyclone V SoC (Single Core)"/>
+    <stringAttribute key="config_db_project_type" value="Bare Metal Debug"/>
+    <stringAttribute key="config_db_project_type_id" value="BARE_METAL"/>
+    <stringAttribute key="config_db_taxonomy_id" value="/platform/intelsocfpga/cyclonevsoc_singlecore_"/>
+    <stringAttribute key="config_file" value="CDB://../Arria V SoC/Altera_DEV5XS1.rvc"/>
+    <booleanAttribute key="connectOnly" value="false"/>
+    <stringAttribute key="connection_type" value="USB-Blaster"/>
+    <listAttribute key="debugger.view.DisassemblyView:current">
+        <listEntry value="&lt;Next Instruction&gt;"/>
+        <listEntry value="100"/>
+    </listAttribute>
+    <stringAttribute key="dtsl_config" value="USBBlaster_DtslScript"/>
+    <stringAttribute key="dtsl_config_script" value="CDB://dtsl_config_script.py"/>
+    <stringAttribute key="dtsl_options_file" value="default"/>
+    <stringAttribute key="dtsl_tracecapture_option" value="options.traceBuffer.traceCapture"/>
+    <stringAttribute key="launch_configuration_version" value="2022.2"/>
+    <booleanAttribute key="linuxOS" value="false"/>
+    <stringAttribute key="rddi_type" value="rddi-debug-rvi"/>
+    <booleanAttribute key="runAfterConnect" value="false"/>
+    <stringAttribute key="runTargetInitializationScript" value="${workspace_loc:/DebugConfig/debugload.ds}"/>
+    <stringAttribute key="rvi_address" value="DE-SoC on localhost [USB-1]:DE-SoC USB-1"/>
+    <mapAttribute key="scripts_view_script_links">
+        <mapEntry key="D:\Program Files\Arm\Development Studio 2022.2\sw\debugger\configdb\Scripts\altera_target_check.py" value=""/>
+        <mapEntry key="D:\homeworkandppt\master\FPGA\Repositories\ELEC5620M-Resources\DebugConfig\debugload.ds" value=""/>
+    </mapAttribute>
+    <listAttribute key="setup">
+        <listEntry value="CDB://../../../Scripts/altera_debug_server.py"/>
+        <listEntry value="CDB://rddi-dap_cfg-altera.txt rddi-dap_altera"/>
+    </listAttribute>
+    <stringAttribute key="stopAtExpression" value="main"/>
+    <stringAttribute key="target_initialization_script" value="CDB://../../../Scripts/altera_target_check.py"/>
+    <stringAttribute key="watchpoints" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#10;&lt;watchpoints&gt;&#10;&lt;/watchpoints&gt;&#10;"/>
+</launchConfiguration>
