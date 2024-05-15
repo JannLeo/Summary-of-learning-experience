@@ -5994,3 +5994,34 @@ Asynchronously called from thread pool-545-thread-1
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:834)
+!SESSION 2024-05-15 15:10:55.571 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.9.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-05-15 15:11:27.360
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\11440'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.arm.debugger.ux 4 0 2024-05-15 16:00:03.106
+!MESSAGE Unable to connect to LeedsSocComputer. The target hardware identity could not be verified. Please check that the target being connected to is of type Cyclone V SoC (Single Core) 
+!STACK 0
+com.arm.debug.core.interfaces.engine.DebugException: The target hardware identity could not be verified. Please check that the target being connected to is of type Cyclone V SoC (Single Core) 
+	at com.arm.debug.targetaccess.device.DTSLConnection.connect(DTSLConnection.java:85)
+	at com.arm.debug.service.DebugService$1.run(DebugService.java:404)
+	at com.arm.debug.service.DebugService$1.run(DebugService.java:1)
+	at com.arm.debug.service.proxy.SingleThreader$QueuedCall.run(SingleThreader.java:53)
+	at com.arm.debug.service.proxy.SingleThreader$1.run(SingleThreader.java:116)
+Asynchronously called from thread pool-77-thread-1
+	at com.arm.debug.service.proxy.SingleThreader.execute(SingleThreader.java:148)
+	at com.arm.debug.service.DebugService.createDebugService(DebugService.java:387)
+	at com.arm.debug.control.ConnectionController.lambda$1(ConnectionController.java:1119)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
