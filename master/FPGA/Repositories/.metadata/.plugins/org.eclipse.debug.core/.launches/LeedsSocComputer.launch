@@ -2,31 +2,42 @@
 <launchConfiguration type="com.arm.debugger.launcher2">
     <booleanAttribute key="ADAPTIVE_CLOCK" value="false"/>
     <mapAttribute key="AverageDurationTracker">
-        <mapEntry key="*Fetching Data Model" value="117725"/>
-        <mapEntry key="*list global low level symbols" value="441743"/>
-        <mapEntry key="AddEventObserver" value="137599"/>
-        <mapEntry key="Evaluate" value="520107"/>
-        <mapEntry key="compute execution mode" value="114755"/>
-        <mapEntry key="continue" value="6292034"/>
+        <mapEntry key="*Fetching Data Model" value="84386"/>
+        <mapEntry key="*list global low level symbols" value="185125"/>
+        <mapEntry key="*loading values from target" value="4983292"/>
+        <mapEntry key="*updating registers" value="84960800"/>
+        <mapEntry key="*updating variables" value="381733"/>
+        <mapEntry key="AddEventObserver" value="124486"/>
+        <mapEntry key="Evaluate" value="420193"/>
+        <mapEntry key="Retrieving globals list" value="5276906"/>
+        <mapEntry key="areCachesAvailable" value="158585"/>
+        <mapEntry key="compute execution mode" value="282024"/>
+        <mapEntry key="continue" value="5986566"/>
         <mapEntry key="core" value="7239200"/>
-        <mapEntry key="disassemble" value="32308700"/>
-        <mapEntry key="get capabilities" value="81554"/>
-        <mapEntry key="get execution addresss" value="178334"/>
-        <mapEntry key="get source lines" value="154524"/>
-        <mapEntry key="initialize command help" value="15346741"/>
-        <mapEntry key="list breakpoint options" value="49298"/>
-        <mapEntry key="list breakpoints" value="197519"/>
-        <mapEntry key="list instruction sets" value="51686"/>
-        <mapEntry key="list signals" value="271161"/>
-        <mapEntry key="list watchpoint options" value="71576"/>
-        <mapEntry key="list watchpoints" value="92875"/>
-        <mapEntry key="loadfile" value="1057731796"/>
-        <mapEntry key="set CWD" value="372705"/>
-        <mapEntry key="set debug-from" value="243495"/>
-        <mapEntry key="source altera_target_check.py" value="315158617"/>
-        <mapEntry key="source debugload.ds" value="4124341575"/>
-        <mapEntry key="start" value="266862311"/>
-        <mapEntry key="waitForTargetToStop" value="304669867"/>
+        <mapEntry key="disassemble" value="28095900"/>
+        <mapEntry key="finish" value="11724050"/>
+        <mapEntry key="get capabilities" value="68614"/>
+        <mapEntry key="get execution addresss" value="138168"/>
+        <mapEntry key="get source lines" value="242023"/>
+        <mapEntry key="getValidEncodings" value="107230"/>
+        <mapEntry key="initialize command help" value="19539664"/>
+        <mapEntry key="interrupt" value="7612879"/>
+        <mapEntry key="list breakpoint options" value="38427"/>
+        <mapEntry key="list breakpoints" value="70662"/>
+        <mapEntry key="list instruction sets" value="42514"/>
+        <mapEntry key="list signals" value="188682"/>
+        <mapEntry key="list watchpoint options" value="48073"/>
+        <mapEntry key="list watchpoints" value="68112"/>
+        <mapEntry key="loadfile" value="2066646620"/>
+        <mapEntry key="next" value="15724142"/>
+        <mapEntry key="reload-symbol-file" value="9386836"/>
+        <mapEntry key="set CWD" value="327827"/>
+        <mapEntry key="set debug-from" value="196402"/>
+        <mapEntry key="source altera_target_check.py" value="310691940"/>
+        <mapEntry key="source debugload.ds" value="3941788659"/>
+        <mapEntry key="start" value="27278262"/>
+        <mapEntry key="step" value="20377781"/>
+        <mapEntry key="waitForTargetToStop" value="306787036"/>
     </mapAttribute>
     <stringAttribute key="CLOCK_SPEED" value="20kHz"/>
     <intAttribute key="DEBUG_TAB..RESOURCES.COUNT" value="0"/>
@@ -111,6 +122,12 @@
     <listAttribute key="com.arm.debug.views.common.AddressTracker.debugger.view.DisassemblyView.ranges">
         <listEntry value="100"/>
     </listAttribute>
+    <listAttribute key="com.arm.debug.views.common.AddressTracker.debugger.view.MemoryView.addresses">
+        <listEntry value=""/>
+    </listAttribute>
+    <listAttribute key="com.arm.debug.views.common.AddressTracker.debugger.view.MemoryView.ranges">
+        <listEntry value=""/>
+    </listAttribute>
     <stringAttribute key="config_db_activity_name" value="Debug Cortex-A9_0"/>
     <stringAttribute key="config_db_connection_keys" value="rvi_address target_initialization_script dtsl_config dtsl_tracecapture_option dtsl_config_script config_file setup TCP_KILL_ON_EXIT TCP_DISABLE_EXTENDED_MODE"/>
     <stringAttribute key="config_db_connection_type" value="Bare Metal Debug"/>
@@ -125,6 +142,19 @@
         <listEntry value="&lt;Next Instruction&gt;"/>
         <listEntry value="100"/>
     </listAttribute>
+    <stringAttribute key="debugger.view.MemoryView" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#10;&lt;page&gt;&#10;&#9;&lt;memoryView/&gt;&#10;&lt;/page&gt;&#10;"/>
+    <listAttribute key="debugger.view.MemoryView:current">
+        <listEntry value=""/>
+        <listEntry value=""/>
+    </listAttribute>
+    <stringAttribute key="debugger.view.NewRegisterView:DebugOutlineColumnState" value="OutlineConfig1&#9;8&#9;0&#9;true&#9;true&#9;69&#9;-1&#9;true&#9;1&#9;false&#9;true&#9;138&#9;-1&#9;true&#9;2&#9;true&#9;true&#9;65&#9;-1&#9;true&#9;3&#9;false&#9;true&#9;59&#9;-1&#9;true&#9;4&#9;false&#9;true&#9;68&#9;-1&#9;true&#9;5&#9;true&#9;true&#9;51&#9;-1&#9;true&#9;6&#9;false&#9;true&#9;90&#9;-1&#9;true&#9;7&#9;true&#9;true&#9;74&#9;-1&#9;true"/>
+    <stringAttribute key="debugger.view.NewRegisterView:_selectedRegisterSet" value="All registers"/>
+    <mapAttribute key="debugger.view.NewRegisterView_registerSets"/>
+    <stringAttribute key="debugger.view.VariableTreeView:DebugOutlineColumnState" value="OutlineConfig1&#9;8&#9;0&#9;true&#9;true&#9;217&#9;-1&#9;true&#9;1&#9;false&#9;true&#9;138&#9;-1&#9;true&#9;2&#9;true&#9;true&#9;147&#9;-1&#9;true&#9;3&#9;true&#9;true&#9;59&#9;-1&#9;true&#9;4&#9;true&#9;true&#9;68&#9;-1&#9;true&#9;5&#9;true&#9;true&#9;51&#9;-1&#9;true&#9;6&#9;true&#9;true&#9;90&#9;-1&#9;true&#9;7&#9;true&#9;true&#9;74&#9;-1&#9;true"/>
+    <listAttribute key="debugger.view.VariableTreeView:USER_ADDED_FILE_STATICS"/>
+    <listAttribute key="debugger.view.VariableTreeView:USER_ADDED_GLOBALS"/>
+    <booleanAttribute key="debugger.view.register.DrawAsHex" value="false"/>
+    <booleanAttribute key="debugger.view.variable.DrawAsHex" value="false"/>
     <stringAttribute key="dtsl_config" value="USBBlaster_DtslScript"/>
     <stringAttribute key="dtsl_config_script" value="CDB://dtsl_config_script.py"/>
     <stringAttribute key="dtsl_options_file" value="default"/>

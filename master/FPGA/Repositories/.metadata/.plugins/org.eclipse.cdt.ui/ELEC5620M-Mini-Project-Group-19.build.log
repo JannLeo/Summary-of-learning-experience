@@ -1,18 +1,13 @@
-20:44:11 **** Incremental Build of configuration Debug for project ELEC5620M-Mini-Project-Group-19 ****
+22:45:01 **** Incremental Build of configuration Debug for project ELEC5620M-Mini-Project-Group-19 ****
 make all 
 'Building file: ../GameLogic/gamelogic.c'
 'Invoking: Arm C Compiler for Embedded 6'
 armclang.exe --target=arm-arm-none-eabi -mcpu=cortex-a9 -mfpu=none -mfloat-abi=soft -marm -I"D:\homeworkandppt\master\FPGA\Repositories\ELEC5620M-Resources\Drivers" -O0 -g -mno-unaligned-access -MD -MP -c -o "GameLogic/gamelogic.o" "../GameLogic/gamelogic.c"
 'Finished building: ../GameLogic/gamelogic.c'
 ' '
-'Building file: ../main.c'
-'Invoking: Arm C Compiler for Embedded 6'
-armclang.exe --target=arm-arm-none-eabi -mcpu=cortex-a9 -mfpu=none -mfloat-abi=soft -marm -I"D:\homeworkandppt\master\FPGA\Repositories\ELEC5620M-Resources\Drivers" -O0 -g -mno-unaligned-access -MD -MP -c -o "main.o" "../main.c"
-'Finished building: ../main.c'
-' '
 'Building target: ELEC5620M-Mini-Project-Group-19.axf'
 'Invoking: Arm Linker 6'
-armlink.exe --entry=__vector_table --scatter="D:\homeworkandppt\master\FPGA\Repositories\ELEC5620M-Resources\ScatterFiles\DDRRomRam.scat" --info=sizes -o "ELEC5620M-Mini-Project-Group-19.axf"  ./Zhu/LCD.o ./Zhu/bg.o ./Zhu/main.o  ./SevenSeg/DE1SoC_SevenSeg.o  ./PrivateTimer/PrivateTimer.o  ./GameLogic/gamelogic.o  ./Drivers/Util/driver_crc.o ./Drivers/Util/driver_ctx.o ./Drivers/Util/driver_flash.o ./Drivers/Util/enum_lookup.o ./Drivers/Util/error.o ./Drivers/Util/startup_arm.o ./Drivers/Util/verbosity.o  ./Drivers/HPS_usleep/HPS_usleep.o  ./Drivers/HPS_IRQ/HPS_IRQ.o  ./Drivers/HPS_I2C/HPS_I2C.o  ./Drivers/HPS_GPIO/HPS_GPIO.o  ./Drivers/FatFS/hwlib/cv/alt_clock_manager.o  ./Drivers/FatFS/hwlib/a10/alt_clock_manager.o  ./Drivers/FatFS/hwlib/alt_globaltmr.o ./Drivers/FatFS/hwlib/alt_sdmmc.o ./Drivers/FatFS/hwlib/alt_timers.o ./Drivers/FatFS/hwlib/alt_watchdog.o  ./Drivers/FatFS/diskio_socfpga.o ./Drivers/FatFS/ff.o ./Drivers/FatFS/ffsystem.o ./Drivers/FatFS/ffunicode.o  ./Drivers/FPGA_PIO/FPGA_PIO.o  ./Drivers/FPGA_IrDAController/FPGA_IrDAController.o  ./Drivers/DE1SoC_WM8731/DE1SoC_WM8731.o  ./Drivers/DE1SoC_Servo/DE1SoC_Servo.o  ./Drivers/DE1SoC_Mandelbrot/DE1SoC_Mandelbrot.o  ./Drivers/DE1SoC_LT24/DE1SoC_LT24.o  ./Drivers/BasicFont/BasicFont.o  ./main.o   
+armlink.exe --entry=__vector_table --scatter="D:\homeworkandppt\master\FPGA\Repositories\ELEC5620M-Resources\ScatterFiles\DDRRomRam.scat" --info=sizes -o "ELEC5620M-Mini-Project-Group-19.axf"  ./Zhu/LCD.o ./Zhu/bg.o ./Zhu/bg2.o ./Zhu/car.o ./Zhu/game1map.o ./Zhu/game2.o ./Zhu/game2ground.o ./Zhu/heart.o ./Zhu/lose.o ./Zhu/main.o ./Zhu/win.o  ./SevenSeg/DE1SoC_SevenSeg.o  ./PrivateTimer/PrivateTimer.o  ./Interrupts/Interrupts.o  ./GameLogic/gamelogic.o  ./Drivers/Util/driver_crc.o ./Drivers/Util/driver_ctx.o ./Drivers/Util/driver_flash.o ./Drivers/Util/enum_lookup.o ./Drivers/Util/error.o ./Drivers/Util/startup_arm.o ./Drivers/Util/verbosity.o  ./Drivers/HPS_usleep/HPS_usleep.o  ./Drivers/HPS_IRQ/HPS_IRQ.o  ./Drivers/HPS_I2C/HPS_I2C.o  ./Drivers/HPS_GPIO/HPS_GPIO.o  ./Drivers/FatFS/hwlib/cv/alt_clock_manager.o  ./Drivers/FatFS/hwlib/a10/alt_clock_manager.o  ./Drivers/FatFS/hwlib/alt_globaltmr.o ./Drivers/FatFS/hwlib/alt_sdmmc.o ./Drivers/FatFS/hwlib/alt_timers.o ./Drivers/FatFS/hwlib/alt_watchdog.o  ./Drivers/FatFS/diskio_socfpga.o ./Drivers/FatFS/ff.o ./Drivers/FatFS/ffsystem.o ./Drivers/FatFS/ffunicode.o  ./Drivers/FPGA_PIO/FPGA_PIO.o  ./Drivers/FPGA_IrDAController/FPGA_IrDAController.o  ./Drivers/DE1SoC_WM8731/DE1SoC_WM8731.o  ./Drivers/DE1SoC_Servo/DE1SoC_Servo.o  ./Drivers/DE1SoC_Mandelbrot/DE1SoC_Mandelbrot.o  ./Drivers/DE1SoC_LT24/DE1SoC_LT24.o  ./Drivers/BasicFont/BasicFont.o  ./main.o   
 
 ==============================================================================
 
@@ -22,22 +17,30 @@ Image component sizes
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
          0          0          0        490          0        562   BasicFont.o
-      1980          0          0        368          0       7733   DE1SoC_LT24.o
+      1856          0          0        368          0       7733   DE1SoC_LT24.o
        400          0          0          8          0       1770   DE1SoC_SevenSeg.o
-       396          0          0          4         13      10003   HPS_IRQ.o
+      1912          0          0          0          0       7949   FPGA_PIO.o
+       112          0          0          0          0       6451   HPS_GPIO.o
+      1604          0          0          8         13      10003   HPS_IRQ.o
        208          0          0          8          0       1383   HPS_usleep.o
-      3004          0          0          0     153608       7241   LCD.o
+       276          0          0          0          0       6834   Interrupts.o
+      3232          0          0          0          4       7897   LCD.o
        452          0          0         16          8       1247   PrivateTimer.o
          0          0     172800          0          0        404   bg.o
+         0          0     153600          0          0        407   bg2.o
+         0          0       7200          0          0        405   car.o
        312          0          0          0          0       2383   driver_ctx.o
-      3988          0         97         16         36       5132   gamelogic.o
-        76          0          7          0          0       1253   main.o
+      2796          0         81          4         75       3853   game2.o
+         0          0     153600          0          0        431   game2ground.o
+      4240          0        134         16         60       7670   gamelogic.o
+         0          0        800          0          0        411   heart.o
+       968         16         42          0     153624       8509   main.o
        872         96         90          4          0       2305   startup_arm.o
 
     ----------------------------------------------------------------------
-     11688         96     173012        916  537024580      41416   Object Totals
+     19240        112     488364        924  537024708      78607   Object Totals
          0          0         16          0  536870912          0   (incl. Generated)
-         0          0          2          2          3          0   (incl. Padding)
+         0          0          1          2         12          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -93,6 +96,7 @@ Image component sizes
         44          0          0          0          0        108   _printf_wchar.o
        188          6          8          0          0         92   _printf_wctomb.o
          6          0          0          0          0          0   _printf_x.o
+        10          0          0          0          0         68   _sputc.o
          8          0          0          0          0         68   abs.o
        392          0          0          0          0         76   aeabi_sdiv.o
        224          6        148          0          0         96   bigflt0.o
@@ -116,6 +120,7 @@ Image component sizes
         48          0          0          0          0         68   h1_extend.o
         78          0          0          0          0         80   h1_free.o
         14          0          0          0          0         84   h1_init.o
+       196          0          0          0          0         92   h1_realloc.o
         80          6          0          4          0         96   heapauxa.o
          4          0          0          0          0        136   hguard.o
          0          0          0          0          0          0   indicate_semi.o
@@ -139,10 +144,12 @@ Image component sizes
          8          4          0          0          0         68   rt_locale_intlibspace.o
         68          0          0          0          0         68   rt_memclr.o
         78          0          0          0          0         80   rt_memclr_w.o
+       100          0          0          0          0         80   rt_memcpy_w.o
          2          0          0          0          0          0   rtexit.o
         10          0          0          0          0          0   rtexit2.o
         44          0          0          0          0         68   rtudiv10.o
         70          0          0          0          0         80   setvbuf.o
+        44          6          0          0          0         84   sprintf.o
        264          6          0          0          0        160   stdio.o
          0          0          0         12        252          0   stdio_streams.o
        244          4          0          0          0         80   strcmp.o
@@ -158,19 +165,19 @@ Image component sizes
         40          0          0          0          0         68   fpclassify.o
 
     ----------------------------------------------------------------------
-     10208        476        564         16        576       7016   Library Totals
-        16          0          1          0          0          0   (incl. Padding)
+     10560        482        564         16        576       7340   Library Totals
+        18          0          1          0          0          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
 
-     10144        476        563         16        576       6812   c_2u.l
+     10494        482        563         16        576       7136   c_2u.l
          8          0          0          0          0        136   fz_2s.l
         40          0          0          0          0         68   m_2s.l
 
     ----------------------------------------------------------------------
-     10208        476        564         16        576       7016   Library Totals
+     10560        482        564         16        576       7340   Library Totals
 
     ----------------------------------------------------------------------
 
@@ -179,20 +186,20 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     21896        572     173576        932  537025156      44384   Grand Totals
-     21896        572     173576        932  537025156      44384   ELF Image Totals
-     21896        572     173576        932          0          0   ROM Totals
+     29800        594     488928        940  537025284      81611   Grand Totals
+     29800        594     488928        940  537025284      81611   ELF Image Totals
+     29800        594     488928        940          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)               195472 ( 190.89kB)
-    Total RW  Size (RW Data + ZI Data)         537026088 (524439.54kB)
-    Total ROM Size (Code + RO Data + RW Data)     196404 ( 191.80kB)
+    Total RO  Size (Code + RO Data)               518728 ( 506.57kB)
+    Total RW  Size (RW Data + ZI Data)         537026224 (524439.67kB)
+    Total ROM Size (Code + RO Data + RW Data)     519668 ( 507.49kB)
 
 ==============================================================================
 
 'Finished building target: ELEC5620M-Mini-Project-Group-19.axf'
 ' '
 
-20:44:13 Build Finished. 0 errors, 0 warnings. (took 2s.324ms)
+22:45:02 Build Finished. 0 errors, 0 warnings. (took 1s.601ms)
 
