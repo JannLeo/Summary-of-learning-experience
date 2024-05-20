@@ -1,0 +1,122 @@
+/*
+ * main.h
+ *
+ * Header file containing necessary includes, definitions, and declarations for the main program.
+ *
+ * Created on: 13/05/2024
+ * Author: Zhuzhu
+ * Co-Author: Junnan Liu
+ */
+#include "main.h"
+
+// Main function
+int main(void) {
+    // Variables
+    PLT24Ctx_t lt24;
+
+    // Initialize LCD
+    LCDinitial();
+
+    // // Assign the HPS timer base address to the driver
+    // drivers.hpsTimer = (unsigned int*)LSC_BASE_HPS_TIMERSP0;
+
+    // Initialize the keys
+    FPGA_PIO_initialise(LSC_BASE_KEYS, LSC_CONFIG_KEYS, &drivers.keys);
+
+    // Initialize IRQs
+    HPS_IRQ_initialise(false, NULL);
+    HPS_ResetWatchdog();
+
+    // Register interrupt handler for keys
+    HPS_IRQ_registerHandler(IRQ_LSC_KEYS, pushbuttonISR, &drivers);
+
+    // Configure Push Buttons to interrupt on press
+    FPGA_PIO_setInterruptEnable(drivers.keys, 0xF, 0xF); // Enable interrupts for all four KEYs
+    HPS_ResetWatchdog();
+
+    // Enable global interrupts
+    HPS_IRQ_globalEnable(true);
+
+    // Initialize the Private timer
+    IntitialiseTimer();
+
+    // Wait a moment and draw the background
+    Drawbackground(bg);
+
+    // Main Run Loop
+    while (1) {
+        HPS_ResetWatchdog();
+
+        // Disable global interrupts temporarily
+        HpsErr_t wasDisabled = HPS_IRQ_globalEnable(false);
+
+        // Read and reset key press value
+        unsigned int keyPressed = drivers.keyPressed;
+        drivers.keyPressed = 0;
+
+        // Re-enable global interrupts if they were not disabled by error
+        HPS_IRQ_globalEnable(wasDisabled != ERR_SKIPPED);
+        HPS_ResetWatchdog();
+
+        // Handle different game states
+        switch (state) {
+            case menu:
+                Drawbackground(bg);
+                FrameBuffer_map(heart, 20, 20, 20, 20);
+                DrawString(70, 10, "Game Box", LT24_RED);
+                DrawString(70, 50, "Menu:", LT24_RED);
+                DrawString(50, 80, "1. Bounce Ball", LT24_RED);
+                DrawString(50, 110, "2. Car", LT24_RED);
+                Drawscreen();
+
+                // Handle menu input
+                if (keyPressed == 0x1) {
+                    state = intro;
+                } else if (keyPressed == 0x2) {
+                    LCDclear(LT24_GREEN);
+                    state = game1;
+                } else if (keyPressed == 0x4) {
+
+					game2_init();
+                    state = game2;
+                }
+                break;
+
+            case intro:
+                LCDclear(LT24_WHITE);
+                FrameBuffer_map(heart, 20, 20, 20, 20);
+                Drawscreen();
+
+                // Handle intro input
+                if (keyPressed == 0x2) {
+                    Drawbackground(bg2);
+                    state = menu;
+                } else if (keyPressed == 0x4) {
+                    state = game1;
+                }
+                break;
+
+            case game1:
+
+                // Run Pong game state machine
+                PongFSM();
+				// Return to menu if specific key is pressed
+                if (keyPressed == 0x8) {
+                    state = menu;
+                }
+                HPS_ResetWatchdog();
+                break;
+
+            case game2:
+                // Initialize and run game2
+                game2_start();
+                break;
+        }
+
+        // Reset key press value
+        keyPressed = 0;
+
+        // Reset the watchdog
+        HPS_ResetWatchdog();
+    }
+}

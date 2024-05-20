@@ -1,0 +1,31 @@
+/* gamelogic.h
+   Author: Yifeng Chen
+*/
+
+#include "DE1SoC_LT24/DE1SoC_LT24.h"
+#include <math.h>
+#include <stdlib.h>
+#include "../LCD/LCDEngine.h"
+#include "../PrivateTimer/PrivateTimer.h"
+#include "../SevenSegDisplay/SevenSegDisplay.h"
+#include "DE1SoC_WM8731/DE1SoC_WM8731.h"
+#include "../Sound/Sound.h"
+
+// Game peramters definitions
+#define heightresolution 240
+#define widthresolution 320
+
+// RunGame:The main game function 
+void RunGame(void);
+// MenuScreen:Draws Menu screen
+void MenuScreen(void);
+// Finalstatemachine
+void FSM(void);
+// DrawRackets:Draw the two rackets on the display
+void DrawRackets(void);
+// InitItems:Initialises rackets and ball starting positions
+void InitItems(void);
+// MoveRightRacket
+void MoveRightRacket(void);
+// MoveLeftRacket：Direction of racket movement, false = downwards, true = upwards
+void MoveLeftRacket(bool Direction);

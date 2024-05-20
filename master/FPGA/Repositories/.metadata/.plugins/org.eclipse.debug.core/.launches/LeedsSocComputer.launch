@@ -2,46 +2,49 @@
 <launchConfiguration type="com.arm.debugger.launcher2">
     <booleanAttribute key="ADAPTIVE_CLOCK" value="false"/>
     <mapAttribute key="AverageDurationTracker">
-        <mapEntry key="*Fetching Data Model" value="108707"/>
-        <mapEntry key="*list global low level symbols" value="1779022"/>
+        <mapEntry key="*Fetching Data Model" value="137729"/>
+        <mapEntry key="*list global low level symbols" value="288504"/>
         <mapEntry key="*loading values from target" value="10626496"/>
         <mapEntry key="*updating registers" value="82586450"/>
         <mapEntry key="*updating variables" value="2171708"/>
-        <mapEntry key="AddEventObserver" value="485317"/>
-        <mapEntry key="Evaluate" value="1867745"/>
+        <mapEntry key="AddEventObserver" value="167546"/>
+        <mapEntry key="Evaluate" value="551375"/>
         <mapEntry key="Retrieving globals list" value="10400653"/>
         <mapEntry key="areCachesAvailable" value="150300"/>
         <mapEntry key="break" value="9157812"/>
-        <mapEntry key="compute execution mode" value="608868"/>
-        <mapEntry key="continue" value="8411401"/>
+        <mapEntry key="compute execution mode" value="132719"/>
+        <mapEntry key="continue" value="9480428"/>
         <mapEntry key="core" value="7239200"/>
-        <mapEntry key="disassemble" value="24578161"/>
+        <mapEntry key="disassemble" value="18696473"/>
         <mapEntry key="finish" value="11724050"/>
-        <mapEntry key="get capabilities" value="97388"/>
-        <mapEntry key="get execution addresss" value="322848"/>
-        <mapEntry key="get source lines" value="212575"/>
+        <mapEntry key="get capabilities" value="106043"/>
+        <mapEntry key="get execution addresss" value="157677"/>
+        <mapEntry key="get source lines" value="117866"/>
         <mapEntry key="getValidEncodings" value="112478"/>
-        <mapEntry key="initialize command help" value="33513986"/>
-        <mapEntry key="interrupt" value="7612879"/>
-        <mapEntry key="list breakpoint options" value="98098"/>
-        <mapEntry key="list breakpoints" value="176434"/>
-        <mapEntry key="list instruction sets" value="91614"/>
-        <mapEntry key="list signals" value="1649262"/>
-        <mapEntry key="list watchpoint options" value="91347"/>
-        <mapEntry key="list watchpoints" value="162424"/>
-        <mapEntry key="loadfile" value="5113708687"/>
-        <mapEntry key="next" value="15724142"/>
-        <mapEntry key="reload-symbol-file" value="19176201"/>
+        <mapEntry key="initialize command help" value="22207390"/>
+        <mapEntry key="interrupt" value="86914448"/>
+        <mapEntry key="list breakpoint options" value="48055"/>
+        <mapEntry key="list breakpoints" value="81917"/>
+        <mapEntry key="list instruction sets" value="60511"/>
+        <mapEntry key="list signals" value="221475"/>
+        <mapEntry key="list watchpoint options" value="71277"/>
+        <mapEntry key="list watchpoints" value="103260"/>
+        <mapEntry key="loadfile" value="3953146470"/>
+        <mapEntry key="next" value="28569921"/>
+        <mapEntry key="nexti" value="18794600"/>
+        <mapEntry key="reload-symbol-file" value="13342642"/>
         <mapEntry key="remove" value="8956987"/>
-        <mapEntry key="set CWD" value="784283"/>
+        <mapEntry key="set CWD" value="1873524"/>
         <mapEntry key="set breakpoint properties" value="14761575"/>
-        <mapEntry key="set debug-from" value="617202"/>
-        <mapEntry key="source altera_target_check.py" value="647531169"/>
-        <mapEntry key="source debugload.ds" value="3654189168"/>
-        <mapEntry key="start" value="4021616569"/>
+        <mapEntry key="set debug-from" value="342349"/>
+        <mapEntry key="source altera_target_check.py" value="411206260"/>
+        <mapEntry key="source debugload.ds" value="3931361000"/>
+        <mapEntry key="start" value="54089714"/>
         <mapEntry key="step" value="29114905"/>
+        <mapEntry key="stepi" value="16137000"/>
+        <mapEntry key="target reset" value="1150060225"/>
         <mapEntry key="toggleBreakpoint" value="7920925"/>
-        <mapEntry key="waitForTargetToStop" value="332929603"/>
+        <mapEntry key="waitForTargetToStop" value="330759509"/>
     </mapAttribute>
     <stringAttribute key="CLOCK_SPEED" value="20kHz"/>
     <intAttribute key="DEBUG_TAB..RESOURCES.COUNT" value="0"/>
@@ -60,29 +63,29 @@
     <listAttribute key="FILES.DOWNLOAD_AND_DEBUG"/>
     <stringAttribute key="FILES.DOWNLOAD_AND_DEBUG.RESOURCES.0.OPTION.ALSO_LOAD_SYMBOLS" value="true"/>
     <stringAttribute key="FILES.DOWNLOAD_AND_DEBUG.RESOURCES.0.OPTION.ON_DEMAND_LOAD" value="true"/>
-    <stringAttribute key="FILES.DOWNLOAD_AND_DEBUG.RESOURCES.0.TYPE" value="TARGET_DOWNLOAD_DIR"/>
+    <stringAttribute key="FILES.DOWNLOAD_AND_DEBUG.RESOURCES.0.TYPE" value="APP_ON_HOST_TO_DOWNLOAD"/>
     <stringAttribute key="FILES.DOWNLOAD_AND_DEBUG.RESOURCES.0.VALUE" value=""/>
     <stringAttribute key="FILES.DOWNLOAD_AND_DEBUG.RESOURCES.1.OPTION.ALSO_LOAD_SYMBOLS" value="true"/>
     <stringAttribute key="FILES.DOWNLOAD_AND_DEBUG.RESOURCES.1.OPTION.ON_DEMAND_LOAD" value="true"/>
-    <stringAttribute key="FILES.DOWNLOAD_AND_DEBUG.RESOURCES.1.TYPE" value="APP_ON_HOST_TO_DOWNLOAD"/>
+    <stringAttribute key="FILES.DOWNLOAD_AND_DEBUG.RESOURCES.1.TYPE" value="TARGET_WORKING_DIR"/>
     <stringAttribute key="FILES.DOWNLOAD_AND_DEBUG.RESOURCES.1.VALUE" value=""/>
     <stringAttribute key="FILES.DOWNLOAD_AND_DEBUG.RESOURCES.2.OPTION.ALSO_LOAD_SYMBOLS" value="true"/>
     <stringAttribute key="FILES.DOWNLOAD_AND_DEBUG.RESOURCES.2.OPTION.ON_DEMAND_LOAD" value="true"/>
-    <stringAttribute key="FILES.DOWNLOAD_AND_DEBUG.RESOURCES.2.TYPE" value="TARGET_WORKING_DIR"/>
+    <stringAttribute key="FILES.DOWNLOAD_AND_DEBUG.RESOURCES.2.TYPE" value="TARGET_DOWNLOAD_DIR"/>
     <stringAttribute key="FILES.DOWNLOAD_AND_DEBUG.RESOURCES.2.VALUE" value=""/>
     <intAttribute key="FILES.DOWNLOAD_AND_DEBUG.RESOURCES.COUNT" value="3"/>
     <listAttribute key="FILES.DOWNLOAD_DEBUG"/>
     <stringAttribute key="FILES.DOWNLOAD_DEBUG.RESOURCES.0.OPTION.ALSO_LOAD_SYMBOLS" value="true"/>
     <stringAttribute key="FILES.DOWNLOAD_DEBUG.RESOURCES.0.OPTION.ON_DEMAND_LOAD" value="true"/>
-    <stringAttribute key="FILES.DOWNLOAD_DEBUG.RESOURCES.0.TYPE" value="TARGET_DOWNLOAD_DIR"/>
+    <stringAttribute key="FILES.DOWNLOAD_DEBUG.RESOURCES.0.TYPE" value="APP_ON_HOST_TO_DOWNLOAD"/>
     <stringAttribute key="FILES.DOWNLOAD_DEBUG.RESOURCES.0.VALUE" value=""/>
     <stringAttribute key="FILES.DOWNLOAD_DEBUG.RESOURCES.1.OPTION.ALSO_LOAD_SYMBOLS" value="true"/>
     <stringAttribute key="FILES.DOWNLOAD_DEBUG.RESOURCES.1.OPTION.ON_DEMAND_LOAD" value="true"/>
-    <stringAttribute key="FILES.DOWNLOAD_DEBUG.RESOURCES.1.TYPE" value="APP_ON_HOST_TO_DOWNLOAD"/>
+    <stringAttribute key="FILES.DOWNLOAD_DEBUG.RESOURCES.1.TYPE" value="TARGET_WORKING_DIR"/>
     <stringAttribute key="FILES.DOWNLOAD_DEBUG.RESOURCES.1.VALUE" value=""/>
     <stringAttribute key="FILES.DOWNLOAD_DEBUG.RESOURCES.2.OPTION.ALSO_LOAD_SYMBOLS" value="true"/>
     <stringAttribute key="FILES.DOWNLOAD_DEBUG.RESOURCES.2.OPTION.ON_DEMAND_LOAD" value="true"/>
-    <stringAttribute key="FILES.DOWNLOAD_DEBUG.RESOURCES.2.TYPE" value="TARGET_WORKING_DIR"/>
+    <stringAttribute key="FILES.DOWNLOAD_DEBUG.RESOURCES.2.TYPE" value="TARGET_DOWNLOAD_DIR"/>
     <stringAttribute key="FILES.DOWNLOAD_DEBUG.RESOURCES.2.VALUE" value=""/>
     <intAttribute key="FILES.DOWNLOAD_DEBUG.RESOURCES.COUNT" value="3"/>
     <intAttribute key="FILES.DOWNLOAD_DEBUG_ANDROID.RESOURCES.COUNT" value="0"/>
@@ -116,6 +119,7 @@
     <stringAttribute key="FILES.SELECTED_DEBUG_OPEATION" value="ICE_DEBUG"/>
     <stringAttribute key="HOST_WORKING_DIR" value="${workspace_loc}"/>
     <booleanAttribute key="HOST_WORKING_DIR_USE_DEFAULT" value="true"/>
+    <booleanAttribute key="InstructionStepping" value="true"/>
     <booleanAttribute key="KEY_COMMANDS_AFTER_CONNECT" value="false"/>
     <stringAttribute key="KEY_COMMANDS_AFTER_CONNECT_TEXT" value=""/>
     <booleanAttribute key="KEY_COMMANDS_AS_CONNECT" value="false"/>

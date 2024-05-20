@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="initialise"/>
+		<item key="selection" value="Drivers"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="drivers"/>
+			<item value="state"/>
 			<item value="initialise"/>
 			<item value="LT24_copyFrameBuffer"/>
 			<item value="LT24_initialise"/>
 		</list>
 		<list key="replacehistory">
+			<item value="drivers1"/>
+			<item value="PongFSM();"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
